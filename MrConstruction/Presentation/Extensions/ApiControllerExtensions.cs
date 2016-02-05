@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
+using System.Web.Http;
 
 namespace MrConstruction.Presentation.Controllers {
     public static class ApiControllerExtensions {
