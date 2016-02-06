@@ -201,7 +201,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Domain\AdminUser.cs" />
     <Compile Include="Domain\ApplicationUser.cs" />
+    <Compile Include="Domain\Client.cs" />
+    <Compile Include="Domain\ContractorUser.cs" />
     <Compile Include="Domain\IEntityInterfaces.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />

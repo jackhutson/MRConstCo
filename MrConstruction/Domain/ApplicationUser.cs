@@ -16,5 +16,6 @@ namespace MrConstruction.Domain {
             // Add custom user claims here
             return userIdentity;
         }
+
     }
 }
