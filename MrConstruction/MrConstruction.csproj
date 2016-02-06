@@ -206,6 +206,8 @@
     <Compile Include="Domain\Client.cs" />
     <Compile Include="Domain\ContractorUser.cs" />
     <Compile Include="Domain\IEntityInterfaces.cs" />
+    <Compile Include="Domain\Portfolio.cs" />
+    <Compile Include="Domain\Upload.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
