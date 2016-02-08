@@ -7,14 +7,6 @@ using System.Web;
 namespace MrConstruction.Services.Models {
     public class ProjectDTO {
 
-        public enum Status {
-            ToDo,
-            AwaitingEstimate,
-            InProgress,
-            PendingReview,
-            Completed
-        }
-
         public string Title { get; set; }
         public string Description { get; set; }
         public string ClientName { get; set; }
