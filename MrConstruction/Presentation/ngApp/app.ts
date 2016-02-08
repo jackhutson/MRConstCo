@@ -51,10 +51,11 @@
                     controllerAs: 'controller'
                 });
             $routeProvider
-                .when('/projectList', {
-                    template: '/Presentation/ngApp/views/newProject.html',
-                    controller: MrConstruction.Controllers.ProjectController,
+                .when('/taskdetails', {
+                    templateUrl: '/Presentation/ngApp/views/taskDetails.html',
+                    controller: MrConstruction.Controllers.TaskDetailsController,
                     controllerAs: 'controller'
                 });
         });
 }
+
