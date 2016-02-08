@@ -5,7 +5,7 @@
         public contractors;
 
         constructor(private $http: ng.IHttpService) {
-            $http.get('/api/contractors')
+            $http.get('/api/contractor')
                 .then((response) => {
                     this.contractors = response.data;
                 });

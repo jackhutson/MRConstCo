@@ -242,6 +242,7 @@
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
     <Compile Include="Services\ContractorService.cs" />
+    <Compile Include="Services\Models\JobListDTO.cs" />
     <Compile Include="Services\Models\ProjectDTO.cs" />
     <Compile Include="Services\Models\ContractorUserDTO.cs" />
     <Compile Include="Services\ProjectService.cs" />
@@ -323,7 +324,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectDetailsController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\directives\multipartUpload.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
