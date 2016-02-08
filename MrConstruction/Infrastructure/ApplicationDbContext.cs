@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 namespace MrConstruction.Infrastructure {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser> {
@@ -14,5 +15,17 @@ namespace MrConstruction.Infrastructure {
         public static ApplicationDbContext Create() {
             return new ApplicationDbContext();
         }
+
+        public IDbSet<Client> Clients { get; set; }
+
+        public IDbSet<Job> Jobs { get; set; }
+        
+        public IDbSet<Location> Locations { get; set; }
+
+        public IDbSet<Portfolio> Portfolios { get; set; }
+        
+        public IDbSet<Project> Project { get; set; }
+
+        public IDbSet<Upload> Uploads { get; set; }
     }
 }
