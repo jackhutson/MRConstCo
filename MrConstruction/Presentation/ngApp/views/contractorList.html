@@ -6,7 +6,7 @@
         <button class="add-contractor" ng-href="">+</button>
     </div>
 </div>
-<div class="contractor-list" ng-repeat="">
+<div class="contractor-list" ng-repeat="contractor in controller.contractors">
     <div class="row">
         <div class="col-md-2">
             Company Name
@@ -47,7 +47,7 @@
             {{contractor.phone}}
         </div>
     </div>
-    <div class="row">
+    <div class="row" ng-if="contractor.phone2">
         <div class="col-md-2">
             Phone #2
         </div>
