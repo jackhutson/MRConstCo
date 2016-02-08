@@ -16,6 +16,7 @@ namespace MrConstruction.Domain {
 
         public int Id { get; set; }
         public bool Active { get; set; }
+        public string Title { get; set; }
         public string Description { get; set; }
         public Client Client { get; set; }
         public IList<Upload> Uploads { get; set; }
