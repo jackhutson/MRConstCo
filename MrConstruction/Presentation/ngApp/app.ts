@@ -28,7 +28,7 @@
             $httpProvider.interceptors.push('authInterceptor');
 
             $routeProvider.when('/contractors', {
-                templateUrl: 'Presentation.ngApp.views.contractorList.html',
+                templateUrl: 'Presentation/ngApp/views/contractorList.html',
                 controller: MrConstruction.Controllers.ContractorListController,
                 controllerAs: 'controller'
             });
