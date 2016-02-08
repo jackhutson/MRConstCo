@@ -247,8 +247,10 @@
     <Compile Include="Services\Models\JobDetailDTO.cs" />
     <Compile Include="Services\JobService.cs" />
     <Compile Include="Services\Models\JobListDTO.cs" />
+    <Compile Include="Services\Models\NewProjectDTO.cs" />
     <Compile Include="Services\Models\ProjectDTO.cs" />
     <Compile Include="Services\Models\ContractorUserDTO.cs" />
+    <Compile Include="Services\Models\UploadDTO.cs" />
     <Compile Include="Services\ProjectService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
