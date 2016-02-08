@@ -1,5 +1,5 @@
 ﻿namespace MrConstruction.Controllers {
-    export class ProjectDetailsController {
+    export class ProjectController {
         public projects;
         constructor(private $http: ng.IHttpService) {
             $http.get('/api/project')
