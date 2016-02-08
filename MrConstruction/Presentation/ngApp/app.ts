@@ -28,7 +28,7 @@
             $httpProvider.interceptors.push('authInterceptor');
 
             $routeProvider.when('/contractors', {
-                templateUrl: 'Presentation.ngApp.views.contractorList.html',
+                templateUrl: 'Presentation/ngApp/views/contractorList.html',
                 controller: MrConstruction.Controllers.ContractorListController,
                 controllerAs: 'controller'
             });
@@ -41,21 +41,21 @@
             $routeProvider.when('/login', {
                 templateUrl: 'Presentation/ngApp/views/login.html',
                 controller: MrConstruction.Controllers.AuthController,
-                controllerAs: 'controller'  
+                controllerAs: 'controller'
 
             });
-
             $routeProvider
                 .when('/newproject', {
-                    template: '/Presentation/ngApp/views/newProject.html',
+                    templateUrl: '/Presentation/ngApp/views/newProject.html',
                     controller: MrConstruction.Controllers.NewProjectController,
                     controllerAs: 'controller'
                 });
             $routeProvider
-                .when('/projectList', {
-                    template: '/Presentation/ngApp/views/newProject.html',
-                    controller: MrConstruction.Controllers.ProjectController,
+                .when('/taskdetails', {
+                    templateUrl: '/Presentation/ngApp/views/taskDetails.html',
+                    controller: MrConstruction.Controllers.TaskDetailsController,
                     controllerAs: 'controller'
                 });
         });
 }
+
