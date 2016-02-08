@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201602081752558_initial.Designer.cs">
       <DependentUpon>201602081752558_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602081950029_edited ApplicationDbContext.cs" />
+    <Compile Include="Migrations\201602081950029_edited ApplicationDbContext.Designer.cs">
+      <DependentUpon>201602081950029_edited ApplicationDbContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -333,6 +337,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602081752558_initial.resx">
       <DependentUpon>201602081752558_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602081950029_edited ApplicationDbContext.resx">
+      <DependentUpon>201602081950029_edited ApplicationDbContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
