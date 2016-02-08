@@ -41,10 +41,9 @@
             $routeProvider.when('/login', {
                 templateUrl: 'Presentation/ngApp/views/login.html',
                 controller: MrConstruction.Controllers.AuthController,
-                controllerAs: 'controller'  
+                controllerAs: 'controller'
 
             });
-
             $routeProvider
                 .when('/newproject', {
                     templateUrl: '/Presentation/ngApp/views/newProject.html',
