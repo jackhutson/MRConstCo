@@ -214,6 +214,7 @@
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\ContractorRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
+    <Compile Include="Infrastructure\JobRepository.cs" />
     <Compile Include="Migrations\201602081752558_initial.cs" />
     <Compile Include="Infrastructure\ProjectRepository.cs" />
     <Compile Include="Migrations\201602081752558_initial.Designer.cs">
@@ -227,6 +228,10 @@
     <Compile Include="Migrations\201602082016468_resolved build errors.Designer.cs">
       <DependentUpon>201602082016468_resolved build errors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602082135412_fixed job model.cs" />
+    <Compile Include="Migrations\201602082135412_fixed job model.Designer.cs">
+      <DependentUpon>201602082135412_fixed job model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -234,6 +239,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Controllers\JobsController.cs" />
     <Compile Include="Presentation\Controllers\ProjectController.cs" />
     <Compile Include="Presentation\Extensions\ApiControllerExtensions.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
@@ -242,9 +248,13 @@
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
     <Compile Include="Services\ContractorService.cs" />
+    <Compile Include="Services\Models\JobDetailDTO.cs" />
+    <Compile Include="Services\JobService.cs" />
     <Compile Include="Services\Models\JobListDTO.cs" />
+    <Compile Include="Services\Models\NewProjectDTO.cs" />
     <Compile Include="Services\Models\ProjectDTO.cs" />
     <Compile Include="Services\Models\ContractorUserDTO.cs" />
+    <Compile Include="Services\Models\UploadDTO.cs" />
     <Compile Include="Services\ProjectService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -271,6 +281,7 @@
     <Content Include="Presentation\ngApp\views\newProject.html" />
     <Content Include="Presentation\ngApp\views\contractorList.html" />
     <Content Include="Presentation\ngApp\views\projectDetails.html" />
+    <Content Include="Presentation\ngApp\views\taskDetails.html" />
     <Content Include="Presentation\ngApp\views\projectList.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
@@ -327,6 +338,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\taskDetailsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\directives\multipartUpload.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
@@ -351,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602082016468_resolved build errors.resx">
       <DependentUpon>201602082016468_resolved build errors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602082135412_fixed job model.resx">
+      <DependentUpon>201602082135412_fixed job model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
