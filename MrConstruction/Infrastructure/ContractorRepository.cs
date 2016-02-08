@@ -13,5 +13,10 @@ namespace MrConstruction.Infrastructure {
         public ContractorRepository(DbContext db) {
             _db = (ApplicationDbContext)db;
         }
+
+        public IQueryable<ContractorUser> GetContractors() {
+            return from c in _db.Contractors
+                   select c;
+        }
     }
 }

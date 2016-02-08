@@ -1,4 +1,5 @@
 ﻿using MrConstruction.Infrastructure;
+using MrConstruction.Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,12 @@ namespace MrConstruction.Services {
             _contractorRepo = contractorRepo;
         }
 
-
+        public IList<ContractorUserDTO> GetContractors() {
+            var contractors = _contractorRepo.GetContractors();
+            return (from c in contractors
+                    select new ContractorUserDTO() {
+                        Name = c.Name,
+                    }).ToList();
+        }
     }
 }

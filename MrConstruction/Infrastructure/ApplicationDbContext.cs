@@ -16,6 +16,8 @@ namespace MrConstruction.Infrastructure {
             return new ApplicationDbContext();
         }
 
+        public IDbSet<ContractorUser> Contractors { get; set; } 
+
         public IDbSet<Client> Clients { get; set; }
 
         public IDbSet<Job> Jobs { get; set; }
@@ -24,7 +26,7 @@ namespace MrConstruction.Infrastructure {
 
         public IDbSet<Portfolio> Portfolios { get; set; }
         
-        public IDbSet<Project> Project { get; set; }
+        public IDbSet<Project> Projects { get; set; }
 
         public IDbSet<Upload> Uploads { get; set; }
     }
