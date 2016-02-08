@@ -244,6 +244,8 @@
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
     <Compile Include="Services\ContractorService.cs" />
+    <Compile Include="Services\Models\JobDetailDTO.cs" />
+    <Compile Include="Services\JobService.cs" />
     <Compile Include="Services\Models\JobListDTO.cs" />
     <Compile Include="Services\Models\ProjectDTO.cs" />
     <Compile Include="Services\Models\ContractorUserDTO.cs" />
