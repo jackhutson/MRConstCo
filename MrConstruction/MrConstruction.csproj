@@ -213,7 +213,11 @@
     <Compile Include="Domain\Upload.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
+    <Compile Include="Migrations\201602081752558_initial.cs" />
     <Compile Include="Infrastructure\ProjectRepository.cs" />
+    <Compile Include="Migrations\201602081752558_initial.Designer.cs">
+      <DependentUpon>201602081752558_initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
@@ -249,6 +253,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\newProject.html" />
+    <Content Include="Presentation\ngApp\views\contractorList.html" />
+    <Content Include="Presentation\ngApp\views\projectDetails.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -316,6 +322,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602081752558_initial.resx">
+      <DependentUpon>201602081752558_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
