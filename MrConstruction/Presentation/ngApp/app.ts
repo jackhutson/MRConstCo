@@ -27,18 +27,20 @@
 
             $httpProvider.interceptors.push('authInterceptor');
 
-<<<<<<< HEAD
+
             $routeProvider.when('/projectList', {
                 templateUrl: 'Presentation/ngApp/views/projectDetails.html',
                 controller: MrConstruction.Controllers.ProjectDetailsController,
                 controllerAs: 'controller'
-=======
+            });
+
             $routeProvider.when('/login', {
                 templateUrl: 'Presentation/ngApp/views/login.html',
                 controller: MrConstruction.Controllers.AuthController,
                 controllerAs: 'controller'  
->>>>>>> 39909f4a2305ac2aba0c9f6c8b2fc3ff4841c25e
+
             });
+
             $routeProvider
                 .when('/newproject', {
                     template: '/Presentation/ngApp/views/newProject.html',
