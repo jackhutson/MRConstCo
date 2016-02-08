@@ -252,6 +252,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\newProject.html" />
     <Content Include="Presentation\ngApp\views\contractorList.html" />
     <Content Include="Presentation\ngApp\views\projectDetails.html" />
