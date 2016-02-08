@@ -23,7 +23,8 @@ namespace MrConstruction {
 
             bundles.Add(new ScriptBundle("~/angular/core").Include(
                       "~/Scripts/angular.js",
-                      "~/Scripts/angular-route.js"));
+                      "~/Scripts/angular-route.js",
+                      "~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
 
             bundles.Add(new ScriptBundle("~/angular/app")
                 .Include("~/Presentation/ngApp/app.js")
