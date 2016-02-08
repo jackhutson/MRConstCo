@@ -57,5 +57,12 @@
                     controller: MrConstruction.Controllers.ProjectController,
                     controllerAs: 'controller'
                 });
+
+            $routeProvider
+                .when('/newContractor', {
+                    template: '/Presentation/ngApp/views/newContractor.html',
+                    controller: MrConstruction.Controllers.AuthController,
+                    controllerAs: 'controller'
+                });
         });
 }
