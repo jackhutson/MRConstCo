@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201602082016468_resolved build errors.Designer.cs">
       <DependentUpon>201602082016468_resolved build errors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602082135412_fixed job model.cs" />
+    <Compile Include="Migrations\201602082135412_fixed job model.Designer.cs">
+      <DependentUpon>201602082135412_fixed job model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -358,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602082016468_resolved build errors.resx">
       <DependentUpon>201602082016468_resolved build errors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602082135412_fixed job model.resx">
+      <DependentUpon>201602082135412_fixed job model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
