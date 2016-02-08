@@ -213,6 +213,7 @@
     <Compile Include="Domain\Upload.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
+    <Compile Include="Infrastructure\JobRepository.cs" />
     <Compile Include="Migrations\201602081752558_initial.cs" />
     <Compile Include="Infrastructure\ProjectRepository.cs" />
     <Compile Include="Migrations\201602081752558_initial.Designer.cs">
@@ -224,6 +225,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Controllers\JobsController.cs" />
     <Compile Include="Presentation\Controllers\ProjectController.cs" />
     <Compile Include="Presentation\Extensions\ApiControllerExtensions.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
@@ -231,6 +233,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
+    <Compile Include="Services\JobDetailDTO.cs" />
+    <Compile Include="Services\JobService.cs" />
     <Compile Include="Services\ProjectService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -256,6 +260,7 @@
     <Content Include="Presentation\ngApp\views\newProject.html" />
     <Content Include="Presentation\ngApp\views\contractorList.html" />
     <Content Include="Presentation\ngApp\views\projectDetails.html" />
+    <Content Include="Presentation\ngApp\views\taskDetails.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -309,6 +314,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\taskDetailsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\directives\multipartUpload.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />

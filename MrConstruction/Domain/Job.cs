@@ -18,7 +18,7 @@ namespace MrConstruction.Domain
 
         public decimal Estimate { get; set; }
 
-        public string Contractor { get; set; }
+        public ContractorUser Contractor { get; set; }
 
         public Project.Status State { get; set; }
 
