@@ -8,7 +8,17 @@ namespace MrConstruction.Domain
     public class Job : IDbEntity, IActivatable
     {
 
+        public enum Status {
+            ToDo,
+            AwaitingEstimate,
+            InProgress,
+            PendingReview,
+            Completed
+        }
+
         public int Id { get; set; }
+
+        public bool Active { get; set; }
 
         public string Name { get; set; }
 
@@ -18,22 +28,11 @@ namespace MrConstruction.Domain
 
         public string Contractor { get; set; }
 
-        public enum Status
-        {
-            ToDo,
-            AwaitingEstimate,
-            InProgress,
-            PendingReview,
-            Completed
-        }
+        public Status State { get; set; }
 
         public DateTime Deadline { get; set; }
 
-        public Location Location { get; set; }
-
         public Project Project { get; set; }
-
-        public bool Active { get; set; }
 
     }
 }
