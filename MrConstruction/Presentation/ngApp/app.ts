@@ -29,7 +29,7 @@
 
             $routeProvider
                 .when('/newproject', {
-                    template: '/Presentation/ngApp/views/newProject.html',
+                    templateUrl: '/Presentation/ngApp/views/newProject.html',
                     controller: MrConstruction.Controllers.NewProjectController,
                     controllerAs: 'controller'
             });
