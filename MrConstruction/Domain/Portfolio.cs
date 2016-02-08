@@ -15,3 +15,4 @@ namespace MrConstruction.Domain {
         public bool Active { get; set; } = true;
     }
 }
+
