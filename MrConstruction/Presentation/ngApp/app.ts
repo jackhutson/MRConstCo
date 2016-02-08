@@ -28,5 +28,11 @@
             $httpProvider.interceptors.push('authInterceptor');
 
             $routeProvider.when('/', { template: 'Hello World!' });
+
+            $routeProvider.when('/contractors', {
+                templateUrl: 'Presentation.ngApp.views.contractorList.html',
+                controller: MrConstruction.Controllers.ContractorListController,
+                controllerAs: 'controller'
+            });
         });
 }
