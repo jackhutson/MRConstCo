@@ -27,6 +27,10 @@
 
             $httpProvider.interceptors.push('authInterceptor');
 
-            $routeProvider.when('/', { template: 'Hello World!' });
+            $routeProvider.when('/projectList', {
+                templateUrl: 'Presentation/ngApp/views/projectDetails.html',
+                controller: MrConstruction.Controllers.ProjectDetailsController,
+                controllerAs: 'controller'
+            });
         });
 }
