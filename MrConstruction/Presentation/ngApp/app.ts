@@ -1,6 +1,6 @@
 ﻿namespace MrConstruction {
     
-    angular.module('MrConstruction', ['ngRoute']);
+    angular.module('MrConstruction', ['ngRoute', 'ui.bootstrap']);
 
     angular.module('MrConstruction').factory('authInterceptor',
         ($q: ng.IQService, $window: ng.IWindowService, $location: ng.ILocationService) => {
@@ -27,6 +27,11 @@
 
             $httpProvider.interceptors.push('authInterceptor');
 
-            $routeProvider.when('/', { template: 'Hello World!' });
+            $routeProvider
+                .when('/newproject', {
+                    template: '/Presentation/ngApp/views/newProject.html',
+                    controller: MrConstruction.Controllers.NewProjectController,
+                    controllerAs: 'controller'
+            });
         });
 }
