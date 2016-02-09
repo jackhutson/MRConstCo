@@ -29,10 +29,10 @@ namespace MrConstruction.Migrations {
             var rm = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
 
             //foreach(var role in Enum.GetNames(typeof(Roles))) {
-            if (rm.RoleExists(Role.Admin)) {
+            if (!rm.RoleExists(Role.Admin)) {
                 rm.Create(new IdentityRole(Role.Admin));
-            };
-            if (rm.RoleExists(Role.Contractor)) {
+            }
+            if (!rm.RoleExists(Role.Contractor)) {
                 rm.Create(new IdentityRole(Role.Contractor));
             }
             //}
