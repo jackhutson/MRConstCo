@@ -3,15 +3,15 @@
 
         public project;
 
-        constructor(private $http: ng.IHttpService) { }
+        constructor(private $http: ng.IHttpService, private $location: ng.ILocationService) { }
 
-        public newProject() {
-            this.$http.post('/api/project', {
-
-            }).then((response) => {
-
+        public newProject(project) {
+            this.$http.post('/api/project', project
+            ).then((response) => {
+                this.$location.path("#/projectDetails")
+                console.log("post successful");
             }).catch((response) => {
-
+                console.log(`uh oh, error ${response}`);
             });
         }
     }
