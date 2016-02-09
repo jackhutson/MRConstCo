@@ -238,6 +238,10 @@
     <Compile Include="Migrations\201602091645111_Updated domain models.Designer.cs">
       <DependentUpon>201602091645111_Updated domain models.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602092233179_modified project model to set active to true by default.cs" />
+    <Compile Include="Migrations\201602092233179_modified project model to set active to true by default.Designer.cs">
+      <DependentUpon>201602092233179_modified project model to set active to true by default.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -247,7 +251,6 @@
     </Compile>
     <Compile Include="Presentation\Controllers\JobsController.cs" />
     <Compile Include="Presentation\Controllers\ProjectController.cs" />
-    <Compile Include="Presentation\Controllers\ProjectDetailsController.cs" />
     <Compile Include="Presentation\Extensions\ApiControllerExtensions.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
@@ -290,6 +293,7 @@
     <Content Include="Presentation\ngApp\views\newContractor.html" />
     <Content Include="Presentation\ngApp\views\newProject.html" />
     <Content Include="Presentation\ngApp\views\contractorList.html" />
+    <Content Include="Presentation\ngApp\views\newTask.html" />
     <Content Include="Presentation\ngApp\views\projectDetails.html" />
     <Content Include="Presentation\ngApp\views\taskDetails.html" />
     <Content Include="Presentation\ngApp\views\projectList.html" />
@@ -346,6 +350,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\newJobController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectDetailsController.ts" />
@@ -383,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602091645111_Updated domain models.resx">
       <DependentUpon>201602091645111_Updated domain models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602092233179_modified project model to set active to true by default.resx">
+      <DependentUpon>201602092233179_modified project model to set active to true by default.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

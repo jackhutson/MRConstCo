@@ -6,6 +6,7 @@
         constructor(private $http: ng.IHttpService, private $location: ng.ILocationService) { }
 
         public newProject(project) {
+            console.log(project);
             this.$http.post('/api/project', project
             ).then((response) => {
                 this.$location.path("#/projectDetails")
