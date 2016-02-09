@@ -14,7 +14,7 @@ namespace MrConstruction.Services.Models
             _jobRepo = jobRepo;
         }
 
-        public IList<JobDetailDTO> GetJobDetails() {
+        public JobDetailDTO GetJobDetails() {
             return (from j in _jobRepo.GetJobDetails()
                     select new JobDetailDTO()
                     {
@@ -26,7 +26,7 @@ namespace MrConstruction.Services.Models
                         Name = j.Name,
                         Project = j.Project,
                         Status = j.State
-                    }).ToList();
+                    }).FirstOrDefault();
                     
         } 
     }

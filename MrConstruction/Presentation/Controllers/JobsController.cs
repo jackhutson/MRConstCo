@@ -19,7 +19,7 @@ namespace MrConstruction.Presentation.Controllers
         }
 
         [HttpGet]
-        public IList<JobDetailDTO> GetJobDetails()
+        public JobDetailDTO Get()
         {
            return _jobService.GetJobDetails();
         }

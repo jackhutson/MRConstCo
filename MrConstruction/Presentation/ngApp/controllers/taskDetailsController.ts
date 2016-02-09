@@ -3,13 +3,13 @@
     export class TaskDetailsController {
 
 
-        public tasks;
+        public task;
 
         constructor(private $http: ng.IHttpService) {
 
             $http.get('/api/jobs')
                 .then((response) => {
-                    this.tasks = response.data;
+                    this.task = response.data;
                 });
         }
     }
