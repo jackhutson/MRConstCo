@@ -6,6 +6,7 @@ using System.Web;
 
 namespace MrConstruction.Services.Models {
     public class JobListDTO {
+        public int Id { get; set; }
         public string Name { get; set; }
         public decimal Estimate { get; set; }
         public Project.Status State { get; set; }

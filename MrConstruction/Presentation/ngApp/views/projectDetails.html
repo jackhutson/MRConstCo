@@ -1,15 +1,19 @@
-﻿<div>
-    <h1>{{}}</h1>
+﻿
+<div>
+    <h1>{{controller.project.title}}</h1>
     <input type="submit" value="upload" />
 </div>
 
 
     <div class="row">
-        <div class="col-md-2" ng-repeat="">
-            <img ng-src="" />
-        </div>
         <div class="col-md-12">
-            
+            {{controller.project.description}}
+        </div>
+        <div class="col-md-12" ng-repeat="job in controller.project.jobList">
+            {{job.name}}
+            {{job.deadline}}
+            {{job.estimate}}
+
         </div>
     </div>
 
