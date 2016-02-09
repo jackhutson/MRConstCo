@@ -1,21 +1,24 @@
-﻿using MrConstruction.Infrastructure;
+﻿using MrConstruction.Domain.Identity;
+using MrConstruction.Infrastructure;
 using MrConstruction.Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 
 namespace MrConstruction.Services {
     public class ContractorService {
 
-        private ContractorRepository _contractorRepo;
+        private UserRepository _userRepo;
 
-        public ContractorService(ContractorRepository contractorRepo) {
-            _contractorRepo = contractorRepo;
+        public ContractorService(UserRepository userRepo) {
+            _userRepo = userRepo;
         }
 
+        [Authorize(Roles="Admin")]
         public IList<ContractorUserDTO> GetContractors() {
-            var contractors = _contractorRepo.GetContractors();
+            var contractors = _userRepo.GetContractors();
             return (from c in contractors
                     select new ContractorUserDTO() {
                         Name = c.Name,

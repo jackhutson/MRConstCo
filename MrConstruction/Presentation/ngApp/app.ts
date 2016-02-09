@@ -59,7 +59,7 @@
 
             $routeProvider
                 .when('/newContractor', {
-                    template: '/Presentation/ngApp/views/newContractor.html',
+                    templateUrl: '/Presentation/ngApp/views/newContractor.html',
                     controller: MrConstruction.Controllers.AuthController,
                     controllerAs: 'controller'
                 });
