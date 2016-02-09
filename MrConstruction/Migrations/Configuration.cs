@@ -1,4 +1,7 @@
 namespace MrConstruction.Migrations {
+    using Domain.Identity;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -22,6 +25,21 @@ namespace MrConstruction.Migrations {
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            var rm = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+
+            //foreach(var role in Enum.GetNames(typeof(Roles))) {
+            if (rm.RoleExists(Role.Admin)) {
+                rm.Create(new IdentityRole(Role.Admin));
+            };
+            if (rm.RoleExists(Role.Contractor)) {
+                rm.Create(new IdentityRole(Role.Contractor));
+            }
+            //}
+
+
+            context.SaveChanges();
+
         }
     }
 }

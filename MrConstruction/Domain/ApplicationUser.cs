@@ -17,5 +17,10 @@ namespace MrConstruction.Domain {
             return userIdentity;
         }
 
+        public string Name { get; set; }
+        public string Title { get; set; }
+        public string CompanyName { get; set; }
+        public IList<Job> JobList { get; set; }
+        public string PhoneNumber2 { get; set; }
     }
 }
