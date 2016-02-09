@@ -25,6 +25,7 @@ namespace MrConstruction.Services {
                             EstCompleted = p.EstCompleted,
                             JobList = (from j in p.JobList
                                        select new JobListDTO() {
+                                           Id = j.Id,
                                            Name = j.Name,
                                            State = j.State,
                                            Deadline = j.Deadline,
@@ -34,9 +35,9 @@ namespace MrConstruction.Services {
             return list;
         }
         public ProjectDTO GetOneProject(int id) {
-            var list = (from p in _projectRepo.GetProjects()
-                        where p.Id == id
+            var single = (from p in _projectRepo.Get(id)
                         select new ProjectDTO() {
+                            Id = p.Id,
                             Title = p.Title,
                             Description = p.Description,
                             Budget = p.Budget,
@@ -46,13 +47,14 @@ namespace MrConstruction.Services {
                             EstCompleted = p.EstCompleted,
                             JobList = (from j in p.JobList
                                        select new JobListDTO() {
+                                           Id = j.Id,
                                            Name = j.Name,
                                            State = j.State,
                                            Deadline = j.Deadline,
                                            Estimate = j.Estimate
                                        }).ToList(),
                         }).FirstOrDefault();
-            return list;
+            return single;
         }
 
         //To check if the project exists

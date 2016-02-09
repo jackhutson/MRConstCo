@@ -1,10 +1,10 @@
 ﻿namespace MrConstruction.Controllers {
     export class ProjectDetailsController {
-        public projects;
+        public project;
         constructor(private $http: ng.IHttpService, private $routeParams) {
             $http.get(`/api/projectDetails/${$routeParams.id}`)
                 .then((response) => {
-                    this.projects = response.data;
+                    this.project = response.data;
                 });
         }
     }
