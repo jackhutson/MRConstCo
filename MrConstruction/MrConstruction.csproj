@@ -288,6 +288,7 @@
     <Content Include="Presentation\ngApp\views\newContractor.html" />
     <Content Include="Presentation\ngApp\views\newProject.html" />
     <Content Include="Presentation\ngApp\views\contractorList.html" />
+    <Content Include="Presentation\ngApp\views\newTask.html" />
     <Content Include="Presentation\ngApp\views\projectDetails.html" />
     <Content Include="Presentation\ngApp\views\taskDetails.html" />
     <Content Include="Presentation\ngApp\views\projectList.html" />
@@ -344,6 +345,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\newJobController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectDetailsController.ts" />

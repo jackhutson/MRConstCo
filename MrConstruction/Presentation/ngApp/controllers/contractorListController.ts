@@ -11,4 +11,6 @@
                 });
         }
     }
+
+    angular.module('MrConstruction').controller('contractorListController', ContractorListController);
 }

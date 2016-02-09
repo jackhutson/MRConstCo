@@ -1,5 +1,5 @@
 ﻿namespace MrConstruction {
-    
+
     angular.module('MrConstruction', ['ngRoute', 'ui.bootstrap']);
 
     angular.module('MrConstruction').factory('authInterceptor',
@@ -60,12 +60,19 @@
                 templateUrl: 'Presentation/ngApp/views/projectDetails.html',
                 controller: MrConstruction.Controllers.ProjectDetailsController,
                 controllerAs: 'controller'
-            });
+                });
 
             $routeProvider
                 .when('/newContractor', {
                     templateUrl: '/Presentation/ngApp/views/newContractor.html',
                     controller: MrConstruction.Controllers.AuthController,
+                    controllerAs: 'controller'
+                });
+
+            $routeProvider
+                .when('/projectDetails/newTask', {
+                    templateUrl: '/Presentation/ngApp/views/newTask.html',
+                    controller: MrConstruction.Controllers.NewJobController,
                     controllerAs: 'controller'
                 });
         });
