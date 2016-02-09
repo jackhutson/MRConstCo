@@ -56,5 +56,10 @@ namespace MrConstruction.Services {
                         }).FirstOrDefault();
             return single;
         }
+
+        //To check if the project exists
+        public bool CheckExists(int id) {
+            return _projectRepo.CheckExists(id);
+        }
     }
 }
