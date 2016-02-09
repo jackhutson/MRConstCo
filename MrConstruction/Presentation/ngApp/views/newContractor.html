@@ -1,0 +1,18 @@
+﻿<div class="row">
+    <div class="row">
+        <form ng-submit="controller.register(user)">
+            <h1>Add New Contractor</h1>
+            <input placeholder="User Name" type="text" class="form-control" ng-model="user.userName" />
+            <input placeholder="Email" type="text" class="form-control" ng-model="user.email" />
+            <input placeholder="Password" type="password" class="form-control" ng-model="user.password" />
+            <input placeholder="Retype Password" type="password" class="form-control" ng-model="user.confirmPassword" />
+            <input placeholder="Name" type="text" class="form-control" ng-model="user.name" />
+            <input placeholder="Title" type="text" class="form-control" ng-model="user.title" />
+            <input placeholder="Company Name" type="text" class="form-control" ng-model="user.companyName" />
+            <input placeholder="Phone Number" type="text" class="form-control" ng-model="user.phoneNumber" />
+            <input placeholder="Phone Number #2" type="text" class="form-control" ng-model="user.phoneNumber2" />
+            <input type="submit" ng-href="#/contractors" class="btn btn-success" value="Add" />
+            <a href="#/contractors">Cancel</a>
+        </form>
+    </div>
+</div>

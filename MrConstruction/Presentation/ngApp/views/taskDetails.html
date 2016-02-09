@@ -1,29 +1,29 @@
 ﻿<div class="row">
     <div class="col-md-offset-3 col-md-6 col-md-offset-3">
-        <h1>{{controller.name}}</h1>
+        <h1>{{controller.task.name}}</h1>
     </div>
     <div class="col-md-offset-3 col-md-6 col-md-offset-3">
         {{controller.project}}
     </div>
 
     <div class="col-md-offset-3 col-md-6 col-md-offset-3">
-        {{controller.contractor}}
+        {{controller.task.contractor}}
     </div>
     <hr />
     <div class="col-md-offset-3 col-md-9">
-        {{controller.contractor.companyName}}
+        {{controller.task.contractor.companyName}}
     </div>
     <div class="col-md-3">
-        {{controller.estimate}}
+        {{controller.task.estimate}}
     </div>
     <div class="col-md-offset-6 col-md-3">
-        {{controller.deadline}}
+        {{controller.task.deadline}}
     </div>
     <div class="row">
-        {{controller.description}}
+        {{controller.task.description}}
     </div>
     <div class="row">
-        {{controller.status}}
+        {{controller.task.status}}
     </div>
     
     

@@ -14,9 +14,7 @@ namespace MrConstruction.Infrastructure {
 
         public static ApplicationDbContext Create() {
             return new ApplicationDbContext();
-        }
-
-        public IDbSet<ContractorUser> Contractors { get; set; } 
+        } 
 
         public IDbSet<Client> Clients { get; set; }
 

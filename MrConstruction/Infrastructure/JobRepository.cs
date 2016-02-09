@@ -11,12 +11,6 @@ namespace MrConstruction.Infrastructure
     {
         public JobRepository(DbContext db) : base(db) { }
 
-        public IQueryable<Job> GetJobDetails()
-        {
-            return from j in Table
-                   where j.Active
-                   select j;
-        }
     }
 }
 
