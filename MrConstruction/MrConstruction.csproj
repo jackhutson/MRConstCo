@@ -234,6 +234,10 @@
     <Compile Include="Migrations\201602090034033_Added Roles.Designer.cs">
       <DependentUpon>201602090034033_Added Roles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602091645111_Updated domain models.cs" />
+    <Compile Include="Migrations\201602091645111_Updated domain models.Designer.cs">
+      <DependentUpon>201602091645111_Updated domain models.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -374,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602090034033_Added Roles.resx">
       <DependentUpon>201602090034033_Added Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602091645111_Updated domain models.resx">
+      <DependentUpon>201602091645111_Updated domain models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
