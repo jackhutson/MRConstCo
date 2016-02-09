@@ -1,5 +1,6 @@
 ﻿namespace MrConstruction.Directives {
 
+// <input type="file" file-model="upload.file" />
     angular.module('MrConstruction').directive('fileModel', function ($parse, $http) {
         return {
             restrict: 'A',
