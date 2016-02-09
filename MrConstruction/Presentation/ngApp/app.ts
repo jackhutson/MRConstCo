@@ -33,7 +33,7 @@
                 controllerAs: 'controller'
             });
             $routeProvider.when('/projectList', {
-                templateUrl: 'Presentation/ngApp/views/projectDetails.html',
+                templateUrl: 'Presentation/ngApp/views/projectList.html',
                 controller: MrConstruction.Controllers.ProjectController,
                 controllerAs: 'controller'
             });
@@ -56,7 +56,7 @@
                     controller: MrConstruction.Controllers.TaskDetailsController,
                     controllerAs: 'controller'
                 });
-            $routeProvider.when('/projectDetails', {
+            $routeProvider.when('/projectDetails/:id', {
                 templateUrl: 'Presentation/ngApp/views/projectDetails.html',
                 controller: MrConstruction.Controllers.ProjectDetailsController,
                 controllerAs: 'controller'
