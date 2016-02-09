@@ -28,7 +28,7 @@ namespace MrConstruction.Presentation.Controllers
         [HttpPost]
         public IHttpActionResult Post(NewProjectDTO newProject) {
             _projectServ.AddNewProject(newProject);
-            if (ModelState.IsValid) {
+            if (ModelState.IsValid && _projectServ.CheckExists(newProject.Title)) {
                 return Ok();
             } else
                 return BadRequest();

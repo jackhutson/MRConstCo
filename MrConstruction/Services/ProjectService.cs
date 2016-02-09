@@ -62,6 +62,9 @@ namespace MrConstruction.Services {
             return _projectRepo.CheckExists(id);
         }
 
+        public bool CheckExists(string title) {
+            return _projectRepo.CheckExists(title);
+        }
         public void AddNewProject(NewProjectDTO newProject) {
 
             var project = new Project() {
