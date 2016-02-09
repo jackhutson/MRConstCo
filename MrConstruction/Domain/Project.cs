@@ -15,7 +15,7 @@ namespace MrConstruction.Domain {
         }
 
         public int Id { get; set; }
-        public bool Active { get; set; }
+        public bool Active { get; set; } = true;
         public string Title { get; set; }
         public string Description { get; set; }
         public Client Client { get; set; }

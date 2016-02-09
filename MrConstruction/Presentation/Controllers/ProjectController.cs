@@ -27,7 +27,11 @@ namespace MrConstruction.Presentation.Controllers
         }
         [HttpPost]
         public IHttpActionResult Post(NewProjectDTO newProject) {
-            return _projectServ.AddNewProject(newProject);
+            _projectServ.AddNewProject(newProject);
+            if (ModelState.IsValid) {
+                return Ok();
+            } else
+                return BadRequest();
         }
     }
 }
