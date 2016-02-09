@@ -3,17 +3,35 @@
         <h1>Create New Project</h1>
     </div>
     <hr />
-    <form class="form-group">
+    <form class="form-group" ng-submit="controller.newProject(project)">
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="Title">Title</label>
-                <input class="form-control" type="text" placeholder="project name" />
+                <input class="form-control" type="text" placeholder="project name" ng-model="project.title"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
+                <label for="clientEmail">Budget</label>
+                <input type="number" class="form-control" placeholder=10,000 ng-model="project.budget"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-11 projectform">
+                <label for="estimatedStartDate">Estimated Start Date</label>
+                <input type="date" class="form-control" ng-model="project.estStart"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-11 projectform">
+                <label for="estimatedCompletedDate">Estimated Completed Date</label>
+                <input type="date" class="form-control" ng-model="project.estCompleted"/>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="projectDescription">Description</label>
-                <textarea style="padding-bottom: 100px" class="form-control" type="text" placeholder="short description of the project"></textarea>
+                <textarea ng-model="project.description" style="padding-bottom: 100px" class="form-control" type="text" placeholder="short description of the project"></textarea>
             </div>
         </div>
         <hr />
@@ -21,49 +39,31 @@
             <h2>Client Details</h2>
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="clientName">Name</label>
-                <input type="text" class="form-control" placeholder="client's name" />
+                <input type="text" class="form-control" placeholder="client's name" ng-model="project.client.name"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="clientPhoneOne">Contact Phone Number 1</label>
-                <input type="text" class="form-control" placeholder="(888) 888-8888" />
+                <input type="text" class="form-control" placeholder="(888) 888-8888" ng-model="project.client.phoneNumber"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="clientPhoneOne">Contact Phone Number 2</label>
-                <input type="text" class="form-control" placeholder="(888) 888-8888" />
+                <input type="text" class="form-control" placeholder="(888) 888-8888" ng-model="project.client.phoneNumber2"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="clientEmail">Email</label>
-                <input type="email" class="form-control" placeholder="example@example.com" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-offset-1 col-md-11 projectform">
-                <label for="clientEmail">Budget</label>
-                <input type="number" class="form-control" placeholder=10,000 />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-offset-1 col-md-11 projectform">
-                <label for="clientEmail">Estimated Start Date</label>
-                <input type="date" class="form-control"/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-offset-1 col-md-11 projectform">
-                <label for="clientEmail">Estimated </label>
-                <input type="date" class="form-control"/>
+                <input type="email" class="form-control" placeholder="example@example.com" ng-model="project.client.email"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="projectDescription">Client Notes</label>
-                <textarea style="padding-bottom: 100px" class="form-control" type="text" placeholder="client notes"></textarea>
+                <textarea style="padding-bottom: 100px" class="form-control" type="text" placeholder="client notes" ng-model="project.client.description"></textarea>
             </div>
         </div>
         <hr />
@@ -73,31 +73,31 @@
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="clientStreetOne">Street One</label>
-                <input type="text" class="form-control" placeholder="1100 Example St." />
+                <input type="text" class="form-control" placeholder="1100 Example St." ng-model="project.client.location.street1"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="clientStreetTwo">Street Two</label>
-                <input type="text" class="form-control" placeholder="1101 Example St. (Optional)" />
+                <input type="text" class="form-control" placeholder="1101 Example St. (Optional)" ng-model="project.client.location.street2"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="city">City</label>
-                <input type="text" class="form-control" placeholder="City" />
+                <input type="text" class="form-control" placeholder="City" ng-model="project.client.location.city" />
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="state">State</label>
-                <input type="text" class="form-control" placeholder="State" />
+                <input type="text" class="form-control" placeholder="State" ng-model="project.client.location.state"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-11 projectform">
                 <label for="Country">Country</label>
-                <input type="text" class="form-control" placeholder="Country (ex. US)" />
+                <input type="text" class="form-control" placeholder="Country (ex. US)" ng-model="project.client.location.country" />
             </div>
         </div>
     </form>
