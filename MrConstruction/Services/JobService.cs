@@ -46,7 +46,7 @@ namespace MrConstruction.Services.Models
         } 
 
         //Add a new job
-        public JobDetailDTO AddJob(JobDetailDTO dto, int id, string id2, string username) {
+        public JobDetailDTO AddJob(JobDetailDTO dto, int id, string id2) {
 
             var contractor = _appUserRepo.FindById(id2);
             var project = _projectRepo.Get(id).FirstOrDefault();
