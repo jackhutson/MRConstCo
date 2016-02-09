@@ -7,19 +7,21 @@
     </div>
 </div>
 
-<div class="row" ng-repeat="project in controller.projects">
+<div class="row" ng-repeat="project in controller.projects" ng-href="#/projectDetails/{{project.id}}">
     <div class="col-md-12">
-    <div class="col-md-12">
-        {{project.title}}
-    </div>
-    <div class="col-md-4">
-        {{project.budget}}
-    </div>
+        <div class="col-md-12">
+            {{project.title}}
+        </div>
+        <div class="col-md-4">
+            {{project.budget}}
+        </div>
         <div class="col-md-4">
             {{project.state}}
         </div>
         <div class="col-md-4">
             {{project.description}}
         </div>
-         </div>
+    </div>
 </div>
+
+

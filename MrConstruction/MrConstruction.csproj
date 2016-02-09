@@ -234,6 +234,10 @@
     <Compile Include="Migrations\201602090034033_Added Roles.Designer.cs">
       <DependentUpon>201602090034033_Added Roles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602091645111_Updated domain models.cs" />
+    <Compile Include="Migrations\201602091645111_Updated domain models.Designer.cs">
+      <DependentUpon>201602091645111_Updated domain models.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -243,6 +247,7 @@
     </Compile>
     <Compile Include="Presentation\Controllers\JobsController.cs" />
     <Compile Include="Presentation\Controllers\ProjectController.cs" />
+    <Compile Include="Presentation\Controllers\ProjectDetailsController.cs" />
     <Compile Include="Presentation\Extensions\ApiControllerExtensions.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
@@ -343,6 +348,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectDetailsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\taskDetailsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\directives\multipartUpload.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602090034033_Added Roles.resx">
       <DependentUpon>201602090034033_Added Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602091645111_Updated domain models.resx">
+      <DependentUpon>201602091645111_Updated domain models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
