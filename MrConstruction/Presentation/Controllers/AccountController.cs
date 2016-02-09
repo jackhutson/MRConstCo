@@ -17,6 +17,7 @@ using MrConstruction.Models;
 using MrConstruction.Providers;
 using MrConstruction.Results;
 using MrConstruction.Domain;
+using MrConstruction.Domain.Identity;
 
 namespace MrConstruction.Controllers {
     [Authorize]
@@ -273,9 +274,9 @@ namespace MrConstruction.Controllers {
             return logins;
         }
 
-        // POST api/Account/Register
-        [AllowAnonymous]
+        // POST api/Account/Registers
         [Route("Register")]
+        [Authorize(Roles=Role.Admin)]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model) {
             if (!ModelState.IsValid) {
                 return BadRequest(ModelState);
@@ -284,6 +285,7 @@ namespace MrConstruction.Controllers {
             var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+            result = await UserManager.AddToRoleAsync(user.Id, Role.Contractor);
 
             if (!result.Succeeded) {
                 return GetErrorResult(result);
@@ -305,10 +307,11 @@ namespace MrConstruction.Controllers {
             if (info == null) {
                 return InternalServerError();
             }
-
+            
             var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
-
+            
             IdentityResult result = await UserManager.CreateAsync(user);
+            
             if (!result.Succeeded) {
                 return GetErrorResult(result);
             }

@@ -1,4 +1,5 @@
 ﻿using MrConstruction.Domain;
+using MrConstruction.Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,17 +13,15 @@ namespace MrConstruction.Services
 
         public Project Project { get; set; }
 
-        public ContractorUser Contractor { get; set; }
+        public ContractorUserDTO Contractor { get; set; }
 
-        public decimal Estimate { get; set; }
-
-        public string CompanyName { get; set; }
+        public decimal? Estimate { get; set; }
 
         public DateTime Deadline { get; set; }
 
         public string Description { get; set; }
 
-        public Project.Status Status { get; set; }
+        public Project.Status State { get; set; }
 
     }
 }

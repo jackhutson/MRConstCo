@@ -12,6 +12,6 @@ namespace MrConstruction.Services.Models {
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string PhoneNumber2 { get; set; }
-        //public IList<JobDTO> JobList { get; set; }
+        public IList<JobDetailDTO> JobList { get; set; }
     }
 }

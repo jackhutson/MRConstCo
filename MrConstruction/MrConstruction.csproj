@@ -201,10 +201,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Domain\AdminUser.cs" />
     <Compile Include="Domain\ApplicationUser.cs" />
     <Compile Include="Domain\Client.cs" />
-    <Compile Include="Domain\ContractorUser.cs" />
+    <Compile Include="Domain\Identity\Role.cs" />
     <Compile Include="Domain\IEntityInterfaces.cs" />
     <Compile Include="Domain\Job.cs" />
     <Compile Include="Domain\Location.cs" />
@@ -212,7 +211,6 @@
     <Compile Include="Domain\Project.cs" />
     <Compile Include="Domain\Upload.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
-    <Compile Include="Infrastructure\ContractorRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Infrastructure\JobRepository.cs" />
     <Compile Include="Migrations\201602081752558_initial.cs" />
@@ -231,6 +229,10 @@
     <Compile Include="Migrations\201602082135412_fixed job model.cs" />
     <Compile Include="Migrations\201602082135412_fixed job model.Designer.cs">
       <DependentUpon>201602082135412_fixed job model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602090034033_Added Roles.cs" />
+    <Compile Include="Migrations\201602090034033_Added Roles.Designer.cs">
+      <DependentUpon>201602090034033_Added Roles.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
@@ -256,6 +258,7 @@
     <Compile Include="Services\Models\ContractorUserDTO.cs" />
     <Compile Include="Services\Models\UploadDTO.cs" />
     <Compile Include="Services\ProjectService.cs" />
+    <Compile Include="Infrastructure\UserRepository.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -277,6 +280,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\login.html" />
+    <Content Include="Presentation\ngApp\views\newContractor.html" />
     <Content Include="Presentation\ngApp\views\newProject.html" />
     <Content Include="Presentation\ngApp\views\contractorList.html" />
     <Content Include="Presentation\ngApp\views\projectDetails.html" />
@@ -365,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602082135412_fixed job model.resx">
       <DependentUpon>201602082135412_fixed job model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602090034033_Added Roles.resx">
+      <DependentUpon>201602090034033_Added Roles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

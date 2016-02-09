@@ -19,9 +19,9 @@ namespace MrConstruction.Presentation.Controllers
         }
 
         [HttpGet]
-        public JobDetailDTO Get()
+        public JobDetailDTO GetJobDetails(int id)
         {
-           return _jobService.GetJobDetails();
+           return _jobService.GetJobDetails(id, User.Identity.Name);
         }
     }
 }

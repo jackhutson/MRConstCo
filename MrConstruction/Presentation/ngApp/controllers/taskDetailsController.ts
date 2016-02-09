@@ -5,9 +5,8 @@
 
         public task;
 
-        constructor(private $http: ng.IHttpService) {
-
-            $http.get('/api/jobs')
+        constructor(private $http: ng.IHttpService, private $routeParams) {
+            $http.get(`/api/jobs/${$routeParams.id}`)
                 .then((response) => {
                     this.task = response.data;
                 });
