@@ -15,6 +15,7 @@ namespace MrConstruction.Services {
         public IList<ProjectDTO> ListProjects() {
             var list = (from p in _projectRepo.GetProjects()
                         select new ProjectDTO() {
+                            Id = p.Id,
                             Title = p.Title,
                             Description = p.Description,
                             Budget = p.Budget,
@@ -30,6 +31,27 @@ namespace MrConstruction.Services {
                                            Estimate = j.Estimate
                                        }).ToList(),
                         }).ToList();
+            return list;
+        }
+        public ProjectDTO GetOneProject(int id) {
+            var list = (from p in _projectRepo.GetProjects()
+                        where p.Id == id
+                        select new ProjectDTO() {
+                            Title = p.Title,
+                            Description = p.Description,
+                            Budget = p.Budget,
+                            ClientName = p.Client.Name,
+                            State = p.State,
+                            EstStart = p.EstStart,
+                            EstCompleted = p.EstCompleted,
+                            JobList = (from j in p.JobList
+                                       select new JobListDTO() {
+                                           Name = j.Name,
+                                           State = j.State,
+                                           Deadline = j.Deadline,
+                                           Estimate = j.Estimate
+                                       }).ToList(),
+                        }).FirstOrDefault();
             return list;
         }
     }

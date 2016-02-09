@@ -241,6 +241,7 @@
     </Compile>
     <Compile Include="Presentation\Controllers\JobsController.cs" />
     <Compile Include="Presentation\Controllers\ProjectController.cs" />
+    <Compile Include="Presentation\Controllers\ProjectDetailsController.cs" />
     <Compile Include="Presentation\Extensions\ApiControllerExtensions.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
@@ -337,6 +338,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectDetailsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\taskDetailsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\directives\multipartUpload.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
