@@ -247,7 +247,6 @@
     </Compile>
     <Compile Include="Presentation\Controllers\JobsController.cs" />
     <Compile Include="Presentation\Controllers\ProjectController.cs" />
-    <Compile Include="Presentation\Controllers\ProjectDetailsController.cs" />
     <Compile Include="Presentation\Extensions\ApiControllerExtensions.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
