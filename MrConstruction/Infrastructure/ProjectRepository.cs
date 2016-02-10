@@ -26,5 +26,16 @@ namespace MrConstruction.Infrastructure {
                 return false;
             }
         }
+
+        public bool CheckExists(string title) {
+            var check = from p in Table
+                        where p.Title == title
+                        select p;
+            if(check != null) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 }
