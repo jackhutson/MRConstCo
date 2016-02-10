@@ -25,9 +25,9 @@ namespace MrConstruction.Presentation.Controllers
         public ProjectDTO Get(int id) {
             return _projectServ.GetOneProject(id);
         }
-        [HttpPost]
-        public IHttpActionResult Post(NewProjectDTO newProject) {
-            return _projectServ.AddNewProject(newProject);
-        }
+        //[HttpPost]
+        //public IHttpActionResult Post(NewProjectDTO newProject) {
+            //return _projectServ.AddNewProject(newProject);
+        //}
     }
 }
