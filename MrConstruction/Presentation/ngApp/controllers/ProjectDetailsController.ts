@@ -5,6 +5,7 @@
         public modalInstance;
 
         constructor(private $uibModal, private $http: ng.IHttpService, private $routeParams) {
+            $http.get('')
                 .then((response) => {
                     this.project = response.data;
                 });

@@ -6,8 +6,6 @@
         public selectedContractor;
 
         constructor(private $uibModalInstance, private $http: ng.IHttpService, private $location: ng.ILocationService, private $routeParams) { }
-
-        public 
         
         public addTask(task): void {
             this.$http.post(`/api/project/${task.project.id}/newTask`, task)
