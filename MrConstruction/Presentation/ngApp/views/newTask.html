@@ -29,7 +29,7 @@
             <div class="col-md-offset-1 col-md-6" ng-controller="contractorListController as contractor">
                 <div class="dropdown">
                     <label for="dropdown">Choose Contractor</label>
-                    <select class="dropdown-toggle" ng-model="contractor.selectedContractor" ng-options="contractor.name in contractor"></select>
+                    <select class="dropdown-toggle" ng-model="task.contractor" ng-options="contractor.name for contractor in contractor.contractors"></select>
                     {{contractor.selectedContractor}}
                 </div>
             </div>

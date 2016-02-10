@@ -10,6 +10,7 @@ namespace MrConstruction.Infrastructure {
     public class UserRepository {
 
         private ApplicationDbContext _db;
+        private ApplicationUserManager _userManager;
 
         public UserRepository(DbContext db) {
             _db = (ApplicationDbContext)db;
@@ -20,8 +21,10 @@ namespace MrConstruction.Infrastructure {
         }
 
         public IQueryable<ApplicationUser> GetContractors() {
-            return from u in _db.Users
-                   where u.Roles.FirstOrDefault(r => r.RoleId == Role.Contractor) != null
+            return from r in _db.Roles
+                   from ru in r.Users
+                   from u in _db.Users
+                   where r.Name == Role.Contractor && ru.UserId == u.Id
                    select u;
         }
     }

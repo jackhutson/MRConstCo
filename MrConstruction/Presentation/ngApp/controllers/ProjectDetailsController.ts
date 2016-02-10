@@ -16,6 +16,11 @@
                 templateUrl: '/Presentation/ngApp/views/newTask.html',
                 controller: MrConstruction.Controllers.NewJobController,
                 controllerAs: 'controller',
+                resolve: {
+                    projectId: () => {
+                        this.$routeParams.id;
+                    }
+                },
                 size: 'lg',
                 backdrop: true,
             });

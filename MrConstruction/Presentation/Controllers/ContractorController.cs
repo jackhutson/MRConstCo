@@ -1,4 +1,5 @@
-﻿using MrConstruction.Services;
+﻿using MrConstruction.Domain.Identity;
+using MrConstruction.Services;
 using MrConstruction.Services.Models;
 using System;
 using System.Collections.Generic;
@@ -17,9 +18,10 @@ namespace MrConstruction.Presentation.Controllers
             _contractorService = contractorService;
         }
 
-        //[Authorize]
+        [Authorize(Roles = Role.Admin)]
         public IList<ContractorUserDTO> GetContractors() {
-            return _contractorService.GetContractors();
+            var cs = _contractorService.GetContractors();
+            return cs;
         }
     }
 }
