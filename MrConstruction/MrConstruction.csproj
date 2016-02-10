@@ -213,6 +213,7 @@
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Infrastructure\JobRepository.cs" />
+    <Compile Include="Infrastructure\UploadRepository.cs" />
     <Compile Include="Migrations\201602081752558_initial.cs" />
     <Compile Include="Infrastructure\ProjectRepository.cs" />
     <Compile Include="Migrations\201602081752558_initial.Designer.cs">
@@ -269,6 +270,7 @@
     <Compile Include="Services\Models\UploadDTO.cs" />
     <Compile Include="Services\ProjectService.cs" />
     <Compile Include="Infrastructure\UserRepository.cs" />
+    <Compile Include="Services\UploadService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -340,7 +342,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Services\Models\.keep" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Public\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />

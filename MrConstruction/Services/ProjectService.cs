@@ -93,5 +93,7 @@ namespace MrConstruction.Services {
             _projectRepo.Add(project);
             _projectRepo.SaveChanges();
         }
+
+
     }
 }
