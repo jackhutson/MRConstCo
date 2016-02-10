@@ -1,4 +1,5 @@
-﻿using MrConstruction.Services;
+﻿using MrConstruction.Domain;
+using MrConstruction.Services;
 using MrConstruction.Services.Models;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,10 @@ namespace MrConstruction.Presentation.Controllers
     public class ProjectController : ApiController
     {
         public ProjectService _projectServ;
-        public ProjectController(ProjectService projectServ) {
+        public UploadService _uploadServ;
+        public ProjectController(ProjectService projectServ, UploadService uploadServ) {
             _projectServ = projectServ;
+            _uploadServ = uploadServ;
         }
 
         [HttpGet]
@@ -35,7 +38,24 @@ namespace MrConstruction.Presentation.Controllers
             } else
                 return BadRequest();
         }
+        [HttpPost]
+        [Route("api/project/{id}/upload")]
+        public async Task<IHttpActionResult> Post(int id) {
+            var formData = await this.ReadFile();
 
+            var file = formData.Files[0];
+            var dst = HttpContext.Current.Server.MapPath("~/Public/" + file.RemoteFileName);
+            file.FileInfo.MoveTo(dst);
+
+            var dto = new UploadDTO() {
+                Name = file.RemoteFileName,
+                Url = dst
+            };
+
+            _uploadServ.SaveUpload(id, dto);
+
+            return Ok();
+        }
         //public async Task<IHttpActionResult> Post() {
 
         //    var formData = await this.ReadFile();
