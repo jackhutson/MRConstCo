@@ -14,36 +14,43 @@ namespace MrConstruction.Presentation.Controllers
     public class ProjectController : ApiController
     {
         public ProjectService _projectServ;
-        public ProjectController(ProjectService projectServ) {
+        public ProjectController(ProjectService projectServ)
+        {
             _projectServ = projectServ;
         }
 
         [HttpGet]
-        public IList<ProjectDTO> Get() {
+        public IList<ProjectDTO> Get()
+        {
             return _projectServ.ListProjects();
         }
 
         [HttpGet]
-        public ProjectDTO Get(int id) {
+        public ProjectDTO Get(int id)
+        {
             return _projectServ.GetOneProject(id);
         }
-        //[HttpPost]
-        //public IHttpActionResult Post(NewProjectDTO newProject) {
+        [HttpPost]
+        public IHttpActionResult Post(NewProjectDTO newProject)
+        {
             _projectServ.AddNewProject(newProject);
-            if (ModelState.IsValid && _projectServ.CheckExists(newProject.Title)) {
+            if (ModelState.IsValid && _projectServ.CheckExists(newProject.Title))
+            {
                 return Ok();
-            } else
+            }
+            else
                 return BadRequest();
 
-        //public async Task<IHttpActionResult> Post() {
+            //public async Task<IHttpActionResult> Post() {
 
-        //    var formData = await this.ReadFile();
+            //    var formData = await this.ReadFile();
 
-        //    var dst = HttpContext.Current.Server.MapPath("~/Public/");
-        //    var file = formData.Files[0];
-        //    file.FileInfo.MoveTo(dst + file.RemoteFileName);
+            //    var dst = HttpContext.Current.Server.MapPath("~/Public/");
+            //    var file = formData.Files[0];
+            //    file.FileInfo.MoveTo(dst + file.RemoteFileName);
 
-        //    var projectId = int.Parse(formData.FormData["projectId"][0]);
-        //}
+            //    var projectId = int.Parse(formData.FormData["projectId"][0]);
+            //}
+        }
     }
 }
