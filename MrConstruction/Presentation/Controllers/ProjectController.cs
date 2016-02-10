@@ -28,13 +28,16 @@ namespace MrConstruction.Presentation.Controllers
         public ProjectDTO Get(int id) {
             return _projectServ.GetOneProject(id);
         }
-        //[HttpPost]
-        //public IHttpActionResult Post(NewProjectDTO newProject) {
+
+        [HttpPost]
+        public IHttpActionResult Post(NewProjectDTO newProject) {
             _projectServ.AddNewProject(newProject);
             if (ModelState.IsValid && _projectServ.CheckExists(newProject.Title)) {
                 return Ok();
             } else
                 return BadRequest();
+        }
+
 
         //public async Task<IHttpActionResult> Post() {
 
