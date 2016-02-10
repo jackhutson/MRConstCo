@@ -23,8 +23,10 @@ namespace MrConstruction.Presentation.Controllers {
                 var form = new MultipartFormInfo();
 
                 foreach (MultipartFileData file in provider.FileData) {
+                    var fileName = file.Headers.ContentDisposition.FileName;
+                    fileName = fileName.Replace("\"", "");
                     var mpi = new MultipartFileInfo() {
-                        RemoteFileName = file.Headers.ContentDisposition.FileName,
+                        RemoteFileName = fileName,
                         FileInfo = new FileInfo(file.LocalFileName)
                     };
 
