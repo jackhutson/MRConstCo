@@ -31,8 +31,9 @@ namespace MrConstruction.Presentation.Controllers {
             _projectServ.AddNewProject(newProject);
             if (ModelState.IsValid && _projectServ.CheckExists(newProject.Title)) {
                 return Ok();
-            } else
+            } else {
                 return BadRequest();
+            }
         }
 
 
