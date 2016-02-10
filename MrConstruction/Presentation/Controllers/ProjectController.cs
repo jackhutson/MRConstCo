@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 
+namespace MrConstruction.Presentation.Controllers {
+    public class ProjectController : ApiController {
 namespace MrConstruction.Presentation.Controllers
 {
     public class ProjectController : ApiController
@@ -30,6 +32,8 @@ namespace MrConstruction.Presentation.Controllers
         public ProjectDTO Get(int id) {
             return _projectServ.GetOneProject(id);
         }
+
+        [Authorize(Roles = Role.Admin)]
         [HttpPost]
         public IHttpActionResult Post(NewProjectDTO newProject) {
             _projectServ.AddNewProject(newProject);

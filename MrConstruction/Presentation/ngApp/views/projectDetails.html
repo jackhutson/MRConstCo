@@ -8,16 +8,19 @@
     
 </div>
 
+<div class="row">
+    <input value="+" type="button" ng-click="controller.showModal()" />
+</div>
 
-    <div class="row">
-        <div class="col-md-12">
-            {{controller.project.description}}
-        </div>
+<div class="row">
+    <div class="col-md-12">
+        {{controller.project.description}}
+    </div>
+    <div>
         <div class="col-md-12" ng-repeat="job in controller.project.jobList">
             {{job.name}}
             {{job.deadline}}
             {{job.estimate}}
-
         </div>
     </div>
-
+</div>

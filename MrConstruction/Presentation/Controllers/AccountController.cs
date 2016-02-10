@@ -282,7 +282,7 @@ namespace MrConstruction.Controllers {
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email, Name = model.Name, Title = model.Title, CompanyName = model.CompanyName, PhoneNumber = model.PhoneNumber, PhoneNumber2 = model.PhoneNumber2 };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
             result = await UserManager.AddToRoleAsync(user.Id, Role.Contractor);

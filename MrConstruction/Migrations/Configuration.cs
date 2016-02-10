@@ -1,4 +1,5 @@
 namespace MrConstruction.Migrations {
+    using Domain;
     using Domain.Identity;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
@@ -27,19 +28,28 @@ namespace MrConstruction.Migrations {
             //
 
             var rm = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            var um = new ApplicationUserManager(new UserStore<ApplicationUser>(context));
 
-            //foreach(var role in Enum.GetNames(typeof(Roles))) {
             if (!rm.RoleExists(Role.Admin)) {
                 rm.Create(new IdentityRole(Role.Admin));
             }
             if (!rm.RoleExists(Role.Contractor)) {
                 rm.Create(new IdentityRole(Role.Contractor));
             }
-            //}
-
-
             context.SaveChanges();
 
+            var mike = um.FindByName("mcon@gmail.com");
+            if (mike == null) {
+                mike = new ApplicationUser() {
+                    UserName = "mcon@gmail.com",
+                    Email = "mcon@gmail.com"
+                };
+                um.Create(mike, "Bang!1");
+            }
+
+            if (!um.IsInRole(mike.Id, Role.Admin)) {
+                um.AddToRole(mike.Id, Role.Admin);
+            }
         }
     }
 }

@@ -27,23 +27,26 @@
 
             $httpProvider.interceptors.push('authInterceptor');
 
-            $routeProvider.when('/contractors', {
-                templateUrl: 'Presentation/ngApp/views/contractorList.html',
-                controller: MrConstruction.Controllers.ContractorListController,
-                controllerAs: 'controller'
-            });
-            $routeProvider.when('/projectList', {
-                templateUrl: 'Presentation/ngApp/views/projectList.html',
-                controller: MrConstruction.Controllers.ProjectController,
-                controllerAs: 'controller'
-            });
+            $routeProvider
+                .when('/contractors', {
+                    templateUrl: 'Presentation/ngApp/views/contractorList.html',
+                    controller: MrConstruction.Controllers.ContractorListController,
+                    controllerAs: 'controller'
+                });
+            $routeProvider
+                .when('/projectList', {
+                    templateUrl: 'Presentation/ngApp/views/projectList.html',
+                    controller: MrConstruction.Controllers.ProjectController,
+                    controllerAs: 'controller'
+                });
 
-            $routeProvider.when('/login', {
-                templateUrl: 'Presentation/ngApp/views/login.html',
-                controller: MrConstruction.Controllers.AuthController,
-                controllerAs: 'controller'
+            $routeProvider
+                .when('/login', {
+                    templateUrl: 'Presentation/ngApp/views/login.html',
+                    controller: MrConstruction.Controllers.AuthController,
+                    controllerAs: 'controller'
 
-            });
+                });
             $routeProvider
                 .when('/newproject', {
                     templateUrl: '/Presentation/ngApp/views/newProject.html',
@@ -56,10 +59,11 @@
                     controller: MrConstruction.Controllers.TaskDetailsController,
                     controllerAs: 'controller'
                 });
-            $routeProvider.when('/projectDetails/:id', {
-                templateUrl: 'Presentation/ngApp/views/projectDetails.html',
-                controller: MrConstruction.Controllers.ProjectDetailsController,
-                controllerAs: 'controller'
+            $routeProvider
+                .when('/projectDetails/:id', {
+                    templateUrl: 'Presentation/ngApp/views/projectDetails.html',
+                    controller: MrConstruction.Controllers.ProjectDetailsController,
+                    controllerAs: 'controller'
                 });
 
             $routeProvider

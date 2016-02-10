@@ -5,16 +5,18 @@
         public task;
         public selectedContractor;
 
-        constructor(private $http: ng.IHttpService, private $location: ng.ILocationService, private $routeParams) { }
-
+        constructor(private $uibModalInstance, private $http: ng.IHttpService, private $location: ng.ILocationService, private projectId: number){ }
+            private $location: ng.ILocationService, private $routeParams) {
+            
+        }
         
         public addTask(task): void {
-            this.$http.post(`/api/projectDetails/${task.project.id}/ newTask`, task)
+            this.$http.post(`api/projectDetails/${this.projectId}/newTask`, task)
                 .then((response) => {
-                    this.$location.path('/projectDetails');
-                })
-                .catch((response) => {
-                    console.log(response);
+                    this.$location.path("#/taskDetails")
+                    console.log("post successful");
+                }).catch((response) => {
+                    console.log(`uh oh, error ${response}`);
                 });
         }
     }
