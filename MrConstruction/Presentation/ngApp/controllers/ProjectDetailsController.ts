@@ -2,10 +2,9 @@
     export class ProjectDetailsController {
 
         public project;
-        constructor(private $http, private $routeParams) {
         public modalInstance;
 
-        constructor(private $uibModal, private $http: ng.IHttpService, private $routeParams) {
+        constructor(private $uibModal, private $http, private $routeParams) {
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;

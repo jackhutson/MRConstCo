@@ -5,11 +5,9 @@
         public task;
         public selectedContractor;
 
-        constructor(private $uibModalInstance, private $http: ng.IHttpService, private $location: ng.ILocationService, private projectId: number){ }
-            private $location: ng.ILocationService, private $routeParams) {
+        constructor(private $uibModalInstance, private $http: ng.IHttpService,
+            private $location: ng.ILocationService, private projectId: number) { }
             
-        }
-        
         public addTask(task): void {
             this.$http.post(`api/projectDetails/${this.projectId}/newTask`, task)
                 .then((response) => {

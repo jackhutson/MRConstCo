@@ -1,4 +1,5 @@
 ﻿using MrConstruction.Domain;
+using MrConstruction.Domain.Identity;
 using MrConstruction.Services;
 using MrConstruction.Services.Models;
 using System;
@@ -10,8 +11,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 
-namespace MrConstruction.Presentation.Controllers {
-    public class ProjectController : ApiController {
+
 namespace MrConstruction.Presentation.Controllers
 {
     public class ProjectController : ApiController
@@ -43,6 +43,7 @@ namespace MrConstruction.Presentation.Controllers
                 return BadRequest();
             }
         }
+
         [HttpPost]
         [Route("api/project/{id}/upload")]
         public async Task<IHttpActionResult> Post(int id) {
