@@ -17,5 +17,6 @@ namespace MrConstruction.Services.Models {
         public decimal Budget { get; set; }
         public DateTime EstStart { get; set; }
         public DateTime EstCompleted { get; set; }
+
     }
 }
