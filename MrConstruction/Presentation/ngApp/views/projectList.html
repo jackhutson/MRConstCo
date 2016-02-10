@@ -1,30 +1,35 @@
-﻿<div class="row">
-    <div class="col-md-10">
-        <h3>Projects</h3>
+﻿
+<div class="row">
+    <div class="col-md-2" id="leftwhitespace">
     </div>
-    <div class="col-md-2">
-        <input type="button" value="+" />
-    </div>
-</div>
-
-<div class="row" ng-repeat="project in controller.projects" >
-    <a href="#/projectDetails/{{project.id}}">
-        <div class="col-md-12">
+    <div class="col-md-8" id="projectlistcontent">
+        <div class="row" id="projectlisttitle">
             <div class="col-md-12">
-                {{project.title}}
-            </div>
-            <div class="col-md-4">
-                {{project.budget}}
-            </div>
-            <div class="col-md-4">
-                {{project.state}}
-            </div>
-            <div class="col-md-4">
-                {{project.description}}
+                <h3 id="projecthead">Projects <a href="#/newproject"><input type="button" value="+" id="projectplus" /></a></h3>
+                
             </div>
         </div>
-        </a>
+
+
+        <div class="row" ng-repeat="project in controller.projects">
+            <a href="#/projectDetails/{{project.id}}">
+                <div class="col-md-12">
+                    <div class="col-md-12" id="projecttitle">
+                        <strong>{{project.title}}</strong> 
+                    </div>
+                    <div class="col-md-4" id="listitems">
+                        Budget: {{project.budget}}
+                    </div>
+                    <div class="col-md-4" id="listitems">
+                        Status: {{project.state}}
+                    </div>
+                    <div class="col-md-4" id="listitems">
+                        Description: {{project.description}}  
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
-
-
+    <div class="col-md-2" id="rightwhitespace"></div>
+</div>
 
