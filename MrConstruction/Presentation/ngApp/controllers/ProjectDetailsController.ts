@@ -5,7 +5,7 @@
         public modalInstance;
 
         constructor(private $uibModal, private $http: ng.IHttpService, private $routeParams) {
-            $http.get('')
+            $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
                 });
