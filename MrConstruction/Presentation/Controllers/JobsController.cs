@@ -26,10 +26,10 @@ namespace MrConstruction.Presentation.Controllers
         }
 
         [HttpPost]
-        [Route("api/projectDetails/{id}/newTask")]
-        public IHttpActionResult AddJob(int id, JobDetailDTO job) {
-            if (ModelState.IsValid && _projectService.CheckExists(id)) {
-                return Ok(_jobService.AddJob(id, job));
+        [Route("api/task")]
+        public IHttpActionResult AddJob(JobDetailDTO job) {
+            if (ModelState.IsValid && _projectService.CheckExists(job.Name)) {
+                return Ok(_jobService.AddJob(job));
             }
             return BadRequest();
         }

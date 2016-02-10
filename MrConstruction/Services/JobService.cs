@@ -23,6 +23,11 @@ namespace MrConstruction.Services.Models
             _appUserRepo = appUserRepo;
         }
 
+        //checks db for job by job name 
+        public bool CheckExists(string name) {
+            return _jobRepo.CheckExists(name);
+        }
+
         //Get Job Details
         public JobDetailDTO GetJobDetails(int id, string username) {
 
@@ -34,9 +39,7 @@ namespace MrConstruction.Services.Models
                         Description = j.Description,
                         Estimate = (u.Roles.FirstOrDefault(r => r.RoleId == Role.Admin)!= null) ? j.Estimate : (decimal?)null,
                         Name = j.Name,
-                        Project = new ProjectDTO() {
-                            Title = j.Project.Title
-                        },
+                        ProjectId = j.ProjectId, 
                         State = j.State,
                         Contractor = new ContractorUserDTO() {
                             Name = j.Contractor.Name,
@@ -46,10 +49,9 @@ namespace MrConstruction.Services.Models
         } 
 
         //Add a new job
-        public JobDetailDTO AddJob(int id, JobDetailDTO dto) {
+        public JobDetailDTO AddJob(JobDetailDTO dto) {
 
             var contractor = _appUserRepo.FindById(dto.Contractor.Id);
-            var project = _projectRepo.Get(id).FirstOrDefault();
 
             var job = new Job() {
                 Name = dto.Name,
@@ -58,7 +60,7 @@ namespace MrConstruction.Services.Models
                 Contractor = contractor,
                 State = dto.State,
                 Deadline = dto.Deadline,
-                Project = project
+                ProjectId = dto.ProjectId
             };
 
             _jobRepo.Add(job);
@@ -74,9 +76,7 @@ namespace MrConstruction.Services.Models
                 },
                 State = job.State,
                 Deadline = job.Deadline,
-                Project = new ProjectDTO() {
-                    Id = job.Project.Id
-                }
+                ProjectId = job.ProjectId
             };
         }
     }

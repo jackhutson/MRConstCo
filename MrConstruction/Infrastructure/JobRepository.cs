@@ -11,6 +11,19 @@ namespace MrConstruction.Infrastructure
     {
         public JobRepository(DbContext db) : base(db) { }
 
+        //check to see if job exists by job name
+        public bool CheckExists(string name) {
+
+            var job = from j in Table
+                      where j.Name == name
+                      select j;
+            
+            if(job != null) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 }
 

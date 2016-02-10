@@ -10,7 +10,7 @@ namespace MrConstruction.Domain
 
         public int Id { get; set; }
 
-        public bool Active { get; set; }
+        public bool Active { get; set; } = true;
 
         public string Name { get; set; }
 
@@ -24,7 +24,7 @@ namespace MrConstruction.Domain
 
         public DateTime Deadline { get; set; }
 
-        public Project Project { get; set; }
+        public int ProjectId { get; set; }
 
     }
 }
