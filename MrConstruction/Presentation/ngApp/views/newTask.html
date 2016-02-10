@@ -1,44 +1,50 @@
-﻿<div class="container">
-    <div class="row">
+﻿<div class="modal-dialog">
+    <div class="modal-header">
+        <a href="" title="Close" class="close">X</a>
         <h1>Add New Task</h1>
     </div>
-    <hr />
-    <form class="form-group" ng-submit="controller.addTask(task)">
-        <div class="row">
-            <div class="col-md-offset-1 col-md-11 taskform">
-                <label for="Name">Name</label>
-                <input ng-model="task.name" class="form-control" type="text" placeholder="Task Name" />
+    <form class="form-horizontal" ng-submit="controller.addTask(task)">
+        <div class="modal-body">
+            <div class="form-group">
+                <div class="col-md-offset-1 col-md-11 taskform">
+                    <label for="Name" class="control-label">Name</label>
+                    <input ng-model="task.name" class="form-control" type="text" placeholder="Task Name" />
+                </div>
             </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-md-offset-1 col-md-11 taskform">
-                <label for="taskDescription">Description</label>
-                <textarea ng-model="task.description" style="padding-bottom: 100px" class="form-control" type="text" placeholder="Short description of the task"></textarea>
+            <div class="form-group">
+                <div class="col-md-offset-1 col-md-11 taskform">
+                    <label for="taskDescription" class="control-label">Description</label>
+                    <textarea ng-model="task.description" style="padding-bottom: 100px" class="form-control" type="text" placeholder="Short description of the task"></textarea>
+                </div>
             </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-md-offset-1 col-md-11 taskform">
-                <label for="taskEstimate">Estimate</label>
-                <input ng-model="task.estimate" class="form-control" type="text" placeholder="Task Estimate"/>
+            <div class="form-group">
+                <div class="col-md-offset-1 col-md-11 taskform">
+                    <label for="taskEstimate" class="control-label">Estimate</label>
+                    <input ng-model="task.estimate" class="form-control" type="text" placeholder="Task Estimate" />
+                </div>
             </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-md-offset-1 col-md-6" ng-controller="contractorListController as contractor">
-                <div class="dropdown">
-                    <label for="dropdown">Choose Contractor</label>
-                    <select class="dropdown-toggle" ng-model="task.contractor" ng-options="contractor.name for contractor in contractor.contractors"></select>
-                    {{contractor.selectedContractor}}
+            <div class="form-group">
+                <div class="col-md-offset-1 col-md-6" ng-controller="contractorListController as contractor">
+                    <div class="dropdown">
+                        <label for="dropdown" class="control-label">Pick a Contractor</label>
+                        <select class="dropdown-toggle" ng-model="task.contractor" ng-options="contractor.name for contractor in contractor.contractors"></select>
+                        {{contractor.selectedContractor}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-1 col-md-11 taskform">
+                    <label for="taskStatus" class="control-label">Status</label>
+                    <input ng-model="task.state" class="form-control" type="text" placeholder="Pick Task Status" />
                 </div>
             </div>
         </div>
-        <hr />
-        <div class="row">
+
+        <div class="modal-footer">
             <div class="col-md-offset-1 col-md-11">
                 <input type="submit" class="btn btn-success" value="Add Task" />
             </div>
         </div>
     </form>
 </div>
+
