@@ -25,7 +25,7 @@ namespace MrConstruction.Presentation.Controllers {
                 foreach (MultipartFileData file in provider.FileData) {
                     var mpi = new MultipartFileInfo() {
                         RemoteFileName = file.Headers.ContentDisposition.FileName,
-                        FileInfo = new FileInfo(HttpContext.Current.Server.MapPath(file.LocalFileName))
+                        FileInfo = new FileInfo(file.LocalFileName)
                     };
 
                     form.Files.Add(mpi);
