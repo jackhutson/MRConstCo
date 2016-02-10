@@ -59,8 +59,8 @@ namespace MrConstruction.Presentation.Controllers
             };
 
             _uploadServ.SaveUpload(id, dto);
-
             return Ok();
+       
         }
 
         //public async Task<IHttpActionResult> Post() {
