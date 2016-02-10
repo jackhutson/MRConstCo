@@ -1,11 +1,24 @@
 ﻿namespace MrConstruction.Controllers {
     export class ProjectDetailsController {
+
         public project;
-        constructor(private $http: ng.IHttpService, private $routeParams) {
-            $http.get(`/api/project/${$routeParams.id}`)
+        public modalInstance;
+
+        constructor(private $uibModal, private $http: ng.IHttpService, private $routeParams) {
+            $http.get('')
                 .then((response) => {
                     this.project = response.data;
                 });
+        }
+
+        public showModal(): void {
+            this.modalInstance = this.$uibModal.open({
+                templateUrl: '/Presentation/ngApp/views/newTask.html',
+                controller: MrConstruction.Controllers.NewJobController,
+                controllerAs: 'controller',
+                size: 'lg',
+                backdrop: true,
+            });
         }
     }
 }

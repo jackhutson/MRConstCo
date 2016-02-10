@@ -30,9 +30,9 @@ namespace MrConstruction.Presentation.Controllers
         {
             return _projectServ.GetOneProject(id);
         }
+
         [HttpPost]
-        public IHttpActionResult Post(NewProjectDTO newProject)
-        {
+        public IHttpActionResult Post(NewProjectDTO newProject) {
             _projectServ.AddNewProject(newProject);
             if (ModelState.IsValid && _projectServ.CheckExists(newProject.Title))
             {
@@ -40,6 +40,8 @@ namespace MrConstruction.Presentation.Controllers
             }
             else
                 return BadRequest();
+        }
+
 
             //public async Task<IHttpActionResult> Post() {
 
