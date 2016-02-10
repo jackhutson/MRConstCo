@@ -12,6 +12,7 @@ namespace MrConstruction.Presentation.Controllers
     public class ProjectController : ApiController
     {
         public ProjectService _projectServ;
+
         public ProjectController(ProjectService projectServ) {
             _projectServ = projectServ;
         }
@@ -25,6 +26,7 @@ namespace MrConstruction.Presentation.Controllers
         public ProjectDTO Get(int id) {
             return _projectServ.GetOneProject(id);
         }
+
         [HttpPost]
         public IHttpActionResult Post(NewProjectDTO newProject) {
             _projectServ.AddNewProject(newProject);
