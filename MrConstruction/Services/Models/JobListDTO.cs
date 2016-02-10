@@ -11,6 +11,5 @@ namespace MrConstruction.Services.Models {
         public decimal? Estimate { get; set; }
         public Project.Status State { get; set; }
         public DateTime Deadline { get; set; }
-
     }
 }
