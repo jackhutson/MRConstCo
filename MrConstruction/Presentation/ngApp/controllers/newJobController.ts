@@ -13,10 +13,6 @@
             this.$uibModalInstance.close(newTask);
         }
 
-        public close() {
-            this.$uibModalInstance.close();
-        }
-
         public cancel() {
             this.$uibModalInstance.dismiss();
         }
