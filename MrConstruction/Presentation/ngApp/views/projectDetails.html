@@ -1,13 +1,22 @@
 ﻿
-<div>
-    <h1>{{controller.project.title}}</h1>
-    <form ng-submit="controller.postFiles(file)">
-        <input type="file" value="upload" file-model="file" />
-        <input type="submit" value="submit"/>
-    </form>
-    
+<div class="row">
+    <div class="col-md-3">
+        <h1>{{controller.project.title}}</h1>
+    </div>
+    <div class="col-md-2">
+        <form ng-submit="controller.postFiles(file)">
+            <input type="file" value="upload" file-model="file" />
+            <input type="submit" value="submit" />
+        </form>
+    </div>
+
 </div>
 
+<div class="row">
+    <div class="col-md-2" ng-repeat="upload in controller.project.uploads" style="display:inline">
+        <img ng-src="{{upload.url}}" class="uploads" />
+    </div>
+</div>
 <div class="row">
     <input value="+" type="button" ng-click="controller.showModal()" />
 </div>
