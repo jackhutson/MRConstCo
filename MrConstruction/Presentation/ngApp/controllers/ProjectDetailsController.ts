@@ -3,7 +3,6 @@
 
         public project;
         public modalInstance;
-        public newTask;
         public tasks;
 
         constructor(private $uibModal, private $http, private $routeParams) {
@@ -41,9 +40,9 @@
                 backdrop: true,
             });
 
-            this.modalInstance
+            this.modalInstance.result
                 .then((newTask) => {
-                    this.newTask.projectId = this.$routeParams.id;
+                    newTask.projectId = this.$routeParams.id;
                     this.$http.post('/api/task', newTask)
                         .then((response) => {
                             this.tasks.push(response.data);
@@ -59,6 +58,7 @@
                 .catch((dismiss) => {
 
                 });
+
         }
     }
 }
