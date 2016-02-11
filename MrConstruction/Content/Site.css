@@ -95,3 +95,39 @@ a:hover {
     text-decoration: none;
     font-weight: bold;
 }
+
+.uploads {
+    height: 200px;
+    width: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;                                
+}
+
+#newproject {
+    background-color: #A5B4C1;
+    min-height:100%;
+    border:1px solid white;
+    
+}
+
+.colside {
+    background-color:#72899C;
+    min-height:100%;
+    min-height:100%;
+    max-height:100%;
+    max-height:100vh;
+
+}
+
+label{
+    margin-top:4px;
+    display:block;
+    text-align:center;
+    line-height:125%;
+}
