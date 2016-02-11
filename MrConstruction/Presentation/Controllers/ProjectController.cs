@@ -52,10 +52,9 @@ namespace MrConstruction.Presentation.Controllers
             var file = formData.Files[0];
             var dst = HttpContext.Current.Server.MapPath("~/Public/" + file.RemoteFileName);
             file.FileInfo.MoveTo(dst);
-
             var dto = new UploadDTO() {
                 Name = file.RemoteFileName,
-                Url = dst
+                Url = Url.Content("~/Public/" + file.RemoteFileName)
             };
 
             _uploadServ.SaveUpload(id, dto);
