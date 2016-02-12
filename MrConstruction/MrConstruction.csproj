@@ -297,6 +297,9 @@
     <Content Include="Presentation\ngApp\views\contractorList.html" />
     <Content Include="Presentation\ngApp\views\newTask.html" />
     <Content Include="Presentation\ngApp\views\projectDetails.html" />
+    <Content Include="Presentation\ngApp\views\publicAbout.html" />
+    <Content Include="Presentation\ngApp\views\publicLanding.html" />
+    <Content Include="Presentation\ngApp\views\publicPortfolio.html" />
     <Content Include="Presentation\ngApp\views\taskDetails.html" />
     <Content Include="Presentation\ngApp\views\projectList.html" />
     <Content Include="Scripts\angular-mocks.js" />
