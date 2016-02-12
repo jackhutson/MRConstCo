@@ -40,15 +40,21 @@ namespace MrConstruction.Services {
 
         public ProjectDTO GetOneProject(int id) {
             var dto = (from p in _projectRepo.Get(id)
-                        select new ProjectDTO() {
-                            Id = p.Id,
-                            Title = p.Title,
-                            Description = p.Description,
-                            Budget = p.Budget,
-                            ClientName = p.Client.Name,
-                            State = p.State,
-                            EstStart = p.EstStart,
-                            EstCompleted = p.EstCompleted,
+                       select new ProjectDTO() {
+                           Id = p.Id,
+                           Title = p.Title,
+                           Description = p.Description,
+                           Budget = p.Budget,
+                           ClientName = p.Client.Name,
+                           State = p.State,
+                           EstStart = p.EstStart,
+                           EstCompleted = p.EstCompleted,
+                           Uploads = (from u in p.Uploads
+                                      select new UploadDTO() {
+                                          Id = u.Id,
+                                          Url = u.Url,
+                                          Name = u.Name
+                                      }).ToList(),
                             JobList = (from j in p.JobList
                                        select new JobListDTO() {
                                            Id = j.Id,

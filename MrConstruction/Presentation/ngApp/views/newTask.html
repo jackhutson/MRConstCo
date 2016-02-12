@@ -1,6 +1,6 @@
 ﻿<div class="modal-dialog">
     <div class="modal-header">
-        <a href="" title="Close" class="close">X</a>
+        <input type="button" class="close" value="X" ng-click="controller.cancel()" />
         <h1>Add New Task</h1>
     </div>
     <form class="form-horizontal">
@@ -41,7 +41,7 @@
         <div class="modal-footer">
             <div class="col-md-offset-1 col-md-11">
                 <input type="button" class="btn btn-success" value="Add Task" ng-click="controller.ok(task)" />
-                <input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />
+                <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
             </div>
         </div>
     </form>
