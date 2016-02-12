@@ -1,4 +1,11 @@
-﻿
+﻿.landing {
+    background-image: url(http://abduzeedo.com/files/originals/bh270.jpg);
+}
+.slogan {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
 .vertical-center {
     min-height: 100%;
     min-height: 100vh;
