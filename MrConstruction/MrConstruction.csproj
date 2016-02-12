@@ -303,6 +303,7 @@
     <Content Include="Presentation\ngApp\views\projectDetails.html" />
     <Content Include="Presentation\ngApp\views\taskDetails.html" />
     <Content Include="Presentation\ngApp\views\projectList.html" />
+    <Content Include="Presentation\ngApp\views\upload.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -363,6 +364,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectDetailsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\taskDetailsController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\uploadsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\directives\multipartUpload.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-ui-bootstrap\angular-ui-bootstrap.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />

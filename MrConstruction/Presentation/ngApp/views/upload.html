@@ -1,0 +1,28 @@
+﻿<div class="modal-dialog">
+    <div class="modal-header">
+        <input type="button" value="X" class="close" ng-click="controller.cancel()" />
+        <h1>Uploads</h1>
+    </div>
+    <form class="form-horizontal" ng-submit="controller.postFiles(file)">
+        <div class="modal-body">
+            <div class="form-group">
+                <div class="col-md-offset-1 btn btn-primary uploadform">
+                    <span class="glyphicon glyphicon-picture">&nbsp;Photo &#43;</span>
+                    <input type="file" id="file-1" file-model="file" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-1 btn btn-primary uploadform">
+                    <!--<input type="button" value="+ picture" />-->
+                    <span class="glyphicon glyphicon-file">&nbsp;Blueprint &#43;</span>
+                    <input class="upload" type="file" id="file-1" file-model="file" />
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="modal-footer">
+        <div class="col-md-offset-6 col-md-1">
+            <input class="btn btn-success" type="submit" value="Upload" />
+        </div>
+    </div>
+</div>
