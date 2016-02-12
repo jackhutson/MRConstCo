@@ -8,6 +8,7 @@
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
+                    this.project.contractors.shift(null);
                 });
         }
 
@@ -41,7 +42,11 @@
                     this.$http.post('/api/task', newTask)
                         .then((response) => {
                             this.project.jobs.push(response);
+                        })
+                        .catch((response) => {
+                            alert("Post failed, must have a contractor.");
                         });
+                    
                     //this.$http.post(`api/projectDetails/${this.$routeParams.id}/newTask`, task)
                     //    .then((response) => {
                     //        this.$location.path("#/taskDetails")

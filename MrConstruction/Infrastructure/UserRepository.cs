@@ -10,7 +10,6 @@ namespace MrConstruction.Infrastructure {
     public class UserRepository {
 
         private ApplicationDbContext _db;
-        private ApplicationUserManager _userManager;
 
         public UserRepository(DbContext db) {
             _db = (ApplicationDbContext)db;
@@ -18,6 +17,12 @@ namespace MrConstruction.Infrastructure {
 
         public IQueryable<ApplicationUser> GetUsers() {
             return _db.Users;
+        }
+
+        public ApplicationUser GetUserById(string Id) {
+            return (from u in _db.Users
+                   where u.Id == Id
+                   select u).FirstOrDefault();
         }
 
         public IQueryable<ApplicationUser> GetContractors() {

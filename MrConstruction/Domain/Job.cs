@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace MrConstruction.Domain
 {
-    public class Job : IDbEntity, IActivatable
-    {
+    public class Job : IDbEntity, IActivatable {
 
         public int Id { get; set; }
 
@@ -18,13 +18,18 @@ namespace MrConstruction.Domain
 
         public decimal? Estimate { get; set; }
 
-        public ApplicationUser Contractor { get; set; }
+        public string ContractorId { get; set; }
+
+        [ForeignKey("ContractorId")]
+        public virtual ApplicationUser Contractor { get; set; }
 
         public Project.Status State { get; set; }
 
         public DateTime Deadline { get; set; }
-
+        
         public int ProjectId { get; set; }
 
+        [ForeignKey("ProjectId")]
+        public virtual Project Project { get; set; }
     }
 }

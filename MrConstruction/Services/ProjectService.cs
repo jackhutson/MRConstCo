@@ -8,10 +8,13 @@ using System.Web;
 
 namespace MrConstruction.Services {
     public class ProjectService {
+
         public ProjectRepository _projectRepo;
+
         public ProjectService(ProjectRepository projectRepo) {
             _projectRepo = projectRepo;
         }
+
         public IList<ProjectDTO> ListProjects() {
             var list = (from p in _projectRepo.GetProjects()
                         select new ProjectDTO() {
@@ -34,6 +37,7 @@ namespace MrConstruction.Services {
                         }).ToList();
             return list;
         }
+
         public ProjectDTO GetOneProject(int id) {
             var dto = (from p in _projectRepo.Get(id)
                         select new ProjectDTO() {
@@ -65,6 +69,7 @@ namespace MrConstruction.Services {
         public bool CheckExists(string title) {
             return _projectRepo.CheckExists(title);
         }
+
         public void AddNewProject(NewProjectDTO newProject) {
 
             var project = new Project() {
