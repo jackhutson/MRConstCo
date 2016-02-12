@@ -16,7 +16,7 @@ namespace MrConstruction.Infrastructure {
         }
 
         public IQueryable<ApplicationUser> GetUsers() {
-            return _db.Users;
+            return _db.Users.AsQueryable();
         }
 
         public ApplicationUser GetUserById(string Id) {
@@ -31,6 +31,12 @@ namespace MrConstruction.Infrastructure {
                    from u in _db.Users
                    where r.Name == Role.Contractor && ru.UserId == u.Id
                    select u;
+        }
+
+        public ApplicationUser GetByUserName(string name) {
+            return (from u in _db.Users
+                    where u.UserName == name
+                    select u).FirstOrDefault();
         }
     }
 }

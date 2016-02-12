@@ -14,11 +14,8 @@ namespace MrConstruction.Presentation.Controllers
     {
         private JobService _jobService;
 
-        private ProjectService _projectService;
-
-        public JobsController(JobService jobService, ProjectService projectService) {
-            _jobService = jobService;
-            _projectService = projectService;  
+        public JobsController(JobService jobService) {
+            _jobService = jobService;  
         }
 
         [HttpGet]
@@ -31,10 +28,12 @@ namespace MrConstruction.Presentation.Controllers
         [Route("api/task")]
         public IHttpActionResult AddJob(NewJobBindingModel job) {
             _jobService.AddJob(job);
-            if (ModelState.IsValid && _projectService.CheckExists(job.Name)) {
+            if (ModelState.IsValid && _jobService.CheckExists(job.Name)) {
                 return Ok();
+            } else {
+                return BadRequest();
             }
-            return BadRequest();
+            
         }
     }
 }

@@ -32,6 +32,7 @@ namespace MrConstruction.Services.Models {
         public JobDetailDTO GetJobDetails(int id, string username) {
 
             var job = _jobRepo.Get(id);
+            var users = _userRepo.GetUsers();
 
             var contractor = (from c in job
                            select c.Contractor).FirstOrDefault();
@@ -40,7 +41,7 @@ namespace MrConstruction.Services.Models {
                            select p.Project).FirstOrDefault();
 
             return (from j in job
-                    from u in _userRepo.GetUsers()
+                    from u in users
                     where u.UserName == username
                     select new JobDetailDTO() {
                         Name = j.Name,

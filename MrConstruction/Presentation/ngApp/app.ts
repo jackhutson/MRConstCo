@@ -34,7 +34,7 @@
                     controllerAs: 'controller'
                 });
             $routeProvider
-                .when('/projectList', {
+                .when('/project-list', {
                     templateUrl: 'Presentation/ngApp/views/projectList.html',
                     controller: MrConstruction.Controllers.ProjectController,
                     controllerAs: 'controller'
@@ -48,37 +48,37 @@
 
                 });
             $routeProvider
-                .when('/newproject', {
+                .when('/new-project', {
                     templateUrl: '/Presentation/ngApp/views/newProject.html',
                     controller: MrConstruction.Controllers.NewProjectController,
                     controllerAs: 'controller'
                 });
             $routeProvider
-                .when('/taskdetails', {
+                .when('/task-details/:id', {
                     templateUrl: '/Presentation/ngApp/views/taskDetails.html',
                     controller: MrConstruction.Controllers.TaskDetailsController,
                     controllerAs: 'controller'
                 });
             $routeProvider
-                .when('/projectDetails/:id', {
+                .when('/project-details/:id', {
                     templateUrl: 'Presentation/ngApp/views/projectDetails.html',
                     controller: MrConstruction.Controllers.ProjectDetailsController,
                     controllerAs: 'controller'
                 });
 
             $routeProvider
-                .when('/newContractor', {
+                .when('/new-contractor', {
                     templateUrl: '/Presentation/ngApp/views/newContractor.html',
                     controller: MrConstruction.Controllers.AuthController,
                     controllerAs: 'controller'
                 });
 
-            $routeProvider
-                .when('/projectDetails/newTask', {
-                    templateUrl: '/Presentation/ngApp/views/newTask.html',
-                    controller: MrConstruction.Controllers.NewJobController,
-                    controllerAs: 'controller'
-                });
+            //$routeProvider
+            //    .when('/project-details/new-task', {
+            //        templateUrl: '/Presentation/ngApp/views/newTask.html',
+            //        controller: MrConstruction.Controllers.NewJobController,
+            //        controllerAs: 'controller'
+            //    });
         });
 }
 

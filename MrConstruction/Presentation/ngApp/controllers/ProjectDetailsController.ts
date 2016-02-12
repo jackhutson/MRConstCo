@@ -41,7 +41,7 @@
                     newTask.projectId = this.$routeParams.id;
                     this.$http.post('/api/task', newTask)
                         .then((response) => {
-                            this.project.jobs.push(response);
+
                         })
                         .catch((response) => {
                             alert("Post failed, must have a contractor.");

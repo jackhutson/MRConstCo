@@ -33,7 +33,7 @@
                 <div class="col-md-offset-1 col-md-6 taskform" ng-controller="contractorListController as contractor">
                     <div class="dropdown">
                         <label for="dropdown" class="control-label">Pick a Contractor</label>
-                        <select class="dropdown-toggle" ng-model="task.contractor" ng-options="contractor.name as contractor.id for contractor in contractor.contractors track by contractor.name"></select>
+                        <select class="dropdown-toggle" ng-model="task.contractorId" ng-options="contractor.id as contractor.name for contractor in contractor.contractors track by contractor.name"></select>
                     </div>
                 </div>
             </div>

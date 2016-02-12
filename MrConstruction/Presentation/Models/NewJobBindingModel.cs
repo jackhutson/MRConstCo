@@ -7,8 +7,6 @@ using System.Web;
 namespace MrConstruction.Presentation.Models {
     public class NewJobBindingModel {
 
-        public int Id { get; set; }
-
         public string Name { get; set; }
 
         public string Description { get; set; }
