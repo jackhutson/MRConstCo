@@ -3,6 +3,7 @@
 
         public projects;
         public modalInstance;
+       
 
         constructor(private $uibModal, private $http: ng.IHttpService) {
             $http.get('/api/project')
