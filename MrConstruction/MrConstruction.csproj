@@ -243,6 +243,10 @@
     <Compile Include="Migrations\201602092233179_modified project model to set active to true by default.Designer.cs">
       <DependentUpon>201602092233179_modified project model to set active to true by default.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602102253103_error.cs" />
+    <Compile Include="Migrations\201602102253103_error.Designer.cs">
+      <DependentUpon>201602102253103_error.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -399,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602092233179_modified project model to set active to true by default.resx">
       <DependentUpon>201602092233179_modified project model to set active to true by default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602102253103_error.resx">
+      <DependentUpon>201602102253103_error.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

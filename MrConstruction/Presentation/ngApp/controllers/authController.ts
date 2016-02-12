@@ -2,7 +2,7 @@
 
     export class AuthController {
 
-        constructor(private $http: ng.IHttpService, private $window: ng.IWindowService, private $location: ng.ILocationService) { }
+        constructor(private $uibModalInstance, private $http: ng.IHttpService, private $window: ng.IWindowService, private $location: ng.ILocationService) { }
 
         public register(user): void {
 
@@ -13,6 +13,7 @@
                 .catch((response) => {
                     console.log(response);
                 });
+            this.$uibModalInstance.close();
         }
 
         public login(username, password): void {
@@ -32,6 +33,10 @@
 
         public logout() {
             this.$window.localStorage.removeItem('token');
+        }
+
+        public cancel() {
+            this.$uibModalInstance.dismiss();
         }
     }
 

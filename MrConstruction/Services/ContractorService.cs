@@ -21,6 +21,7 @@ namespace MrConstruction.Services {
             var contractors = _userRepo.GetContractors();
             return (from c in contractors
                     select new ContractorUserDTO() {
+                        Id = c.Id,
                         Name = c.Name,
                         Title = c.Title,
                         CompanyName = c.CompanyName,

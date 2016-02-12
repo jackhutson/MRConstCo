@@ -3,13 +3,18 @@
     export class NewJobController{
 
         public task;
+        public newTask;
         public selectedContractor;
 
         constructor(private $uibModalInstance, private $http: ng.IHttpService,
             private $location: ng.ILocationService) { }
             
-        public addTask(task): void {
-            this.$uibModalInstance.close(task);
+        public ok(newTask){
+            this.$uibModalInstance.close(newTask);
+        }
+
+        public cancel() {
+            this.$uibModalInstance.dismiss();
         }
     }
 }
