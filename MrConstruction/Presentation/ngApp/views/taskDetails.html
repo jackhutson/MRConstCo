@@ -3,11 +3,11 @@
         <h1>{{controller.task.name}}</h1>
     </div>
     <div class="col-md-offset-3 col-md-6 col-md-offset-3">
-        {{controller.project}}
+        {{controller.task.projectTitle}}
     </div>
 
     <div class="col-md-offset-3 col-md-6 col-md-offset-3">
-        {{controller.task.contractor}}
+        {{controller.task.contractor.name}}
     </div>
     <hr />
     <div class="col-md-offset-3 col-md-9">
@@ -25,6 +25,4 @@
     <div class="row">
         {{controller.task.status}}
     </div>
-    
-    
 </div>

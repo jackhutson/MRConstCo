@@ -2,7 +2,6 @@
 
     export class TaskDetailsController {
 
-
         public task;
 
         constructor(private $http: ng.IHttpService, private $routeParams) {

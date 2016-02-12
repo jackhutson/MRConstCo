@@ -8,6 +8,7 @@
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
+                    this.project.contractors.shift(null);
                 });
         }
 
@@ -52,8 +53,12 @@
                     newTask.projectId = this.$routeParams.id;
                     this.$http.post('/api/task', newTask)
                         .then((response) => {
-                            this.project.jobs.push(response);
+
+                        })
+                        .catch((response) => {
+                            alert("Post failed, must have a contractor.");
                         });
+                    
                 })
                 .catch((dismiss) => {
 

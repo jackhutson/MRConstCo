@@ -1,0 +1,14 @@
+﻿<!--Add a portfolio-->
+<div class="row" ng-repeat="portfolio in controller.portfolios" ng-click="details = true">
+    <div class="col-md-6">
+        <img ng-src="{{portfolio.beforePicture}}" />
+    </div>
+    <div class="col-md-6">
+        <img ng-src="{{portfolio.afterPicture}}" />
+    </div>
+
+    <div class="row" ng-show="details">
+
+    </div>
+</div>
+
