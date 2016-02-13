@@ -17,7 +17,7 @@
 
             this.modalInstance = this.$uibModal.open({
                 templateUrl: '/Presentation/ngApp/views/newContractor.html',
-                controller: MrConstruction.Controllers.AuthController,
+                controller: MrConstruction.Controllers.NewContractorController,
                 controllerAs: 'controller',
                 size: 'lg',
                 backdrop: true,

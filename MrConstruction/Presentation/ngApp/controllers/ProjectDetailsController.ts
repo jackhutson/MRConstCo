@@ -8,7 +8,7 @@
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
-                    this.project.contractors.shift(null);
+                    //this.project.contractors.shift(null);
                 });
         }
 

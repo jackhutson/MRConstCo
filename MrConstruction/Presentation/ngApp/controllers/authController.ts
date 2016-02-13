@@ -2,19 +2,19 @@
 
     export class AuthController {
 
-        constructor(private $uibModalInstance, private $http: ng.IHttpService, private $window: ng.IWindowService, private $location: ng.ILocationService) { }
+        constructor(private $http: ng.IHttpService, private $window: ng.IWindowService, private $location: ng.ILocationService) { }
 
-        public register(user): void {
+        //public register(user): void {
 
-            this.$http.post('/api/account/register', user)
-                .then((response) => {
-                    console.log('Registered a new user!');
-                })
-                .catch((response) => {
-                    console.log(response);
-                });
-            this.$uibModalInstance.close();
-        }
+        //    this.$http.post('/api/account/register', user)
+        //        .then((response) => {
+        //            console.log('Registered a new user!');
+        //        })
+        //        .catch((response) => {
+        //            console.log(response);
+        //        });
+        //    this.$uibModalInstance.close();
+        //}
 
         public login(username, password): void {
             let data = `grant_type=password&username=${username}&password=${password}`;
@@ -33,10 +33,6 @@
 
         public logout() {
             this.$window.localStorage.removeItem('token');
-        }
-
-        public cancel() {
-            this.$uibModalInstance.dismiss();
         }
     }
 
