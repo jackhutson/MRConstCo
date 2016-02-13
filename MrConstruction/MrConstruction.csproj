@@ -213,6 +213,7 @@
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Infrastructure\JobRepository.cs" />
+    <Compile Include="Infrastructure\PortfolioRepository.cs" />
     <Compile Include="Infrastructure\UploadRepository.cs" />
     <Compile Include="Migrations\201602081752558_initial.cs" />
     <Compile Include="Infrastructure\ProjectRepository.cs" />
@@ -247,6 +248,10 @@
     <Compile Include="Migrations\201602102253103_error.Designer.cs">
       <DependentUpon>201602102253103_error.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602121630373_added before and after to the project model.cs" />
+    <Compile Include="Migrations\201602121630373_added before and after to the project model.Designer.cs">
+      <DependentUpon>201602121630373_added before and after to the project model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -255,10 +260,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Controllers\JobsController.cs" />
+    <Compile Include="Presentation\Controllers\PortfolioController.cs" />
     <Compile Include="Presentation\Controllers\ProjectController.cs" />
     <Compile Include="Presentation\Extensions\ApiControllerExtensions.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
+    <Compile Include="Presentation\Models\NewPortfolioBindingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
@@ -269,9 +276,11 @@
     <Compile Include="Services\Models\JobListDTO.cs" />
     <Compile Include="Services\Models\LocationDTO.cs" />
     <Compile Include="Services\Models\NewProjectDTO.cs" />
+    <Compile Include="Services\Models\PortfolioDTO.cs" />
     <Compile Include="Services\Models\ProjectDTO.cs" />
     <Compile Include="Services\Models\ContractorUserDTO.cs" />
     <Compile Include="Services\Models\UploadDTO.cs" />
+    <Compile Include="Services\PortfolioService.cs" />
     <Compile Include="Services\ProjectService.cs" />
     <Compile Include="Infrastructure\UserRepository.cs" />
     <Compile Include="Services\UploadService.cs" />
@@ -407,6 +416,9 @@
     <EmbeddedResource Include="Migrations\201602102253103_error.resx">
       <DependentUpon>201602102253103_error.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602121630373_added before and after to the project model.resx">
+      <DependentUpon>201602121630373_added before and after to the project model.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -430,7 +442,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53598</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

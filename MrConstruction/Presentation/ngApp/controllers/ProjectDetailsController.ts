@@ -18,6 +18,18 @@
                 });
         }
 
+        public createPortfolio(port) {
+            var pics = [];
+            for (var p in port) {
+                if (port[p]) {
+                    pics.push(p);
+                }
+            }
+            this.$http.post('/api/portfolio', pics)
+                .then((response) => {
+                    console.log(response);
+                });
+        }
         //public addTask(newTask): void {
         //    this.newTask.projectId = this.$routeParams.id;
         //    this.$http.post('/api/task', newTask)

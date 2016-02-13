@@ -20,6 +20,8 @@ namespace MrConstruction.Domain {
         public string Description { get; set; }
         public Client Client { get; set; }
         public IList<Upload> Uploads { get; set; }
+        public Upload BeforePicture { get; set; }
+        public Upload AfterPicture { get; set; }
         public Status State { get; set; }
         public IList<Job> JobList { get; set; }
         public decimal Budget { get; set; }

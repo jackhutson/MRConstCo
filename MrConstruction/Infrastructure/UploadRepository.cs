@@ -8,5 +8,10 @@ using System.Web;
 namespace MrConstruction.Infrastructure {
     public class UploadRepository:GenericRepository<Upload> {
         public UploadRepository(DbContext db) : base(db) { }
+        public Upload FindUploadById(int id) {
+            return (from u in Table
+                    where u.Id == id
+                    select u).FirstOrDefault();
+        }
     }
 }

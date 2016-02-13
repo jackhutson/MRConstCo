@@ -11,16 +11,26 @@
     </div>
 
 </div>
+<form ng-submit="controller.createPortfolio(port)">
+    <div class="row">
 
-<div class="row">
-    <div class="col-md-2" ng-repeat="upload in controller.project.uploads" style="display:inline">
-        <img ng-src="{{upload.url}}" class="uploads" />
+        <h1>Create Portfolio</h1>
+        <input type="submit" />
+
     </div>
-</div>
-<div class="row">
-    <input value="+" type="button" ng-click="controller.showModal()" />
-</div>
 
+    <div class="row">
+        <div class="col-md-2" ng-repeat="upload in controller.project.uploads" style="display:inline">
+            <img ng-src="{{upload.url}}" class="uploads" />
+            <input type="checkbox" name="{{upload.id}}" ng-model="port[upload.id]" />
+        </div>
+    </div>
+
+    <div class="row">
+        <input value="+" type="button" ng-click="controller.showModal()" />
+
+    </div>
+</form>
 <div class="row">
     <div class="col-md-12">
         {{controller.project.description}}
