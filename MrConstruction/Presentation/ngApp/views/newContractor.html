@@ -3,7 +3,7 @@
         <input type="button" class="close" value="X" ng-click="controller.cancel()" />
         <h1>Add New Contractor</h1>
     </div>
-    <form class="form-horizontal" ng-submit="controller.register(user)">
+    <form class="form-horizontal">
         <div class="modal-body">
             <div class="form-group">
                 <div class="col-md-11 registerform">
@@ -56,7 +56,7 @@
         </div>
         <div class="modal-footer">
             <div class="col-md-11">
-                <input type="submit" class="btn btn-success" value="Add" />
+                <input type="submit" class="btn btn-success" value="Add" ng-click="controller.register(user)"/>
                 <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
             </div>
         </div>
