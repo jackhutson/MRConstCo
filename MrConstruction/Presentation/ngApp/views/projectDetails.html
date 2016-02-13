@@ -3,10 +3,6 @@
     <div class="col-md-3">
         <h1>{{controller.project.title}}</h1>
     </div>
-
-    <div class="col-md-2">
-        <input type="button" value="Uploads" ng-click="controller.uploadModal()"/>
-    </div>
     <!--<div class="col-md-2">
         <form ng-submit="controller.postFiles(file)">
             <input type="file" id="file-1" file-model="file" />
@@ -14,28 +10,48 @@
             <input type="submit" value="submit" />
         </form>
     </div>-->
-
 </div>
-
 <div class="row">
     <div class="col-md-2" ng-repeat="upload in controller.project.uploads" style="display:inline">
         <img ng-src="{{upload.url}}" class="uploads" />
     </div>
 </div>
 <div class="row">
-    <input value="+" type="button" ng-click="controller.showModal()" />
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        {{controller.project.description}}
+    <div class="col-md-offset-10 col-md-2">
+        <input value="+" type="button" ng-click="controller.showModal()" />
     </div>
-    <div>
-        <div class="col-md-12" ng-repeat="job in controller.project.jobList">
-            {{job.name}}
-            {{job.deadline}}
-            {{job.estimate}}
-            <input type="button" />
+</div>
+<div class="row">
+    <div class="col-md-offset-10 col-md-2">
+        <input value="Edit" type="button" /> <!--Add Edit method-->
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-10 col-md-2">
+            <input type="button" value="Uploads" ng-click="controller.uploadModal()" />
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="row col-md-8">
+        <div class="col-md-offset-2 col-md-8">
+            {{controller.project.description}}
+        </div>
+        <div class="row joblistitem" ng-repeat="job in controller.project.jobList">
+            <div class="col-md-4">
+                {{job.name}}
+            </div>
+            <div class="col-md-3">
+                {{job.deadline}}
+            </div>
+            <div class="col-md-3">
+                {{job.estimate}}
+            </div>
+            <div class="col-md-2">
+                <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a>
+            </div>
         </div>
     </div>
 </div>
