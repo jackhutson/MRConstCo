@@ -114,7 +114,14 @@ h2 {
     text-align: center;
 }
 
-#newproject {
+#newtask {
+    background-color: #A5B4C1 !important;
+    min-height: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.modal-dialog .newproject {
     background-color: #A5B4C1;
     min-height: 100%;
     border: 1px solid white;
@@ -138,10 +145,11 @@ label control-label {
 }
 
 .modal-content {
-    height: 0;
     width: 100%;
+    height:0;
 }
 
 input[value]:focus {
     outline: none;
 }
+

@@ -1,48 +1,50 @@
 ﻿<div class="modal-dialog">
-    <div class="modal-header">
-        
-        <h1>Add New Task <input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
-    </div>
-    <form class="form-horizontal">
-        <div class="modal-body">
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-11 taskform">
-                    <label for="Name" class="control-label">Name</label>
-                    <input ng-model="task.name" class="form-control" type="text" placeholder="Task Name" />
+    <div class="row newproject">
+        <div class="modal-header">
+
+            <h1 style="text-align:center">Add New Task <input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
+        </div>
+        <form class="form-horizontal">
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        <label for="Name" class="control-label">Name</label>
+                        <input ng-model="task.name" class="form-control" type="text" placeholder="Task Name" />
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-11 taskform">
-                    <label for="taskDescription" class="control-label">Description</label>
-                    <textarea ng-model="task.description" style="padding-bottom: 100px" class="form-control" type="text" placeholder="Short description of the task"></textarea>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        <label for="taskDescription" class="control-label">Description</label>
+                        <textarea ng-model="task.description" style="padding-bottom: 100px" class="form-control" type="text" placeholder="Short description of the task"></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-11 taskform">
-                    <label for="taskEstimate" class="control-label">Estimate</label>
-                    <input ng-model="task.estimate" class="form-control" type="text" placeholder="Task Estimate" />
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        <label for="taskEstimate" class="control-label">Estimate</label>
+                        <input ng-model="task.estimate" class="form-control" type="text" placeholder="Task Estimate" />
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-11 taskform">
-                    <label for="deadline" class="control-label">Deadline</label>
-                    <input ng-model="task.deadline" class="form-control" type="date" placeholder="Task Deadline" />
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        <label for="deadline" class="control-label">Deadline</label>
+                        <input ng-model="task.deadline" class="form-control" type="date" placeholder="Task Deadline" />
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-6 taskform" ng-controller="contractorListController as contractor">
-                    <div class="dropdown">
-                        <label for="dropdown" class="control-label">Pick a Contractor</label>
-                        <select class="dropdown-toggle" ng-model="task.contractor" ng-options="contractor.name for contractor in contractor.contractors"></select>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-6" ng-controller="contractorListController as contractor">
+                        <div class="dropdown">
+                            <label for="dropdown" class="control-label">Pick a Contractor</label>
+                            <select class="dropdown-toggle" ng-model="task.contractor" ng-options="contractor.name for contractor in contractor.contractors"></select>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="modal-footer">
-            <div class="col-md-offset-1 col-md-11">
-                <input type="button" class="btn btn-success" value="Add Task" ng-click="controller.ok(task)" />
-                <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
+            <div class="modal-footer">
+                <div class="col-md-offset-5 col-md-1">
+                    <input type="button" class="btn btn-success" value="Add Task" ng-click="controller.ok(task)" />
+                    <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
