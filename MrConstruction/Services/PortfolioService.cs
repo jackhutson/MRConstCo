@@ -29,5 +29,14 @@ namespace MrConstruction.Services {
             _portfolioRepo.SaveChanges();
             
         }
+        public IList<PortfolioDTO> DisplayPortfolio() {
+            return (from p in _portfolioRepo.FindPortfolios()
+                    select new PortfolioDTO() {
+                        Uploads = (from u in p.Uploads
+                                   select new UploadDTO() {
+                                       Url = u.Url  
+                                   }).ToList(),
+                    }).ToList();
+        }
     }
 }
