@@ -4,8 +4,15 @@
 
         constructor(private $uibModalInstance, private $http: ng.IHttpService) { }
 
-        public ok() {
-            this.$uibModalInstance.close();
+        public postFiles(file, type) {
+
+            if (type == 0) {
+                file.type = 0;
+            }
+            else {
+                file.type = 1;
+            }
+            this.$uibModalInstance.close(file);
         }
 
         public cancel() {
