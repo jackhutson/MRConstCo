@@ -17,7 +17,9 @@ namespace MrConstruction.Presentation.Controllers
     public class ProjectController : ApiController
     {
         public ProjectService _projectServ;
+
         public UploadService _uploadServ;
+
         public ProjectController(ProjectService projectServ, UploadService uploadServ) {
             _projectServ = projectServ;
             _uploadServ = uploadServ;

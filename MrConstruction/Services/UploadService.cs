@@ -9,11 +9,14 @@ using System.Web;
 namespace MrConstruction.Services {
     public class UploadService {
         public UploadRepository _uploadRepo;
+
         public ProjectRepository _projectRepo;
+
         public UploadService(UploadRepository uploadRepo, ProjectRepository projectRepo) {
             _uploadRepo = uploadRepo;
             _projectRepo = projectRepo;
         }
+
         public void SaveUpload(int id, UploadDTO file) {
             var currentProject = _projectRepo.Get(id).FirstOrDefault();
 

@@ -1,4 +1,5 @@
-﻿using MrConstruction.Services;
+﻿using MrConstruction.Presentation.Models;
+using MrConstruction.Services;
 using MrConstruction.Services.Models;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,9 @@ namespace MrConstruction.Presentation.Controllers
     public class JobsController : ApiController
     {
         private JobService _jobService;
-        private ProjectService _projectService;
 
-        public JobsController(JobService jobService, ProjectService projectService) {
-            _jobService = jobService;
-            _projectService = projectService;  
+        public JobsController(JobService jobService) {
+            _jobService = jobService;  
         }
 
         [HttpGet]
@@ -27,11 +26,14 @@ namespace MrConstruction.Presentation.Controllers
 
         [HttpPost]
         [Route("api/task")]
-        public IHttpActionResult AddJob(JobDetailDTO job) {
-            if (ModelState.IsValid && _projectService.CheckExists(job.Name)) {
-                return Ok(_jobService.AddJob(job));
+        public IHttpActionResult AddJob(NewJobBindingModel job) {
+            _jobService.AddJob(job);
+            if (ModelState.IsValid && _jobService.CheckExists(job.Name)) {
+                return Ok();
+            } else {
+                return BadRequest();
             }
-            return BadRequest();
+            
         }
     }
 }
