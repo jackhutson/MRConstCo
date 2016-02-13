@@ -10,6 +10,7 @@ namespace MrConstruction.Domain {
         public string Name { get; set; }
         public string Url { get; set; }
 
+        [InverseProperty("Uploads")]
         public Project Project { get; set; }
 
         [InverseProperty("Uploads")]

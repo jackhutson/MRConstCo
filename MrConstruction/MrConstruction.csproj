@@ -215,50 +215,10 @@
     <Compile Include="Infrastructure\JobRepository.cs" />
     <Compile Include="Infrastructure\PortfolioRepository.cs" />
     <Compile Include="Infrastructure\UploadRepository.cs" />
-    <Compile Include="Migrations\201602081752558_initial.cs" />
     <Compile Include="Infrastructure\ProjectRepository.cs" />
-    <Compile Include="Migrations\201602081752558_initial.Designer.cs">
-      <DependentUpon>201602081752558_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602081950029_edited ApplicationDbContext.cs" />
-    <Compile Include="Migrations\201602081950029_edited ApplicationDbContext.Designer.cs">
-      <DependentUpon>201602081950029_edited ApplicationDbContext.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602082016468_resolved build errors.cs" />
-    <Compile Include="Migrations\201602082016468_resolved build errors.Designer.cs">
-      <DependentUpon>201602082016468_resolved build errors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602082135412_fixed job model.cs" />
-    <Compile Include="Migrations\201602082135412_fixed job model.Designer.cs">
-      <DependentUpon>201602082135412_fixed job model.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602090034033_Added Roles.cs" />
-    <Compile Include="Migrations\201602090034033_Added Roles.Designer.cs">
-      <DependentUpon>201602090034033_Added Roles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602091645111_Updated domain models.cs" />
-    <Compile Include="Migrations\201602091645111_Updated domain models.Designer.cs">
-      <DependentUpon>201602091645111_Updated domain models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602092233179_modified project model to set active to true by default.cs" />
-    <Compile Include="Migrations\201602092233179_modified project model to set active to true by default.Designer.cs">
-      <DependentUpon>201602092233179_modified project model to set active to true by default.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602102253103_error.cs" />
-    <Compile Include="Migrations\201602102253103_error.Designer.cs">
-      <DependentUpon>201602102253103_error.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602121630373_added before and after to the project model.cs" />
-    <Compile Include="Migrations\201602121630373_added before and after to the project model.Designer.cs">
-      <DependentUpon>201602121630373_added before and after to the project model.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602121722089_updated Job and Project models to have contractorIds.cs" />
-    <Compile Include="Migrations\201602121722089_updated Job and Project models to have contractorIds.Designer.cs">
-      <DependentUpon>201602121722089_updated Job and Project models to have contractorIds.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602131653316_testing.cs" />
-    <Compile Include="Migrations\201602131653316_testing.Designer.cs">
-      <DependentUpon>201602131653316_testing.cs</DependentUpon>
+    <Compile Include="Migrations\201602131755178_re-initialize.cs" />
+    <Compile Include="Migrations\201602131755178_re-initialize.Designer.cs">
+      <DependentUpon>201602131755178_re-initialize.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
@@ -403,38 +363,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602081752558_initial.resx">
-      <DependentUpon>201602081752558_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602081950029_edited ApplicationDbContext.resx">
-      <DependentUpon>201602081950029_edited ApplicationDbContext.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602082016468_resolved build errors.resx">
-      <DependentUpon>201602082016468_resolved build errors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602082135412_fixed job model.resx">
-      <DependentUpon>201602082135412_fixed job model.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602090034033_Added Roles.resx">
-      <DependentUpon>201602090034033_Added Roles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602091645111_Updated domain models.resx">
-      <DependentUpon>201602091645111_Updated domain models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602092233179_modified project model to set active to true by default.resx">
-      <DependentUpon>201602092233179_modified project model to set active to true by default.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602102253103_error.resx">
-      <DependentUpon>201602102253103_error.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602121722089_updated Job and Project models to have contractorIds.resx">
-      <DependentUpon>201602121722089_updated Job and Project models to have contractorIds.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602121630373_added before and after to the project model.resx">
-      <DependentUpon>201602121630373_added before and after to the project model.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602131653316_testing.resx">
-      <DependentUpon>201602131653316_testing.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602131755178_re-initialize.resx">
+      <DependentUpon>201602131755178_re-initialize.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
