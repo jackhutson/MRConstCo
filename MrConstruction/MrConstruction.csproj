@@ -220,6 +220,14 @@
     <Compile Include="Migrations\201602131800245_re-re-initialize.Designer.cs">
       <DependentUpon>201602131800245_re-re-initialize.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602131820072_Added property to model.cs" />
+    <Compile Include="Migrations\201602131820072_Added property to model.Designer.cs">
+      <DependentUpon>201602131820072_Added property to model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602131828149_added upload classification enum.cs" />
+    <Compile Include="Migrations\201602131828149_added upload classification enum.Designer.cs">
+      <DependentUpon>201602131828149_added upload classification enum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -365,6 +373,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602131800245_re-re-initialize.resx">
       <DependentUpon>201602131800245_re-re-initialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602131820072_Added property to model.resx">
+      <DependentUpon>201602131820072_Added property to model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602131828149_added upload classification enum.resx">
+      <DependentUpon>201602131828149_added upload classification enum.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
