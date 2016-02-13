@@ -7,13 +7,13 @@ namespace MrConstruction.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class reinitialize : IMigrationMetadata
+    public sealed partial class rereinitialize : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(reinitialize));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(rereinitialize));
         
         string IMigrationMetadata.Id
         {
-            get { return "201602131755178_re-initialize"; }
+            get { return "201602131800245_re-re-initialize"; }
         }
         
         string IMigrationMetadata.Source

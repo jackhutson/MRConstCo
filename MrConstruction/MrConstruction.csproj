@@ -216,9 +216,9 @@
     <Compile Include="Infrastructure\PortfolioRepository.cs" />
     <Compile Include="Infrastructure\UploadRepository.cs" />
     <Compile Include="Infrastructure\ProjectRepository.cs" />
-    <Compile Include="Migrations\201602131755178_re-initialize.cs" />
-    <Compile Include="Migrations\201602131755178_re-initialize.Designer.cs">
-      <DependentUpon>201602131755178_re-initialize.cs</DependentUpon>
+    <Compile Include="Migrations\201602131800245_re-re-initialize.cs" />
+    <Compile Include="Migrations\201602131800245_re-re-initialize.Designer.cs">
+      <DependentUpon>201602131800245_re-re-initialize.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
@@ -363,8 +363,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602131755178_re-initialize.resx">
-      <DependentUpon>201602131755178_re-initialize.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602131800245_re-re-initialize.resx">
+      <DependentUpon>201602131800245_re-re-initialize.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
