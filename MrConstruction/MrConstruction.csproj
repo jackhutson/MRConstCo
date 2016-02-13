@@ -252,6 +252,14 @@
     <Compile Include="Migrations\201602121630373_added before and after to the project model.Designer.cs">
       <DependentUpon>201602121630373_added before and after to the project model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602121722089_updated Job and Project models to have contractorIds.cs" />
+    <Compile Include="Migrations\201602121722089_updated Job and Project models to have contractorIds.Designer.cs">
+      <DependentUpon>201602121722089_updated Job and Project models to have contractorIds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602131653316_testing.cs" />
+    <Compile Include="Migrations\201602131653316_testing.Designer.cs">
+      <DependentUpon>201602131653316_testing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -266,6 +274,7 @@
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
     <Compile Include="Presentation\Models\NewPortfolioBindingModel.cs" />
+    <Compile Include="Presentation\Models\NewJobBindingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
@@ -315,6 +324,7 @@
     <Content Include="Presentation\ngApp\views\publicPortfolio.html" />
     <Content Include="Presentation\ngApp\views\taskDetails.html" />
     <Content Include="Presentation\ngApp\views\projectList.html" />
+    <Content Include="Presentation\ngApp\views\upload.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -375,6 +385,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectDetailsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\taskDetailsController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\uploadsController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\directives\multipartUpload.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-ui-bootstrap\angular-ui-bootstrap.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
@@ -416,8 +427,14 @@
     <EmbeddedResource Include="Migrations\201602102253103_error.resx">
       <DependentUpon>201602102253103_error.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602121722089_updated Job and Project models to have contractorIds.resx">
+      <DependentUpon>201602121722089_updated Job and Project models to have contractorIds.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602121630373_added before and after to the project model.resx">
       <DependentUpon>201602121630373_added before and after to the project model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602131653316_testing.resx">
+      <DependentUpon>201602131653316_testing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

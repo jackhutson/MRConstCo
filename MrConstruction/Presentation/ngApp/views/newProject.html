@@ -1,14 +1,21 @@
 ﻿
 <div class="modal-dialog">
-    <!--<div class="col-md-2 colside"></div>
 
-    <div class="col-md-8" id="newproject">-->
+
+
+
+    <!--<div class="col-md-2 colside"></div>-->
+    <div class="row newproject">
         <div class="modal-header">
-            <input type="button" class="close" value="X" ng-click="controller.cancel()" />
-            <h1>Create New Project</h1>
+
+            <h1>Create New Project <input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
         </div>
+
         <form class="form-horizontal" ng-submit="controller.newProject(newProject)">
             <div class="modal-body">
+                <div class="row">
+                    <h2>Project Details</h2>
+                </div>
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-10 projectform">
                         <label for="Title">Title</label>
@@ -111,12 +118,13 @@
         </form>
 
         <div class="modal-footer">
-            <div class="col-md-offset-6 col-md-1">
+            <div class="col-md-offset-5 col-md-1">
                 <input class="btn btn-success" type="submit" value="Add" />
             </div>
         </div>
+    </div>
+    <!--<div class="col-md-2 colside"></div>-->
 
-    <!--</div>
-    <div class="col-md-2 colside"></div>-->
+
 </div>
 

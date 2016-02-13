@@ -2,25 +2,25 @@
 using MrConstruction.Domain;
 using MrConstruction.Domain.Identity;
 using MrConstruction.Infrastructure;
+using MrConstruction.Presentation.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MrConstruction.Services.Models
-{
-    public class JobService
-    {
-        private JobRepository _jobRepo;
-        private UserRepository _userRepo;
-        private ProjectRepository _projectRepo;
-        private ApplicationUserManager _appUserRepo;
+namespace MrConstruction.Services.Models {
+    public class JobService {
 
-        public JobService(JobRepository jobRepo, UserRepository userRepo, ProjectRepository projectRepo, ApplicationUserManager appUserRepo) {
+        private JobRepository _jobRepo;
+
+        private UserRepository _userRepo;
+
+        private ProjectRepository _projectRepo;
+
+        public JobService(JobRepository jobRepo, UserRepository userRepo, ProjectRepository projectRepo) {
             _jobRepo = jobRepo;
             _userRepo = userRepo;
             _projectRepo = projectRepo;
-            _appUserRepo = appUserRepo;
         }
 
         //checks db for job by job name 
@@ -31,33 +31,45 @@ namespace MrConstruction.Services.Models
         //Get Job Details
         public JobDetailDTO GetJobDetails(int id, string username) {
 
-            return (from j in _jobRepo.Get(id)
-                    from u in _userRepo.GetUsers()
+            var job = _jobRepo.Get(id);
+            var users = _userRepo.GetUsers();
+
+            var contractor = (from c in job
+                           select c.Contractor).FirstOrDefault();
+
+            var project = (from p in job
+                           select p.Project).FirstOrDefault();
+
+            return (from j in job
+                    from u in users
                     where u.UserName == username
                     select new JobDetailDTO() {
+                        Name = j.Name,
+                        ProjectTitle = project.Title,
+                        Estimate = (u.Roles.FirstOrDefault(r => r.RoleId == Role.Admin) != null) ? j.Estimate : (decimal?)null,
                         Deadline = j.Deadline,
                         Description = j.Description,
-                        Estimate = (u.Roles.FirstOrDefault(r => r.RoleId == Role.Admin)!= null) ? j.Estimate : (decimal?)null,
-                        Name = j.Name,
-                        ProjectId = j.ProjectId, 
                         State = j.State,
                         Contractor = new ContractorUserDTO() {
-                            Name = j.Contractor.Name,
-                            CompanyName = j.Contractor.CompanyName
+                            Id = contractor.Id,
+                            Name = contractor.Name,
+                            Title = contractor.Title,
+                            CompanyName = contractor.CompanyName,
+                            Email = contractor.Email,
+                            PhoneNumber = contractor.PhoneNumber,
+                            PhoneNumber2 = contractor.PhoneNumber2
                         }
-                    }).FirstOrDefault();                    
-        } 
+                    }).FirstOrDefault();
+        }
 
         //Add a new job
-        public JobDetailDTO AddJob(JobDetailDTO dto) {
-
-            var contractor = _appUserRepo.FindById(dto.Contractor.Id);
+        public void AddJob(NewJobBindingModel dto) {
 
             var job = new Job() {
                 Name = dto.Name,
                 Description = dto.Description,
                 Estimate = dto.Estimate,
-                Contractor = contractor,
+                ContractorId = dto.ContractorId,
                 State = dto.State,
                 Deadline = dto.Deadline,
                 ProjectId = dto.ProjectId
@@ -65,19 +77,6 @@ namespace MrConstruction.Services.Models
 
             _jobRepo.Add(job);
             _jobRepo.SaveChanges();
-
-            return new JobDetailDTO() {
-                Name = job.Name,
-                Description = job.Description,
-                Estimate = job.Estimate,
-                Contractor = new ContractorUserDTO() {
-                    Name = job.Contractor.Name,
-                    CompanyName = job.Contractor.CompanyName
-                },
-                State = job.State,
-                Deadline = job.Deadline,
-                ProjectId = job.ProjectId
-            };
         }
     }
 }

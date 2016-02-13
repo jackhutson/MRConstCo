@@ -15,17 +15,26 @@ namespace MrConstruction.Domain {
         }
 
         public int Id { get; set; }
+
         public bool Active { get; set; } = true;
+
         public string Title { get; set; }
+
         public string Description { get; set; }
+
         public Client Client { get; set; }
+
         public IList<Upload> Uploads { get; set; }
         public Upload BeforePicture { get; set; }
         public Upload AfterPicture { get; set; }
         public Status State { get; set; }
+
         public IList<Job> JobList { get; set; }
+
         public decimal Budget { get; set; }
+
         public DateTime EstStart { get; set; }
+
         public DateTime EstCompleted { get; set; }
     }
 }
