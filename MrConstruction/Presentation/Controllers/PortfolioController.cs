@@ -16,6 +16,10 @@ namespace MrConstruction.Presentation.Controllers
         public PortfolioController(PortfolioService portfolioServ) {
             _portfolioServ = portfolioServ;
         }
+        public IList<PortfolioDTO> Get() {
+            return _portfolioServ.DisplayPortfolio(); 
+        }
+
         public void Post(NewPortfolioBindingModel port) {
             _portfolioServ.MakePortfolio(port);
         }
