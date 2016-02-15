@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201602131828149_added upload classification enum.Designer.cs">
       <DependentUpon>201602131828149_added upload classification enum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602132126591_removed before after upload from project.cs" />
+    <Compile Include="Migrations\201602132126591_removed before after upload from project.Designer.cs">
+      <DependentUpon>201602132126591_removed before after upload from project.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -281,6 +285,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\views\editProject.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\newContractor.html" />
     <Content Include="Presentation\ngApp\views\newProject.html" />
@@ -337,6 +342,7 @@
     <Content Include="Services\Models\.keep" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Migrations\201602132126166_removed before\" />
     <Folder Include="Public\" />
   </ItemGroup>
   <ItemGroup>
@@ -348,6 +354,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\editProject.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newContractor.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newJobController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectController.ts" />
@@ -380,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602131828149_added upload classification enum.resx">
       <DependentUpon>201602131828149_added upload classification enum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602132126591_removed before after upload from project.resx">
+      <DependentUpon>201602132126591_removed before after upload from project.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
