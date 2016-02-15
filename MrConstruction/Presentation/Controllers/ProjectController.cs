@@ -57,6 +57,7 @@ namespace MrConstruction.Presentation.Controllers
             var dto = new UploadDTO() {
                 Name = file.RemoteFileName,
                 Url = Url.Content("~/Public/" + file.RemoteFileName)
+                //Type = 
             };
 
             _uploadServ.SaveUpload(id, dto);
