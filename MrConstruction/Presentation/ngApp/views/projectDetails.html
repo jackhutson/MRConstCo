@@ -11,6 +11,8 @@
         </form>
     </div>-->
 </div>
+
+
 <form ng-submit="controller.createPortfolio(port)">
     <div class="row">
 
@@ -18,10 +20,12 @@
         <input type="submit" />
 
     </div>
-    <div class="row">
+  
+    <div class="row" ng-init="port = {}">
         <div class="col-md-2" ng-repeat="upload in controller.project.uploads" style="display:inline">
             <img ng-src="{{upload.url}}" class="uploads" />
-            <input type="checkbox" name="{{upload.id}}" ng-model="port" />
+            <input type="checkbox" name="{{upload.id}}" ng-model="port[upload.id]" />
+
         </div>
     </div>
 
@@ -29,9 +33,10 @@
     <div class="col-md-offset-10 col-md-2">
         <input value="+" type="button" ng-click="controller.showModal()" />
     </div>
-</div>
-    </div>
+</div>   
 </form>
+
+
 <div class="row">
     <div class="col-md-offset-10 col-md-2">
         <input value="Edit" type="button" /> <!--Add Edit method-->

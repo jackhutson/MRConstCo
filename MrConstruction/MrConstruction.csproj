@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201602131828149_added upload classification enum.Designer.cs">
       <DependentUpon>201602131828149_added upload classification enum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602151954150_added to the models.cs" />
+    <Compile Include="Migrations\201602151954150_added to the models.Designer.cs">
+      <DependentUpon>201602151954150_added to the models.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ContractorController.cs" />
@@ -381,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602131828149_added upload classification enum.resx">
       <DependentUpon>201602131828149_added upload classification enum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602151954150_added to the models.resx">
+      <DependentUpon>201602151954150_added to the models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
