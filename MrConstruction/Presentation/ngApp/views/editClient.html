@@ -1,0 +1,49 @@
+﻿<div class="modal-dialog">
+    <!--<div class="col-md-2 colside"></div>-->
+    <div class="row newproject">
+        <div class="modal-header">
+            <h1>Edit Client Details<input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
+        </div>
+        <form class="form-horizontal">
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="clientName">Name</label>
+                        <input type="text" class="form-control" placeholder="client's name" ng-model="controller.client.name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="clientPhoneOne">Contact Phone Number 1</label>
+                        <input type="text" class="form-control" placeholder="(888) 888-8888" ng-model="controller.client.phoneNumber" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="clientPhoneOne">Contact Phone Number 2</label>
+                        <input type="text" class="form-control" placeholder="(888) 888-8888" ng-model="controller.client.phoneNumber2" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="clientEmail">Email</label>
+                        <input type="email" class="form-control" placeholder="example@example.com" ng-model="controller.client.email" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="projectDescription">Client Notes</label>
+                        <textarea style="padding-bottom: 100px; text-align:center" class="form-control" type="text" placeholder="Client Notes" ng-model="controller.client.description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="modal-footer">
+            <div class="col-md-offset-5 col-md-1">
+                <input class="btn btn-success" type="submit" value="Add" ng-click="controller.ok(client)" />
+            </div>
+        </div>
+    </div>
+    <!--<div class="col-md-2 colside"></div>-->
+</div>
+

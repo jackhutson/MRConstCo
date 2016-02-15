@@ -8,7 +8,7 @@
         public project: any;
 
         public ok(editProject) {
-            this.$uibModalInstance.close(editProject);
+            this.$uibModalInstance.close(this.project);
         }
 
         public cancel() {
