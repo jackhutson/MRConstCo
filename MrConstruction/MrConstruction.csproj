@@ -299,7 +299,6 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
-    <Content Include="Presentation\ngApp\views\editLocation.html" />
     <Content Include="Presentation\ngApp\views\editClient.html" />
     <Content Include="Presentation\ngApp\views\editProject.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
@@ -370,9 +369,9 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\editClientController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editLocationController.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\editClient.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\editProject.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\editProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newContractor.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newJobController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\portfolioController.ts" />
