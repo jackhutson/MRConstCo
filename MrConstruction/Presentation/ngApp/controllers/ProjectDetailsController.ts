@@ -8,17 +8,10 @@
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
-                    //this.project.contractors.shift(null);
+                    
                 });
         }
 
-        //public postFiles(file) {
-        //    this.$http.postMultipart(`/api/project/${this.$routeParams.id}/upload`, { file: file })
-        //        .then((response) => {
-        //        });
-        //}
-
-        //Upload Modal
         public uploadModal(): void {
             this.modalInstance = this.$uibModal.open({
                 templateUrl: '/Presentation/ngApp/views/upload.html',
@@ -29,8 +22,8 @@
             });
 
             this.modalInstance.result
-                .then((file) => {
-                    this.$http.postMultipart(`/api/project/${this.$routeParams.id}/upload`, { file: file })
+                .then((upload) => {
+                    this.$http.postMultipart(`/api/project/${this.$routeParams.id}/upload`, upload)
                         .then((response) => {
                         });
                 })
@@ -52,6 +45,38 @@
                 .then((response) => {
                     console.log(response);
                 });
+        }
+
+        public editModal(): void {
+
+            this.modalInstance = this.$uibModal.open({
+                templateUrl: '/Presentation/ngApp/views/editProject.html',
+                controller: MrConstruction.Controllers.EditProjectController,
+                controllerAs: 'controller',
+                size: 'lg',
+                resolve: {
+                    project: () => {
+                        return this.project
+                    }
+                },
+                backdrop: true,
+            });
+
+            this.modalInstance.result
+                .then((editProject) => {
+                    this.$http.post(`/api/project/${this.$routeParams.id}`, editProject)
+                        .then((response) => {
+
+                        })
+                        .catch((response) => {
+                            alert("Post failed, must have a contractor.");
+                        });
+
+                })
+                .catch((dismiss) => {
+
+                });
+
         }
 
         public showModal(): void {

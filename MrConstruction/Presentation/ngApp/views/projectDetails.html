@@ -15,10 +15,8 @@
 
 <form ng-submit="controller.createPortfolio(port)">
     <div class="row">
-
         <label>Create Portfolio</label>
         <input type="submit" />
-
     </div>
   
     <div class="row" ng-init="port = {}">
@@ -28,23 +26,22 @@
 
         </div>
     </div>
-
     <div class="row">
-    <div class="col-md-offset-10 col-md-2">
-        <input value="+" type="button" ng-click="controller.showModal()" />
+        <div class="col-md-offset-10 col-md-2">
+            <input value="New" class="btn" type="button" ng-click="controller.showModal()" />
+        </div>
     </div>
-</div>   
 </form>
 
 
 <div class="row">
     <div class="col-md-offset-10 col-md-2">
-        <input value="Edit" type="button" /> <!--Add Edit method-->
+        <input value="Edit" class="btn" type="button" ng-click="controller.editModal()" />
     </div>
 </div>
 <div class="row">
     <div class="col-md-offset-10 col-md-2">
-            <input type="button" value="Uploads" ng-click="controller.uploadModal()" />
+        <input type="button" value="Uploads" ng-click="controller.uploadModal()" />
     </div>
 </div>
 <hr />

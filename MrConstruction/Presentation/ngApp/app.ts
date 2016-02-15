@@ -33,6 +33,7 @@
                     controller: MrConstruction.Controllers.ContractorListController,
                     controllerAs: 'controller'
                 });
+
             $routeProvider
                 .when('/project-list', {
                     templateUrl: 'Presentation/ngApp/views/projectList.html',
@@ -61,20 +62,6 @@
                     controller: MrConstruction.Controllers.ProjectDetailsController,
                     controllerAs: 'controller'
                 });
-
-            //$routeProvider
-            //    .when('/new-project', {
-            //        templateUrl: '/Presentation/ngApp/views/newProject.html',
-            //        controller: MrConstruction.Controllers.NewProjectController,
-            //        controllerAs: 'controller'
-            //    });
-
-            //$routeProvider
-            //    .when('/new-contractor', {
-            //        templateUrl: '/Presentation/ngApp/views/newContractor.html',
-            //        controller: MrConstruction.Controllers.AuthController,
-            //        controllerAs: 'controller'
-            //    });
         });
 }
 

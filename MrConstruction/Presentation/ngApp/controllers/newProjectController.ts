@@ -5,8 +5,8 @@
 
         constructor(private $uibModalInstance, private $http: ng.IHttpService, private $location: ng.ILocationService) { }
 
-        public ok(newProject) {
-            this.$uibModalInstance.close(newProject);
+        public ok(editProject) {
+            this.$uibModalInstance.close(editProject);
         }
 
         public cancel() {
