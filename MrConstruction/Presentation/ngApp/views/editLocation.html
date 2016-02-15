@@ -1,0 +1,57 @@
+﻿<div class="modal-dialog">
+    <!--<div class="col-md-2 colside"></div>-->
+    <div class="row newproject">
+        <div class="modal-header">
+            <h1>Edit Location <input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
+            {{controller.location}}
+        </div>
+        <form class="form-horizontal">
+            <div class="modal-body">
+                <div class="row">
+                    <h2>Location Details</h2>
+                </div>
+                <hr />
+                <div class="row">
+                    <h2>Location Details</h2>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="clientStreetOne">Street One</label>
+                        <input type="text" class="form-control" placeholder="1100 Example St." ng-model="controller.location.street1" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="clientStreetTwo">Street Two</label>
+                        <input type="text" class="form-control" placeholder="1101 Example St. (Optional)" ng-model="controller.location.street2" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" placeholder="City" ng-model="controller.location.city" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" placeholder="State" ng-model="controller.location.state" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 projectform">
+                        <label for="Country">Country</label>
+                        <input type="text" class="form-control" placeholder="Country (ex. US)" ng-model="controller.location.country" />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="modal-footer">
+            <div class="col-md-offset-5 col-md-1">
+                <input class="btn btn-success" type="submit" value="Edit" ng-click="controller.ok(location)" />
+            </div>
+        </div>
+    </div>
+    <!--<div class="col-md-2 colside"></div>-->
+</div>
+

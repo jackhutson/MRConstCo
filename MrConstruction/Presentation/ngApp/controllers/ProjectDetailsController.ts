@@ -3,12 +3,17 @@
 
         public project;
         public modalInstance;
+        public location;
 
         constructor(private $uibModal, private $http, private $routeParams) {
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
                     
+                });
+            $http.get(`/api/location/${$routeParams.id}`)
+                .then((response) => {
+                    this.location = response.data;
                 });
         }
 
@@ -70,6 +75,38 @@
                         })
                         .catch((response) => {
                             alert("Post failed, must have a contractor.");
+                        });
+
+                })
+                .catch((dismiss) => {
+
+                });
+
+        }
+
+        public editLocationModal(): void {
+
+            this.modalInstance = this.$uibModal.open({
+                templateUrl: '/Presentation/ngApp/views/editLocation.html',
+                controller: MrConstruction.Controllers.EditLocationController,
+                controllerAs: 'controller',
+                size: 'lg',
+                resolve: {
+                    location: () => {
+                        return this.location
+                    }
+                },
+                backdrop: true,
+            });
+
+            this.modalInstance.result
+                .then((Client) => {
+                    this.$http.post(`/api/location/${this.$routeParams.id}`, Client)
+                        .then((response) => {
+
+                        })
+                        .catch((response) => {
+                            alert('failed');
                         });
 
                 })

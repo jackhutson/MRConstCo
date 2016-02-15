@@ -213,6 +213,7 @@
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Infrastructure\JobRepository.cs" />
+    <Compile Include="Infrastructure\LocationRepository.cs" />
     <Compile Include="Infrastructure\PortfolioRepository.cs" />
     <Compile Include="Infrastructure\UploadRepository.cs" />
     <Compile Include="Infrastructure\ProjectRepository.cs" />
@@ -248,6 +249,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Controllers\JobsController.cs" />
+    <Compile Include="Presentation\Controllers\LocationController.cs" />
     <Compile Include="Presentation\Controllers\PortfolioController.cs" />
     <Compile Include="Presentation\Controllers\ProjectController.cs" />
     <Compile Include="Presentation\Extensions\ApiControllerExtensions.cs" />
@@ -259,6 +261,7 @@
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
     <Compile Include="Services\ContractorService.cs" />
+    <Compile Include="Services\LocationService.cs" />
     <Compile Include="Services\Models\ClientDTO.cs" />
     <Compile Include="Services\Models\JobDetailDTO.cs" />
     <Compile Include="Services\JobService.cs" />
@@ -293,6 +296,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\views\editLocation.html" />
     <Content Include="Presentation\ngApp\views\editProject.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\newContractor.html" />
@@ -362,6 +366,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\editLocationController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editProject.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newContractor.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newJobController.ts" />
