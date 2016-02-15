@@ -16,6 +16,7 @@ namespace MrConstruction.Domain {
         public string Name { get; set; }
         public string Url { get; set; }
         public Classification Type { get; set; }
+
         public bool IsBefore { get; set; }
         public bool IsAfter { get; set; }
 
