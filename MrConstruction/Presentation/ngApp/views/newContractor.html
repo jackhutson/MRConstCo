@@ -1,65 +1,68 @@
 ﻿<div class="modal-dialog">
-    <div class="modal-header">
-        <input type="button" class="close" value="X" ng-click="controller.cancel()" />
-        <h1>Add New Contractor</h1>
+    <div class="row newproject">
+        <div class="modal-header">
+            
+            <h1>Add New Contractor<input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
+        </div>
+        
+        <form class="form-horizontal">
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 registerform">
+                        <label for="Email" class="control-label">Email</label>
+                        <input placeholder="Contractor Email" type="text" class="form-control" ng-model="user.email" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 registerform">
+                        <label for="Password" class="control-label">Password</label>
+                        <input placeholder="Password" type="text" class="form-control" ng-model="user.password" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 registerform">
+                        <label for="confirmPassword" class="control-label">Retype Password</label>
+                        <input placeholder="Retype Password" type="text" class="form-control" ng-model="user.confirmPassword" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 registerform">
+                        <label for="Name" class="control-label">Name</label>
+                        <input placeholder="Contractor Name" type="text" class="form-control" ng-model="user.name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 registerform">
+                        <label for="Title" class="control-label">Title</label>
+                        <input placeholder="Contractor Title" type="text" class="form-control" ng-model="user.title" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 registerform">
+                        <label for="companyName" class="control-label">Company Name</label>
+                        <input placeholder="Contractor Company Name" type="text" class="form-control" ng-model="user.companyName" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 registerform">
+                        <label for="phoneNumber" class="control-label">Phone Number</label>
+                        <input placeholder="Contractor Phone Number" type="text" class="form-control" ng-model="user.phoneNumber" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10 registerform">
+                        <label for="phoneNumber" class="control-label">Phone Number #2</label>
+                        <input placeholder="Contractor Phone Number #2" type="text" class="form-control" ng-model="user.phoneNumber2" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-offset-5 col-md-1">
+                    <input type="submit" class="btn btn-success" value="Add" ng-click="controller.register(user)" />
+                    <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
+                </div>
+            </div>
+        </form>
     </div>
-    <form class="form-horizontal">
-        <div class="modal-body">
-            <div class="form-group">
-                <div class="col-md-11 registerform">
-                    <label for="Email" class="control-label">Email</label>
-                    <input placeholder="Contractor Email" type="text" class="form-control" ng-model="user.email" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-11 registerform">
-                    <label for="Password" class="control-label">Password</label>
-                    <input placeholder="Password" type="text" class="form-control" ng-model="user.password" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-11 registerform">
-                    <label for="confirmPassword" class="control-label">Retype Password</label>
-                    <input placeholder="Retype Password" type="text" class="form-control" ng-model="user.confirmPassword" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-11 registerform">
-                    <label for="Name" class="control-label">Name</label>
-                    <input placeholder="Contractor Name" type="text" class="form-control" ng-model="user.name" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-11 registerform">
-                    <label for="Title" class="control-label">Title</label>
-                    <input placeholder="Contractor Title" type="text" class="form-control" ng-model="user.title" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-11 registerform">
-                    <label for="companyName" class="control-label">Company Name</label>
-                    <input placeholder="Contractor Company Name" type="text" class="form-control" ng-model="user.companyName" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-11 registerform">
-                    <label for="phoneNumber" class="control-label">Phone Number</label>
-                    <input placeholder="Contractor Phone Number" type="text" class="form-control" ng-model="user.phoneNumber" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-11 registerform">
-                    <label for="phoneNumber" class="control-label">Phone Number #2</label>
-                    <input placeholder="Contractor Phone Number #2" type="text" class="form-control" ng-model="user.phoneNumber2" />
-                </div>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <div class="col-md-11">
-                <input type="submit" class="btn btn-success" value="Add" ng-click="controller.register(user)"/>
-                <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
-            </div>
-        </div>
-    </form>
 </div>
 
