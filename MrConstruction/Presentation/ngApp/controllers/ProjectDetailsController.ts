@@ -2,6 +2,7 @@
     export class ProjectDetailsController {
 
         public project;
+        public client;
         public modalInstance;
 
         constructor(private $uibModal, private $http, private $routeParams) {
@@ -9,6 +10,11 @@
                 .then((response) => {
                     this.project = response.data;
                     
+                });
+
+            $http.get(`api/client/${$routeParams.id}`)
+                .then((response) => {
+                    this.client = response.data;
                 });
         }
 
@@ -64,12 +70,46 @@
 
             this.modalInstance.result
                 .then((editProject) => {
-                    this.$http.post(`/api/project/${this.$routeParams.id}`, editProject)
+                    console.log(editProject);
+                    this.$http.post(`/api/project/edit/${this.$routeParams.id}`, editProject)
                         .then((response) => {
 
                         })
                         .catch((response) => {
                             alert("Post failed, must have a contractor.");
+                        });
+
+                })
+                .catch((dismiss) => {
+
+                });
+
+        }
+
+        public editClientModal(): void {
+
+            this.modalInstance = this.$uibModal.open({
+                templateUrl: '/Presentation/ngApp/views/editClient.html',
+                controller: MrConstruction.Controllers.EditClientController,
+                controllerAs: 'controller',
+                size: 'lg',
+                resolve: {
+                    client: () => {
+                        return this.client
+                    }
+                },
+                backdrop: true,
+            });
+
+            this.modalInstance.result
+                .then((editClient) => {
+                    console.log(editClient);
+                    this.$http.post(`/api/client/${this.$routeParams.id}`, editClient)
+                        .then((response) => {
+
+                        })
+                        .catch((response) => {
+
                         });
 
                 })
