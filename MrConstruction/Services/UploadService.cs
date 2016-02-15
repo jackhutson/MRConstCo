@@ -25,7 +25,8 @@ namespace MrConstruction.Services {
                 var newUpload = new Upload() {
                     Name = file.Name,
                     Url = file.Url,
-                    Project = currentProject
+                    Project = currentProject,
+                    Type = (Upload.Classification)Enum.Parse(typeof(Upload.Classification), file.Type)
                 };
 
                 _uploadRepo.Add(newUpload);

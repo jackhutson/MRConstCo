@@ -22,8 +22,8 @@
             });
 
             this.modalInstance.result
-                .then((file) => {
-                    this.$http.postMultipart(`/api/project/${this.$routeParams.id}/upload`, { file: file })
+                .then((upload) => {
+                    this.$http.postMultipart(`/api/project/${this.$routeParams.id}/upload`, upload)
                         .then((response) => {
                         });
                 })

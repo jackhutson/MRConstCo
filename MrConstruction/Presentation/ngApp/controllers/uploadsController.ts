@@ -4,8 +4,9 @@
 
         constructor(private $uibModalInstance, private $http: ng.IHttpService) { }
 
-        public ok() {
-            this.$uibModalInstance.close();
+        public postFiles(file, type) {
+        
+            this.$uibModalInstance.close({ file: file, type: type });
         }
 
         public cancel() {

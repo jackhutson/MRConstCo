@@ -357,6 +357,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editProject.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newContractor.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newJobController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\portfolioController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProjectDetailsController.ts" />

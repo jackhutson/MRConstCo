@@ -8,5 +8,9 @@ using System.Web;
 namespace MrConstruction.Infrastructure {
     public class PortfolioRepository: GenericRepository<Portfolio> {
         public PortfolioRepository(DbContext db): base(db) { }
+        public IQueryable<Portfolio> FindPortfolios() {
+            return from p in Table
+                   select p;
+        }
     }
 }
