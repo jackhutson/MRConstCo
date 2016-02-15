@@ -44,7 +44,7 @@
                 });
         }
 
-        public editModal(): void {
+        public editProjectModal(): void {
 
             this.modalInstance = this.$uibModal.open({
                 templateUrl: '/Presentation/ngApp/views/editProject.html',
