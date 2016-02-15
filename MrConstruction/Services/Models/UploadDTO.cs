@@ -9,6 +9,6 @@ namespace MrConstruction.Services.Models {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Url { get; set; }
-        public Upload.Classification Type { get; set; }
+        public string Type { get; set; }
     }
 }

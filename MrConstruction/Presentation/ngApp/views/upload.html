@@ -4,7 +4,7 @@
         <h1>Uploads</h1>
     </div>
     <div class="modal-body">
-        <form class="form-horizontal" ng-submit="controller.postFiles(file, 0)">
+        <form class="form-horizontal" ng-submit="controller.postFiles(file, 'Picture')">
             <div class="form-group">
                 <div class="col-md-offset-1 btn btn-primary uploadform">
                     <span class="glyphicon glyphicon-picture">&nbsp;Photo &#43;</span>
@@ -14,7 +14,7 @@
             <input class="btn btn-success" type="submit" value="Upload" />
         </form>
 
-        <form class="form-horizontal" ng-submit="controller.postFiles(file, 1)">
+        <form class="form-horizontal" ng-submit="controller.postFiles(file, 'Blueprint')">
             <div class="form-group">
                 <div class="col-md-offset-1 btn btn-primary uploadform">
                     <span class="glyphicon glyphicon-file">&nbsp;Blueprint &#43;</span>
