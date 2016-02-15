@@ -16,8 +16,8 @@ namespace MrConstruction.Services {
         }
         public void MakePortfolio(NewPortfolioBindingModel port) {
             var uploads = (from p in port.PictureIds
-                          where p == _uploadRepo.FindUploadById(p).Id
-                          select p).ToList();
+                           where p == _uploadRepo.FindUploadById(p).Id
+                           select p).ToList();
             var portfolio = new Portfolio() {
                 Uploads = (from u in uploads
                            select new Upload() {
@@ -27,14 +27,14 @@ namespace MrConstruction.Services {
             };
             _portfolioRepo.Add(portfolio);
             _portfolioRepo.SaveChanges();
-            
+
         }
         public IList<PortfolioDTO> DisplayPortfolio() {
             return (from p in _portfolioRepo.FindPortfolios()
                     select new PortfolioDTO() {
                         Uploads = (from u in p.Uploads
                                    select new UploadDTO() {
-                                       Url = u.Url  
+                                       Url = u.Url
                                    }).ToList(),
                     }).ToList();
         }
