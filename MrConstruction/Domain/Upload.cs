@@ -17,6 +17,9 @@ namespace MrConstruction.Domain {
         public string Url { get; set; }
         public Classification Type { get; set; }
 
+        public bool IsBefore { get; set; }
+        public bool IsAfter { get; set; }
+
         [InverseProperty("Uploads")]
         public Project Project { get; set; }
 

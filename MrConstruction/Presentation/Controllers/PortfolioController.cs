@@ -21,7 +21,11 @@ namespace MrConstruction.Presentation.Controllers
         }
 
         public void Post(NewPortfolioBindingModel port) {
-            _portfolioServ.MakePortfolio(port);
+            if (ModelState.IsValid) {
+                //Check if state is valid
+                _portfolioServ.MakePortfolio(port);
+            }
+            
         }
     }
 }
