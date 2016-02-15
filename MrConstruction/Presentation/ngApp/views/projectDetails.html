@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-md-2" ng-repeat="upload in controller.project.uploads" style="display:inline">
             <img ng-src="{{upload.url}}" class="uploads" />
-            <input type="checkbox" name="{{upload.id}}" ng-model="port[upload.id]" />
+            <input type="checkbox" name="{{upload.id}}" ng-model="port" />
         </div>
     </div>
 

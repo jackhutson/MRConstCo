@@ -39,17 +39,22 @@
         }
 
         public createPortfolio(port) {
+            console.log("Create portfolio function");
+            console.log(port);
             var pics = [];
             for (var p in port) {
                 if (port[p]) {
                     pics.push(p);
+
                 }
             }
+
             this.$http.post('/api/portfolio', pics)
                 .then((response) => {
                     console.log(response);
                 });
         }
+
         public showModal(): void {
             this.modalInstance = this.$uibModal.open({
                 templateUrl: '/Presentation/ngApp/views/newTask.html',
