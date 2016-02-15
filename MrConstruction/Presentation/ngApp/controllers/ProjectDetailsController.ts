@@ -32,13 +32,16 @@
         }
 
         public createPortfolio(port) {
+            console.log("Create portfolio function");
+            console.log(port);
             var pics = [];
-            for (var p in port) {
+            for (let p in port) {
                 if (port[p]) {
                     pics.push(p);
                 }
             }
-            this.$http.post('/api/portfolio', pics)
+
+            this.$http.post('/api/portfolio', { pictureIds: pics })
                 .then((response) => {
                     console.log(response);
                 });
