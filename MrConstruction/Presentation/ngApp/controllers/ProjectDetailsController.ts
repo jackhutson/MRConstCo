@@ -6,7 +6,7 @@
         public modalInstance;
         public location;
 
-        constructor(private $uibModal, private $http, private $routeParams) {
+        constructor(private $uibModal, private $http, private $routeParams, private $location) {
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
@@ -183,6 +183,20 @@
 
                 });
 
+        }
+
+        public deleteProject(): void {
+
+            var userConfirm = confirm("Are you sure you want to delete this project?");
+
+            if (userConfirm) {
+                this.$http.get(`/api/project/delete/${this.$routeParams.id}`)
+                    .then((response) => {
+                        this.$location.path('/project-list');
+                    });
+            } else {
+                alert("Delete canceled.");
+            }
         }
     }
 }

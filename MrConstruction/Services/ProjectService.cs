@@ -118,6 +118,12 @@ namespace MrConstruction.Services {
             _projectRepo.SaveChanges();
         }
 
+        public void Delete(int id) {
+            var project = _projectRepo.Get(id).FirstOrDefault();
 
+            project.Active = false;
+
+            _projectRepo.SaveChanges();
+        }
     }
 }
