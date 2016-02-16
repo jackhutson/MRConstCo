@@ -27,6 +27,7 @@ namespace MrConstruction.Services {
                             EstStart = p.EstStart,
                             EstCompleted = p.EstCompleted,
                             JobList = (from j in p.JobList
+                                       where j.Active == true
                                        select new JobListDTO() {
                                            Id = j.Id,
                                            Name = j.Name,
@@ -50,12 +51,14 @@ namespace MrConstruction.Services {
                            EstStart = p.EstStart,
                            EstCompleted = p.EstCompleted,
                            Uploads = (from u in p.Uploads
+                                      where u.Active == true
                                       select new UploadDTO() {
                                           Id = u.Id,
                                           Url = u.Url,
                                           Name = u.Name
                                       }).ToList(),
                             JobList = (from j in p.JobList
+                                       where j.Active == true
                                        select new JobListDTO() {
                                            Id = j.Id,
                                            Name = j.Name,
@@ -119,10 +122,7 @@ namespace MrConstruction.Services {
         }
 
         public void Delete(int id) {
-            var project = _projectRepo.Get(id).FirstOrDefault();
-
-            project.Active = false;
-
+            _projectRepo.Delete(id);
             _projectRepo.SaveChanges();
         }
     }

@@ -35,6 +35,17 @@ namespace MrConstruction.Presentation.Controllers
             }
             
         }
+
+        [HttpGet]
+        [Route("api/task/delete/{id}")]
+        public IHttpActionResult DeleteTask(int id) {
+            _jobService.DeleteJob(id);
+            if (ModelState.IsValid) {
+                return Ok();
+            } else {
+                return BadRequest();
+            }
+        }
     }
 }
 

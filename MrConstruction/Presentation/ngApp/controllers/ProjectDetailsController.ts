@@ -203,5 +203,18 @@
                 alert("Delete canceled.");
             }
         }
+
+        public deleteTask(Id: any): void {
+
+            var userConfirm = confirm("Are you sure you want to delete this task?");
+
+            if (userConfirm) {
+                this.$http.get(`/api/task/delete/${Id}`).then((response) => {
+
+                });
+            } else {
+                alert("Task delete canceled.");
+            }
+        }
     }
 }
