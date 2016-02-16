@@ -13,5 +13,11 @@ namespace MrConstruction.Infrastructure {
                     where u.Id == id
                     select u).FirstOrDefault();
         }
+
+        public IQueryable<Upload> FindUploadsByProjectId(int projectId) {
+            return from u in Table
+                   where u.Project.Id == projectId && u.Active
+                   select u;
+        }
     }
 }

@@ -6,11 +6,15 @@
         public modalInstance;
         public location;
 
-        constructor(private $uibModal, private $http, private $routeParams) {
+        private beforeId;
+        private afterId;
+        constructor(private $uibModal, private $http, private $routeParams, private $location) {
+        
+
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
-                    
+
                 });
             $http.get(`/api/location/${$routeParams.id}`)
                 .then((response) => {
@@ -43,16 +47,17 @@
         }
 
         public createPortfolio(port) {
-            console.log("Create portfolio function");
-            console.log(port);
             var pics = [];
             for (let p in port) {
                 if (port[p]) {
                     pics.push(p);
                 }
             }
-
-            this.$http.post('/api/portfolio', { pictureIds: pics })
+            this.$http.post('/api/portfolio', {
+                pictureIds: pics,
+                beforeId: this.beforeId,
+                afterId: this.afterId
+            })
                 .then((response) => {
                     console.log(response);
                 });
@@ -177,12 +182,26 @@
                         .catch((response) => {
                             alert("Post failed, must have a contractor.");
                         });
-                    
+
                 })
                 .catch((dismiss) => {
 
                 });
 
+        }
+
+        public deleteProject(): void {
+
+            var userConfirm = confirm("Are you sure you want to delete this project?");
+
+            if (userConfirm) {
+                this.$http.get(`/api/project/delete/${this.$routeParams.id}`)
+                    .then((response) => {
+                        this.$location.path('/project-list');
+                    });
+            } else {
+                alert("Delete canceled.");
+            }
         }
     }
 }

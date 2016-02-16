@@ -78,6 +78,18 @@ namespace MrConstruction.Presentation.Controllers
        
         }
 
+        [HttpGet]
+        [Authorize(Roles = Role.Admin)]
+        [Route("api/project/delete/{id}")]
+        public IHttpActionResult DeleteProject(int id) {
+            _projectServ.Delete(id);
+            if (ModelState.IsValid) {
+                return Ok();
+            } else {
+                return BadRequest();
+            }
+        }
+
 
         //public async Task<IHttpActionResult> Post() {
 

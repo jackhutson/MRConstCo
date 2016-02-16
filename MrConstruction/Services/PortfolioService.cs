@@ -16,27 +16,23 @@ namespace MrConstruction.Services {
             _portfolioRepo = portfolioRepo;
             _uploadRepo = uploadRepo;
         }
-        public void MakePortfolio(NewPortfolioBindingModel port) {
-            var uploads = (from p in port.PictureIds
-                           where p == _uploadRepo.FindUploadById(p).Id
+        public void MakePortfolio(int projectId, NewPortfolioBindingModel port) {
+
+            var uploads = (from p in _uploadRepo.FindUploadsByProjectId(projectId)
+                           where port.PictureIds.Contains(p.Id)
                            select p).ToList();
+            var project = _projectRepo.Get(projectId).FirstOrDefault();
+
             var portfolio = new Portfolio() {
-                Uploads = (from u in uploads
-                           select new Upload() {
-                               Url = _uploadRepo.FindUploadById(u).Url
-                           }).ToList(),
-                Description = (from u in uploads
-                               select _uploadRepo.FindUploadById(u).Project.Description).FirstOrDefault(),
-                AfterPicture = (from u in uploads
-                                where _uploadRepo.FindUploadById(u).IsAfter == true
-                                select new Upload() {
-                                    Url = _uploadRepo.FindUploadById(u).Url
-                                }).FirstOrDefault(),
-                BeforePicture = (from u in uploads
-                                 where _uploadRepo.FindUploadById(u).IsBefore == true
-                                 select new Upload() {
-                                     Url = _uploadRepo.FindUploadById(u).Url
-                                 }).FirstOrDefault()
+                Uploads = uploads,
+                Description = project.Description,
+                AfterPicture = (from p in uploads
+                                where p.Id == port.AfterId
+                                select p).FirstOrDefault(),
+                BeforePicture = (from p in uploads
+                                 where p.Id == port.BeforeId
+                                 select p).FirstOrDefault(),
+                Name = project.Title
             };
             _portfolioRepo.Add(portfolio);
             _portfolioRepo.SaveChanges();

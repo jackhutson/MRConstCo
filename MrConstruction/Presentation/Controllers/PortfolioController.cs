@@ -20,12 +20,14 @@ namespace MrConstruction.Presentation.Controllers
             return _portfolioServ.DisplayPortfolio(); 
         }
 
-        public void Post(NewPortfolioBindingModel port) {
+        [Route("api/portfolio/{id}")]
+        public void Post(int id, NewPortfolioBindingModel port) {
             if (ModelState.IsValid) {
                 //Check if state is valid
-                _portfolioServ.MakePortfolio(port);
+                _portfolioServ.MakePortfolio(id, port);
             }
             
         }
+       
     }
 }
