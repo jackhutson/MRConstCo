@@ -1,4 +1,4 @@
-﻿<div class="row" id="contractorlist">
+﻿<div class="row">
     <div class="col-md-11">
         Contractor
     </div>
@@ -6,7 +6,7 @@
         <input value="+" class="btn btn-default btn-sm" ng-click="controller.showModal()" />
     </div>
 </div>
-<div class="contractor-list" ng-repeat="contractor in controller.contractors">
+<div ng-repeat="contractor in controller.contractors">
     <div class="row">
         <div class="col-md-2">
             Company Name
@@ -56,11 +56,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-11">
+        <div class="col-md-10">
             Tasks
         </div>
-        <div class="col-md-1">
-            <a href="#/taskdetails" class="btn btn-default btn-sm add-contractor">Expand</a>
+        <div class="col-md-2" style="display:block">
+            <input value="Edit" class="btn btn-default" ng-click="controller.showEditModal(contractor.id)"/>
+            <a href="#/taskdetails" class="btn btn-default btn-sm add-contractor">Tasks of Contractor</a>
         </div>
     </div>
 </div>

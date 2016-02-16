@@ -68,6 +68,16 @@
                     controller: MrConstruction.Controllers.PortfolioController,
                     controllerAs: 'controller'
                 });
+
+            $routeProvider
+                .when('/about', {
+                    templateUrl: 'Presentation/ngApp/views/publicAbout.html'
+                });
+
+            $routeProvider
+                .when('/', {
+                    templateUrl: 'Presentation/ngApp/views/publicLanding.html'
+                });
         });
 }
 

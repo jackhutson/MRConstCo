@@ -18,6 +18,15 @@ namespace MrConstruction.Presentation.Controllers
             _contractorService = contractorService;
         }
 
+        [HttpGet]
+        [Route("api/contractor/{id}")]
+        public ContractorUserDTO Get(string id) {
+            return _contractorService.GetContractorForEdit(id);
+        }
+
+
+
+
         [Authorize(Roles = Role.Admin)]
         public IList<ContractorUserDTO> GetContractors() {
             var cs = _contractorService.GetContractors();

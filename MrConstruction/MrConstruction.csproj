@@ -304,6 +304,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\editClient.html" />
+    <Content Include="Presentation\ngApp\views\editContractor.html" />
     <Content Include="Presentation\ngApp\views\editProject.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\newContractor.html" />
@@ -374,6 +375,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editClientController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\EditContractorController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editLocationController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\newContractor.ts" />

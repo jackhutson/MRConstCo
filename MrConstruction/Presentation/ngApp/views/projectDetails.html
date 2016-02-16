@@ -77,18 +77,21 @@
             {{controller.project.description}}
         </div>
         <div class="row joblistitem" ng-repeat="job in controller.project.jobList">
-            <div class="col-md-4">
+            <div class="col-md-2">
                 {{job.name}}
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 {{job.deadline}}
             </div>
             <div class="col-md-3">
                 {{job.estimate}}
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a>
             </div>
+                <div class="col-md-2">
+                    <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
+                </div>
         </div>
     </div>
 </div>

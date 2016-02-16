@@ -6,26 +6,32 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace MrConstruction.Infrastructure {
-    public class UserRepository {
+namespace MrConstruction.Infrastructure
+{
+    public class UserRepository
+    {
 
         private ApplicationDbContext _db;
 
-        public UserRepository(DbContext db) {
+        public UserRepository(DbContext db)
+        {
             _db = (ApplicationDbContext)db;
         }
 
-        public IQueryable<ApplicationUser> GetUsers() {
+        public IQueryable<ApplicationUser> GetUsers()
+        {
             return _db.Users.AsQueryable();
         }
 
-        public ApplicationUser GetUserById(string Id) {
+        public ApplicationUser GetUserById(string Id)
+        {
             return (from u in _db.Users
-                   where u.Id == Id
-                   select u).FirstOrDefault();
+                    where u.Id == Id
+                    select u).FirstOrDefault();
         }
 
-        public IQueryable<ApplicationUser> GetContractors() {
+        public IQueryable<ApplicationUser> GetContractors()
+        {
             return from r in _db.Roles
                    from ru in r.Users
                    from u in _db.Users
@@ -33,7 +39,17 @@ namespace MrConstruction.Infrastructure {
                    select u;
         }
 
-        public ApplicationUser GetByUserName(string name) {
+        public ApplicationUser GetSpecificContractor(string id)
+        {
+            return (
+                   from u in _db.Users
+                   where u.Id == id
+                   select u).FirstOrDefault();
+        }
+
+
+        public ApplicationUser GetByUserName(string name)
+        {
             return (from u in _db.Users
                     where u.UserName == name
                     select u).FirstOrDefault();

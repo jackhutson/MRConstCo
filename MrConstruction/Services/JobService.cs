@@ -78,5 +78,11 @@ namespace MrConstruction.Services.Models {
             _jobRepo.Add(job);
             _jobRepo.SaveChanges();
         }
+
+        public void DeleteJob(int id) {
+
+            _jobRepo.Delete(id);
+            _jobRepo.SaveChanges();
+        }
     }
 }
