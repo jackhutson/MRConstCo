@@ -12,9 +12,10 @@ namespace MrConstruction.Services {
         public PortfolioRepository _portfolioRepo;
         public UploadRepository _uploadRepo;
         public ProjectRepository _projectRepo;
-        public PortfolioService(PortfolioRepository portfolioRepo, UploadRepository uploadRepo, ProjectRepository _projectRepo) {
+        public PortfolioService(PortfolioRepository portfolioRepo, UploadRepository uploadRepo, ProjectRepository projectRepo) {
             _portfolioRepo = portfolioRepo;
             _uploadRepo = uploadRepo;
+            _projectRepo = projectRepo;
         }
         public void MakePortfolio(int projectId, NewPortfolioBindingModel port) {
 
@@ -32,7 +33,8 @@ namespace MrConstruction.Services {
                 BeforePicture = (from p in uploads
                                  where p.Id == port.BeforeId
                                  select p).FirstOrDefault(),
-                Name = project.Title
+                Name = project.Title,
+                ProjectId = project.Id
             };
             _portfolioRepo.Add(portfolio);
             _portfolioRepo.SaveChanges();
@@ -41,10 +43,18 @@ namespace MrConstruction.Services {
         public IList<PortfolioDTO> DisplayPortfolio() {
             return (from p in _portfolioRepo.FindPortfolios()
                     select new PortfolioDTO() {
+                        BeforePicture = new UploadDTO() {
+                            Url = p.BeforePicture.Url
+                        },
+                        AfterPicture = new UploadDTO() {
+                            Url = p.AfterPicture.Url
+                        },
                         Uploads = (from u in p.Uploads
                                    select new UploadDTO() {
                                        Url = u.Url
                                    }).ToList(),
+                        Description = p.Description
+
                     }).ToList();
         }
     }

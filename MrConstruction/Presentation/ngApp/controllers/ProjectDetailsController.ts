@@ -8,6 +8,7 @@
 
         private beforeId;
         private afterId;
+
         constructor(private $uibModal, private $http, private $routeParams, private $location) {
         
 
@@ -53,7 +54,7 @@
                     pics.push(p);
                 }
             }
-            this.$http.post('/api/portfolio', {
+            this.$http.post(`/api/portfolio/${this.$routeParams.id}`, {
                 pictureIds: pics,
                 beforeId: this.beforeId,
                 afterId: this.afterId

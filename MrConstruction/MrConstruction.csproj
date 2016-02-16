@@ -242,6 +242,10 @@
     <Compile Include="Migrations\201602152043179_merge battle.Designer.cs">
       <DependentUpon>201602152043179_merge battle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602161933275_added foreignkey to Portfolio model.cs" />
+    <Compile Include="Migrations\201602161933275_added foreignkey to Portfolio model.Designer.cs">
+      <DependentUpon>201602161933275_added foreignkey to Portfolio model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ClientController.cs" />
@@ -301,6 +305,7 @@
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\editClient.html" />
     <Content Include="Presentation\ngApp\views\editTask.html" />
+    <Content Include="Presentation\ngApp\views\editContractor.html" />
     <Content Include="Presentation\ngApp\views\editProject.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\newContractor.html" />
@@ -371,6 +376,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editClientController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\EditContractorController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editLocationController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editProjectController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editTaskController.ts" />
@@ -416,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602152043179_merge battle.resx">
       <DependentUpon>201602152043179_merge battle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602161933275_added foreignkey to Portfolio model.resx">
+      <DependentUpon>201602161933275_added foreignkey to Portfolio model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
