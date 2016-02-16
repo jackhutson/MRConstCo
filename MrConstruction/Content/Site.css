@@ -146,9 +146,8 @@ a:hover {
     min-height: 100%;
 }
 
-#contractorlist {
+.contractorlist {
     background-color: #A5B4C1;
-    min-height: 100%;
 }
 
 .close {
