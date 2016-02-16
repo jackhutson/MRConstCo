@@ -67,6 +67,19 @@ namespace MrConstruction.Services {
             return dto;
         }
 
+        public void EditProject(ProjectDTO edited) {
+
+            var project = _projectRepo.Get(edited.Id).FirstOrDefault();
+
+            project.Title = edited.Title;
+            project.Budget = edited.Budget;
+            project.EstStart = edited.EstStart;
+            project.EstCompleted = edited.EstCompleted;
+            project.Description = edited.Description;
+
+            _projectRepo.SaveChanges();
+        }
+
         //To check if the project exists
         public bool CheckExists(int id) {
             return _projectRepo.CheckExists(id);
@@ -105,6 +118,12 @@ namespace MrConstruction.Services {
             _projectRepo.SaveChanges();
         }
 
+        public void Delete(int id) {
+            var project = _projectRepo.Get(id).FirstOrDefault();
 
+            project.Active = false;
+
+            _projectRepo.SaveChanges();
+        }
     }
 }

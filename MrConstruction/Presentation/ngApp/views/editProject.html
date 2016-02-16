@@ -2,14 +2,10 @@
     <!--<div class="col-md-2 colside"></div>-->
     <div class="row newproject">
         <div class="modal-header">
-            <h1>Edit Project <input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
-            {{controller.project}}
+            <h1>Edit Project Details<input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
         </div>
         <form class="form-horizontal">
             <div class="modal-body">
-                <div class="row">
-                    <h2>Project Details</h2>
-                </div>
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-10 projectform">
                         <label for="Title">Title</label>
@@ -31,7 +27,7 @@
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-10 projectform">
                         <label for="estimatedCompletedDate">Estimated Completed Date</label>
-                        <input type="date" class="form-control" ng-model="controller.project.estCompleted" />
+                        <input class="form-control" ng-model="controller.project.estCompleted" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -40,79 +36,11 @@
                         <textarea ng-model="controller.project.description" style="padding-bottom: 100px; text-align:center" class="form-control" type="text" placeholder="Short Description of the Project"></textarea>
                     </div>
                 </div>
-                <hr />
-                <div class="row">
-                    <h2>Client Details</h2>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="clientName">Name</label>
-                        <input type="text" class="form-control" placeholder="client's name" ng-model="controller.project.clientName" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="clientPhoneOne">Contact Phone Number 1</label>
-                        <input type="text" class="form-control" placeholder="(888) 888-8888" ng-model="controller.project.client.phoneNumber" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="clientPhoneOne">Contact Phone Number 2</label>
-                        <input type="text" class="form-control" placeholder="(888) 888-8888" ng-model="controller.project.client.phoneNumber2" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="clientEmail">Email</label>
-                        <input type="email" class="form-control" placeholder="example@example.com" ng-model="controller.project.client.email" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="projectDescription">Client Notes</label>
-                        <textarea style="padding-bottom: 100px; text-align:center" class="form-control" type="text" placeholder="Client Notes" ng-model="controller.project.client.description"></textarea>
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <h2>Location Details</h2>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="clientStreetOne">Street One</label>
-                        <input type="text" class="form-control" placeholder="1100 Example St." ng-model="controller.project.client.location.street1" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="clientStreetTwo">Street Two</label>
-                        <input type="text" class="form-control" placeholder="1101 Example St. (Optional)" ng-model="controller.project.client.location.street2" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="city">City</label>
-                        <input type="text" class="form-control" placeholder="City" ng-model="controller.project.client.location.city" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="state">State</label>
-                        <input type="text" class="form-control" placeholder="State" ng-model="controller.project.client.location.state" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 projectform">
-                        <label for="Country">Country</label>
-                        <input type="text" class="form-control" placeholder="Country (ex. US)" ng-model="controller.project.client.location.country" />
-                    </div>
-                </div>
             </div>
         </form>
         <div class="modal-footer">
             <div class="col-md-offset-5 col-md-1">
-                <input class="btn btn-success" type="submit" value="Add" ng-click="controller.ok(project)" />
+                <input class="btn btn-success" type="submit" value="Edit" ng-click="controller.ok(project)" />
             </div>
         </div>
     </div>

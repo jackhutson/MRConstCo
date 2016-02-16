@@ -2,16 +2,28 @@
     export class ProjectDetailsController {
 
         public project;
+        public client;
         public modalInstance;
+        public location;
 
         private beforeId;
         private afterId;
+        constructor(private $uibModal, private $http, private $routeParams, private $location) {
+        
 
-        constructor(private $uibModal, private $http, private $routeParams) {
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
 
+                });
+            $http.get(`/api/location/${$routeParams.id}`)
+                .then((response) => {
+                    this.location = response.data;
+                });
+
+            $http.get(`api/client/${$routeParams.id}`)
+                .then((response) => {
+                    this.client = response.data;
                 });
         }
 
@@ -51,7 +63,7 @@
                 });
         }
 
-        public editModal(): void {
+        public editProjectModal(): void {
 
             this.modalInstance = this.$uibModal.open({
                 templateUrl: '/Presentation/ngApp/views/editProject.html',
@@ -68,7 +80,8 @@
 
             this.modalInstance.result
                 .then((editProject) => {
-                    this.$http.post(`/api/project/${this.$routeParams.id}`, editProject)
+                    console.log(editProject);
+                    this.$http.post(`/api/project/edit/${this.$routeParams.id}`, editProject)
                         .then((response) => {
 
                         })
@@ -82,6 +95,73 @@
                 });
 
         }
+
+        public editLocationModal(): void {
+
+            this.modalInstance = this.$uibModal.open({
+                templateUrl: '/Presentation/ngApp/views/editLocation.html',
+                controller: MrConstruction.Controllers.EditLocationController,
+                controllerAs: 'controller',
+                size: 'lg',
+                resolve: {
+                    location: () => {
+                        return this.location
+                    }
+                },
+                backdrop: true,
+            });
+
+            this.modalInstance.result
+                .then((location) => {
+                    this.$http.post(`/api/location/${this.$routeParams.id}`, location)
+                        .then((response) => {
+
+                        })
+                        .catch((response) => {
+                            alert('failed');
+
+                        });
+
+                })
+                .catch((dismiss) => {
+
+                });
+
+        }
+        
+                public editClientModal(): void {
+
+            this.modalInstance = this.$uibModal.open({
+                templateUrl: '/Presentation/ngApp/views/editClient.html',
+                controller: MrConstruction.Controllers.EditClientController,
+                controllerAs: 'controller',
+                size: 'lg',
+                resolve: {
+                    client: () => {
+                        return this.client
+                    }
+                },
+                backdrop: true,
+            });
+
+            this.modalInstance.result
+                .then((editClient) => {
+                    console.log(editClient);
+                    this.$http.post(`/api/client/${this.$routeParams.id}`, editClient)
+                        .then((response) => {
+
+                        })
+                        .catch((response) => {
+
+                        });
+
+                })
+                .catch((dismiss) => {
+
+                });
+
+        }
+
 
         public showModal(): void {
             this.modalInstance = this.$uibModal.open({
@@ -108,6 +188,20 @@
 
                 });
 
+        }
+
+        public deleteProject(): void {
+
+            var userConfirm = confirm("Are you sure you want to delete this project?");
+
+            if (userConfirm) {
+                this.$http.get(`/api/project/delete/${this.$routeParams.id}`)
+                    .then((response) => {
+                        this.$location.path('/project-list');
+                    });
+            } else {
+                alert("Delete canceled.");
+            }
         }
     }
 }

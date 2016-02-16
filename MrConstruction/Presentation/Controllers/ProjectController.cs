@@ -46,6 +46,18 @@ namespace MrConstruction.Presentation.Controllers
             }
         }
 
+        [Authorize(Roles = Role.Admin)]
+        [HttpPost]
+        [Route("api/project/edit/{id}")]
+        public IHttpActionResult EditProject(ProjectDTO edited) {
+            _projectServ.EditProject(edited);
+            if(ModelState.IsValid && _projectServ.CheckExists(edited.Id)) {
+                return Ok();
+            } else {
+                return BadRequest();
+            }
+        }
+
         [HttpPost]
         [Route("api/project/{id}/upload")]
         public async Task<IHttpActionResult> Post(int id) {
@@ -65,6 +77,19 @@ namespace MrConstruction.Presentation.Controllers
             return Ok();
        
         }
+
+        [HttpGet]
+        [Authorize(Roles = Role.Admin)]
+        [Route("api/project/delete/{id}")]
+        public IHttpActionResult DeleteProject(int id) {
+            _projectServ.Delete(id);
+            if (ModelState.IsValid) {
+                return Ok();
+            } else {
+                return BadRequest();
+            }
+        }
+
 
         //public async Task<IHttpActionResult> Post() {
 
