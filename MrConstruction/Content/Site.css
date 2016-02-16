@@ -1,4 +1,60 @@
-﻿
+﻿/*----NAVBAR----*/
+header {
+    padding: 10px, 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+.header.navbar-fixed-top {
+    background: white;
+    /*z-index: 9999;
+        -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);*/
+}
+.navbar-default {
+    background-color: #253c62;
+    border-color: transparent;
+}
+.header .home {
+    margin: 0;
+    padding-left: 2%;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+    .header .home a {
+        color: white;
+    }
+    .header .home a:hover {
+        color: #9e9d9d;
+    }
+.header .main-nav .navbar-collapse {
+    padding: 0;
+}
+.header .main-nav  {
+    padding-right: 2%;
+}
+.header .main-nav .nav .nav-item {
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+.header .main-nav .nav .nav-item a {
+    color: white;
+}
+
+    .header .main-nav .nav .nav-item a:hover {
+        color: #9e9d9d;
+        background: none;
+        transition-delay: 0.3s;
+        text-shadow: 20px, 20px, 20px, #9e9d9d;
+    }
+    .header .main-nav .nav .nav-item a:active {
+        outline: none;
+        background: #808080;
+    }
+
 .vertical-center {
     min-height: 100%;
     min-height: 100vh;
@@ -93,8 +149,8 @@ a:hover {
 .close {
     margin: auto;
     border: none;
-    font-size:30px;
-    background-color:#A5B4C1;
+    font-size: 30px;
+    background-color: #A5B4C1;
 }
 
     .close:hover {
@@ -154,32 +210,56 @@ input[value]:focus {
     outline: none;
 }
 
-.uploadform {
-    position: relative;
-    background-color: maroon;
-    outline-color: none;
-    overflow: hidden;
-    margin: 10px;
+label.uploadLabel input[type="file"] {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    font-size: 40px;
+    filter: alpha(opacity=0);
+    cursor: pointer;
 }
 
-    .uploadform span {
-        font-size: 40px;
-        width: 250px;
+.uploadLabel {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    border-radius: 4px;
+    padding: 5px 5px;
+    margin: 5px;
+    height: 50px;
+    width: 300px;
+    background: maroon;
+    display: inline-block;
+    font-size: 30px;
+    color: white;
+}
+
+    .uploadLabel:hover {
+        background: #fa6161;
     }
 
-    .uploadform input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 0;
-        padding: 0;
-        font-size: 20px;
-        color: white;
-        cursor: pointer;
-        opacity: 0;
-        filter: alpha(opacity=0);
+/*-----Doesnt work :(----*/
+/*.uploadLabel:invalid + span {
+        color: #cc6f05;
     }
+
+    .uploadLabel:invalid + span {
+        color: #3ea919;
+    }*/
 
 .row .joblistitem {
     padding-top: 5px;
+}
+
+
+/*----FOOTER----*/
+footer {
+  padding: 10px 0;
+  text-align: center;
+}
+footer span.copyright {
+  line-height: 20px;
+  text-transform: none;
 }
