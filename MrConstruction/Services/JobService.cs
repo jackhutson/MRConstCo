@@ -44,6 +44,7 @@ namespace MrConstruction.Services.Models {
                     from u in users
                     where u.UserName == username
                     select new JobDetailDTO() {
+                        Id = j.Id,
                         Name = j.Name,
                         ProjectTitle = project.Title,
                         Estimate = (u.Roles.FirstOrDefault(r => r.RoleId == Role.Admin) != null) ? j.Estimate : (decimal?)null,
@@ -76,6 +77,20 @@ namespace MrConstruction.Services.Models {
             };
 
             _jobRepo.Add(job);
+            _jobRepo.SaveChanges();
+        }
+
+        public void EditJob(NewJobBindingModel dto) {
+
+            var job = _jobRepo.Get(dto.Id).FirstOrDefault();
+
+            job.Name = dto.Name;
+            job.Estimate = dto.Estimate;
+            job.Deadline = dto.Deadline;
+            job.State = dto.State;
+            job.ContractorId = dto.ContractorId;
+            job.Description = dto.Description;
+
             _jobRepo.SaveChanges();
         }
 

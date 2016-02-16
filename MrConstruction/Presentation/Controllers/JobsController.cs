@@ -19,6 +19,7 @@ namespace MrConstruction.Presentation.Controllers
         }
 
         [HttpGet]
+        [Route("api/jobs/{id}")]
         public JobDetailDTO GetJobDetails(int id)
         {
            return _jobService.GetJobDetails(id, User.Identity.Name);
@@ -34,6 +35,17 @@ namespace MrConstruction.Presentation.Controllers
                 return BadRequest();
             }
             
+        }
+
+        [HttpPost]
+        [Route("api/jobs/{id}")]
+        public IHttpActionResult EditTask(NewJobBindingModel job) {
+            _jobService.EditJob(job);
+            if(ModelState.IsValid && _jobService.CheckExists(job.Name)) {
+                return Ok();
+            } else {
+                return BadRequest();
+            }
         }
 
         [HttpGet]
