@@ -4,11 +4,14 @@
         public project;
         public modalInstance;
 
+        private beforeId;
+        private afterId;
+
         constructor(private $uibModal, private $http, private $routeParams) {
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
-                    
+
                 });
         }
 
@@ -32,16 +35,17 @@
         }
 
         public createPortfolio(port) {
-            console.log("Create portfolio function");
-            console.log(port);
             var pics = [];
             for (let p in port) {
                 if (port[p]) {
                     pics.push(p);
                 }
             }
-
-            this.$http.post('/api/portfolio', { pictureIds: pics })
+            this.$http.post('/api/portfolio', {
+                pictureIds: pics,
+                beforeId: this.beforeId,
+                afterId: this.afterId
+            })
                 .then((response) => {
                     console.log(response);
                 });
@@ -98,7 +102,7 @@
                         .catch((response) => {
                             alert("Post failed, must have a contractor.");
                         });
-                    
+
                 })
                 .catch((dismiss) => {
 

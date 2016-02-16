@@ -18,13 +18,28 @@
         <label>Create Portfolio</label>
         <input type="submit" />
     </div>
-  
     <div class="row" ng-init="port = {}">
         <div class="col-md-2" ng-repeat="upload in controller.project.uploads" style="display:inline">
             <img ng-src="{{upload.url}}" class="uploads" />
-            <input type="checkbox" name="{{upload.id}}" ng-model="port[upload.id]" />
-            <input type="checkbox" name="{{upload.id}}" ng-model="after=true" />
-            <input type="checkbox" name="{{upload.id}}" ng-model="before=true" />
+            <label>
+                General
+                <input type="radio" name="{{upload.id}}" ng-model="port[upload.id]" value="general"/>
+            </label>
+            <label>
+                After
+                <input type="radio" id="{{upload.id}}-after" name="after" ng-model="controller.afterId" ng-value="upload.id" ng-click="port[upload.id] = 'general'"/>
+            </label>
+            <label>
+                Before
+                <input type="radio" id="{{upload.id}}-before" name="before" ng-model="controller.beforeId" ng-value="upload.id" ng-click="port[upload.id] = 'general'"/>
+            </label>
+            <label>
+                None
+                <input type="radio" name="{{upload.id}}"
+                       ng-model="port[upload.id]"
+                       value=""
+                       checked="checked" />
+            </label>
         </div>
     </div>
     <div class="row">
