@@ -242,6 +242,10 @@
     <Compile Include="Migrations\201602152043179_merge battle.Designer.cs">
       <DependentUpon>201602152043179_merge battle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602161933275_added foreignkey to Portfolio model.cs" />
+    <Compile Include="Migrations\201602161933275_added foreignkey to Portfolio model.Designer.cs">
+      <DependentUpon>201602161933275_added foreignkey to Portfolio model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ClientController.cs" />
@@ -414,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602152043179_merge battle.resx">
       <DependentUpon>201602152043179_merge battle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602161933275_added foreignkey to Portfolio model.resx">
+      <DependentUpon>201602161933275_added foreignkey to Portfolio model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
