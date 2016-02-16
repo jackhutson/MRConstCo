@@ -59,6 +59,18 @@ header {
         background: #808080;
     }
 
+/*----ABOUT PAGE----*/
+.profile {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.profile-image {
+    max-height: 300px;
+    max-width: 300px;
+}
+
+
 .vertical-center {
     min-height: 100%;
     min-height: 100vh;
