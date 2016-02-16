@@ -9,6 +9,11 @@ header {
     position: fixed;
     width: 100%;
 }
+
+body {
+    padding-top: 70px;
+}
+
 .header.navbar-fixed-top {
     background: white;
     /*z-index: 9999;
