@@ -1,5 +1,9 @@
 ﻿body {
-    padding-top: 40px; 
+    /*padding-top: 50px;*/
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /*----NAVBAR----*/
@@ -9,11 +13,6 @@ header {
     position: fixed;
     width: 100%;
 }
-
-body {
-    padding-top: 70px;
-}
-
 .header.navbar-fixed-top {
     background: white;
     /*z-index: 9999;
@@ -21,10 +20,13 @@ body {
         -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);*/
 }
+
 .navbar-default {
     background-color: #253c62;
     border-color: transparent;
+    opacity: 0.7;
 }
+
 .header .home {
     margin: 0;
     padding-left: 2%;
@@ -32,49 +34,77 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
     .header .home a {
         color: white;
     }
-    .header .home a:hover {
-        color: #9e9d9d;
-    }
+
+        .header .home a:hover {
+            color: #9e9d9d;
+        }
+
 .header .main-nav .navbar-collapse {
     padding: 0;
 }
-.header .main-nav  {
+
+.header .main-nav {
     padding-right: 2%;
 }
-.header .main-nav .nav .nav-item {
-    font-weight: normal;
-    margin-right: 20px;
-}
 
-.header .main-nav .nav .nav-item a {
-    color: white;
-}
+    .header .main-nav .nav .nav-item {
+        font-weight: normal;
+        margin-right: 20px;
+    }
 
-    .header .main-nav .nav .nav-item a:hover {
-        color: #9e9d9d;
-        background: none;
-        transition-delay: 0.3s;
-        text-shadow: 20px, 20px, 20px, #9e9d9d;
-    }
-    .header .main-nav .nav .nav-item a:active {
-        outline: none;
-        background: #808080;
-    }
+        .header .main-nav .nav .nav-item a {
+            color: white;
+        }
+
+            .header .main-nav .nav .nav-item a:hover {
+                color: #9e9d9d;
+                background: none;
+                transition-delay: 0.3s;
+                text-shadow: 20px, 20px, 20px, #9e9d9d;
+            }
+
+            .header .main-nav .nav .nav-item a:active {
+                outline: none;
+                background: #808080;
+            }
+/*----LANDING PAGE----*/
+.landing {
+    padding: 0 0px 0px 0px;
+}
+.main {
+    background: url('http://www.thepanorama.cos.sg/wp-content/uploads/2014/06/pan3.jpg');
+    width: 100%;
+    min-height: 450px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 0 0px 0px 0px;
+}
+.activity-circle {
+    border-radius: 50%;
+}
 
 /*----ABOUT PAGE----*/
+.about {
+    padding: 0 0px 0px 0px;
+}
 .profile {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 80px;
 }
-
 .profile-image {
     max-height: 300px;
     max-width: 300px;
 }
 
+.profile-info {
+    text-align: center;
+}
 
 .vertical-center {
     min-height: 100%;
@@ -277,10 +307,11 @@ label.uploadLabel input[type="file"] {
 
 /*----FOOTER----*/
 footer {
-  padding: 10px 0;
-  text-align: center;
+    padding: 10px 0;
+    text-align: center;
 }
-footer span.copyright {
-  line-height: 20px;
-  text-transform: none;
-}
+
+    footer span.copyright {
+        line-height: 20px;
+        text-transform: none;
+    }
