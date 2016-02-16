@@ -1,4 +1,8 @@
-﻿/*----NAVBAR----*/
+﻿body {
+    padding-top: 40px; 
+}
+
+/*----NAVBAR----*/
 header {
     padding: 10px, 0;
     color: white;
@@ -19,7 +23,7 @@ header {
 .header .home {
     margin: 0;
     padding-left: 2%;
-    font-size: 25px;
+    font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
