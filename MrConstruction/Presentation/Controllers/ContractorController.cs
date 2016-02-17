@@ -25,7 +25,17 @@ namespace MrConstruction.Presentation.Controllers
         }
 
 
-
+        [HttpPost]
+        [Route("api/contractor/edit/{id}")]
+        public IHttpActionResult EditContractor(ContractorUserDTO edited)
+        {
+            _contractorService.EditContractor(edited);
+            if (ModelState.IsValid)
+            {
+                return Ok();
+            }
+            else return BadRequest();
+        }
 
         [Authorize(Roles = Role.Admin)]
         public IList<ContractorUserDTO> GetContractors() {

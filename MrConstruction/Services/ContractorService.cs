@@ -36,6 +36,21 @@ namespace MrConstruction.Services {
             return dto;
         }
 
+        public void EditContractor(ContractorUserDTO edited)
+        {
+            var contractor = _userRepo.GetSpecificContractor(edited.Id);
+
+            contractor.Name = edited.Name;
+            contractor.Title = edited.Title;
+            contractor.CompanyName = edited.CompanyName;
+            contractor.Email = edited.Email;
+            contractor.PhoneNumber = edited.PhoneNumber;
+            contractor.PhoneNumber2 = edited.PhoneNumber2;
+
+            _userRepo.SaveChanges();
+
+        }
+
         [Authorize(Roles="Admin")]
         public IList<ContractorUserDTO> GetContractors() {
             var contractors = _userRepo.GetContractors();
