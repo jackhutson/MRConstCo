@@ -28,11 +28,28 @@ namespace MrConstruction.Services.Models {
             return _jobRepo.CheckExists(name);
         }
 
+        public bool checkIfAdmin(string username) {
+
+            var admins = _userRepo.GetAdmin();
+
+            var user = (from u in admins
+                        where u.UserName == username
+                        select u).FirstOrDefault();
+
+            if(user != null) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
         //Get Job Details
         public JobDetailDTO GetJobDetails(int id, string username) {
 
             var job = _jobRepo.Get(id);
-            var users = _userRepo.GetUsers();
+
+            var isAdminUser = checkIfAdmin(username);
 
             var contractor = (from c in job
                            select c.Contractor).FirstOrDefault();
@@ -41,13 +58,11 @@ namespace MrConstruction.Services.Models {
                            select p.Project).FirstOrDefault();
 
             return (from j in job
-                    from u in users
-                    where u.UserName == username
                     select new JobDetailDTO() {
                         Id = j.Id,
                         Name = j.Name,
                         ProjectTitle = project.Title,
-                        Estimate = (u.Roles.FirstOrDefault(r => r.RoleId == Role.Admin) != null) ? j.Estimate : (decimal?)null,
+                        Estimate = isAdminUser ? j.Estimate : (decimal?)null,
                         Deadline = j.Deadline,
                         Description = j.Description,
                         State = j.State,
