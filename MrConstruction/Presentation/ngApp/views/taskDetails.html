@@ -1,28 +1,48 @@
 ﻿<div class="row">
     <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+        <h1>{{controller.task.projectTitle}}</h1>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-offset-3 col-md-6 col-md-offset-3">
         <h1>{{controller.task.name}}</h1>
     </div>
-    <div class="col-md-offset-3 col-md-6 col-md-offset-3">
-        {{controller.task.projectTitle}}
+</div>
+<hr />
+<div class="row">
+    <div class="col-offset-2">
+        <div class="col-md-offset-1 col-md-1">
+            <strong>Contractor</strong>
+        </div>
+        <div class="col-md-4">
+            {{controller.task.contractor.name}}
+        </div>
+        <div class="col-md-offset-1 col-md-1">
+            <strong>Company</strong>
+        </div>
+        <div class="col-md-4">
+            {{controller.task.contractor.companyName}}
+        </div>
     </div>
-
-    <div class="col-md-offset-3 col-md-6 col-md-offset-3">
-        {{controller.task.contractor.name}}
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-offset-2">
+        Description: {{controller.task.description}}
     </div>
-    <hr />
-    <div class="col-md-offset-3 col-md-9">
-        {{controller.task.contractor.companyName}}
+    <div class="col-md-offset-2 col-md-2">
+        Estimate: {{controller.task.estimate}}
     </div>
-    <div class="col-md-3">
-        {{controller.task.estimate}}
+    <div class="col-md-offset-2 col-md-2">
+        Deadline: {{controller.task.deadline}}
     </div>
-    <div class="col-md-offset-6 col-md-3">
-        {{controller.task.deadline}}
+    <div class="col-md-2">
+        State: {{controller.task.state}}
     </div>
-    <div class="row">
-        {{controller.task.description}}
-    </div>
-    <div class="row">
-        {{controller.task.status}}
+</div>
+<div class="row">
+    <div class="col-md-offset-10 col-md-2">
+        <input type="button" class="btn btn-primary" value="Edit Task" ng-click="controller.editTaskModal()" />
     </div>
 </div>

@@ -9,6 +9,8 @@ namespace MrConstruction.Services
 {
     public class JobDetailDTO
     {
+        public int Id { get; set; }
+
         public string Name { get; set; }
 
         public string ProjectTitle { get; set; }
