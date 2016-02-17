@@ -5,6 +5,7 @@
         public contractors;
         public selectedContractor;
         public modalInstance;
+        public edited;
 
         constructor(private $http: ng.IHttpService, private $uibModal, private $routeParams) {
             $http.get('/api/contractor')
@@ -31,13 +32,13 @@
                     console.log("reason");
                 });
         }
-        public showEditModal(id): void {
 
-            var edited;
+
+        public showEditModal(id): void {
 
             this.$http.get(`/api/contractor/${id}`)
                 .then((response) => {
-                    edited = response.data;
+                    this.edited = response.data;
 
                     this.modalInstance = this.$uibModal.open({
                         templateUrl: '/Presentation/ngApp/views/editContractor.html',
@@ -46,18 +47,26 @@
                         size: 'lg',
                         resolve: {
                             edited: () => {
-                                return edited
+                                return this.edited
                             }
                         },
                         backdrop: true,
                     });
 
                     this.modalInstance.result
-                        .then((reason) => {
-                            console.log("reason");
+                        .then((editContractor) => {
+                            console.log(editContractor);
+                            this.$http.post(`/api/contractor/edit/${this.$routeParams.id}`, editContractor)
+                                .then((response) => {
+                                    console.log("You successfully posted!")
+                                })
+                                .catch((response) => {
+                                    alert(`You have encountered an error! response: ${response}`);
+                                });
+
                         })
                         .catch((dismiss) => {
-                            console.log("reason");
+
                         });
                 });
         }
