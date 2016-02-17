@@ -7,8 +7,8 @@
             this.edited = edited;
         }
 
-        public ok(edit) {
-            this.$uibModalInstance.close(this.edited);
+        public ok(edited) {
+            this.$uibModalInstance.close(edited);
         }
 
         public cancel() {
