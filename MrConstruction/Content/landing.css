@@ -43,6 +43,7 @@ h1.title {
     font-size: 60px;
     margin-top: 12.5%;
     font-family: 'Raleway', sans-serif;
+    opacity: 0.9;
 }
 
 .landing-img-left {
@@ -64,4 +65,16 @@ h1.title {
     font-size: 20px;
     margin-left: -60px;
     margin-right: 60px;
+}
+.landing-card {
+    margin: 50px;
+    min-width: 250px;
+    min-height: 500px;
+    background-color: rgba(172, 172, 172, 0.45);
+    border-radius: 2px;
+}
+.landing-card-p{
+    padding: 25px;
+    font-size: 22px;
+    color: #f7f7f7;   
 }

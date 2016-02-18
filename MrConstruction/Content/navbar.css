@@ -35,6 +35,8 @@
 a {
     color: #251C68 !important;
     background: none;
+    border-bottom: transparent !important;
+    min-height: 51px;
 }
 
     a:hover {
