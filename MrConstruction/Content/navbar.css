@@ -1,6 +1,6 @@
 ﻿body {
-    color: #6C6C6C;
     background-color: #F7F7F7;
+    color: #6C6C6C;
 }
 
 #logo {
@@ -33,7 +33,7 @@
 }
 
 a {
-    color: !important;
+    color: #251C68 !important;
     background: none;
 }
 
@@ -41,7 +41,10 @@ a {
         background-color: transparent !important;
         border-bottom: groove 1px grey !important;
     }
-
+a:focus{
+    background-color: transparent !important;
+    border-bottom: groove 1px grey !important;
+}
 
 .center {
     display: flex;
@@ -49,9 +52,8 @@ a {
     justify-content: center;
     font-weight: 600;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
+    color: #251C68 !important;
+
 }
 
-hr {
-    max-width: 80%;
-}
