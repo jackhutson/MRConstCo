@@ -39,7 +39,14 @@ namespace MrConstruction.Providers {
             ClaimsIdentity cookiesIdentity = await user.GenerateUserIdentityAsync(userManager,
                 CookieAuthenticationDefaults.AuthenticationType);
 
-            AuthenticationProperties properties = CreateProperties(user.UserName);
+            var roles = userManager.GetRoles(user.Id);
+
+            Dictionary<string, string> items = new Dictionary<string, string> {
+                { "userName", user.UserName },
+                { "role", roles.FirstOrDefault() }
+            };
+
+            AuthenticationProperties properties = CreateProperties(items);
             AuthenticationTicket ticket = new AuthenticationTicket(oAuthIdentity, properties);
             context.Validated(ticket);
             context.Request.Context.Authentication.SignIn(cookiesIdentity);
@@ -74,11 +81,15 @@ namespace MrConstruction.Providers {
             return Task.FromResult<object>(null);
         }
 
+        public static AuthenticationProperties CreateProperties(IDictionary<string, string> items) {
+            return new AuthenticationProperties(items);
+        }
+
         public static AuthenticationProperties CreateProperties(string userName) {
-            IDictionary<string, string> data = new Dictionary<string, string>
-            {
+            IDictionary<string, string> data = new Dictionary<string, string> {
                 { "userName", userName }
             };
+
             return new AuthenticationProperties(data);
         }
     }
