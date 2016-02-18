@@ -22,7 +22,7 @@
 
     .profile-info p {
         padding-top: 5px;
-        color: #70859E;
+        color: #6C6C6C;
         font-family: 'Titillium Web', sans-serif;
         font-size: 20px;
     }
@@ -36,6 +36,6 @@ blockquote {
 }
 
     .contact-icon p {
-        color: #70859E;
+        color: #6C6C6C;
         font-family: 'Titillium Web', sans-serif;
     }
