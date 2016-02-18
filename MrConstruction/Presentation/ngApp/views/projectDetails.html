@@ -1,8 +1,66 @@
-﻿<div class="row">
-    <div class="col-md-3">
-        <h1>{{controller.project.title}}</h1>
+﻿<hr class="sexy-line"/>
+<div class="project-details-title row">
+    <div class="col-md-12">
+        <h1 class="text-center">{{controller.project.title}}</h1>
     </div>
 </div>
+<hr class="sexy-line"/>
+<!--Upload Boxes-->
+<div class="project-details-description row">
+    <div class="col-md-12">
+        <h3 class="text-center">{{controller.project.description}}</h3>
+    </div>
+</div>
+<hr class="sexy-line"/>
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center project-details-tasklist-header">Task List</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="new-task-button col-md-offset-9 col-md-2">
+        <input value="New Task" class="btn btn-primary" type="button" ng-click="controller.showModal()" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+        <div class="table-striped">
+            <table class="table">
+                <tr>
+                    <th>
+                        Job
+                    </th>
+                    <th>
+                        Estimate
+                    </th>
+                    <th>
+                        Deadline
+                    </th>
+                    <th>
+                        Options
+                    </th>
+                </tr>
+                <tr ng-repeat="job in controller.project.jobList">
+                    <td>
+                        {{job.name}}
+                    </td>
+                    <td>
+                        {{job.estimate | currency}}
+                    </td>
+                    <td>
+                        {{job.deadline | date: "MM/dd/yyyy"}}
+                    </td>
+                    <td>
+                        <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a> | <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<hr class="sexy-line"/>
+
+<!---->
 <form ng-submit="controller.createPortfolio(port)">
     <div class="row">
         <label>Create Portfolio</label>
@@ -30,11 +88,6 @@
                        value=""
                        checked="checked" />
             </label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-offset-10 col-md-2">
-            <input value="New Task" class="btn" type="button" ng-click="controller.showModal()" />
         </div>
     </div>
 </form>
@@ -65,15 +118,7 @@
     </div>
 </div>
 <hr />
-<div class="row">
-    <div class="col-md-2">
-    </div>
 
-    <div class="row col-md-8">
-        <div class="col-md-offset-2 col-md-8">
-            {{controller.project.description}}
-        </div>
-        <hr />
         <div class="row">
             <div class="col-md-2">Name of Task</div>
             <div class="col-md-2">Deadline of Task</div>
@@ -81,23 +126,4 @@
         </div>
         <hr />
         <div class="row">
-            <div class="row joblistitem" ng-repeat="job in controller.project.jobList">
-                <div class="col-md-2">
-                    {{job.name}}
                 </div>
-                <div class="col-md-2">
-                    {{job.deadline | date: 'MM-dd-yyyy'}}
-                </div>
-                <div class="col-md-3">
-                    {{job.estimate}}
-                </div>
-                <div class="col-md-3">
-                    <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a>
-                </div>
-                <div class="col-md-2">
-                    <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
