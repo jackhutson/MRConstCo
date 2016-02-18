@@ -21,7 +21,7 @@ namespace MrConstruction {
                       "~/Content/bootstrap.css",
                       /*"~/Content/site.css"*/
                       "~/Content/navbar.css",
-                      "~/Content/landing.css"));
+                      "~/Content/landing.css",
                       "~/Content/about.css",
                       "~/Content/login.css"));
 
