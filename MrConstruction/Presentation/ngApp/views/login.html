@@ -1,8 +1,15 @@
 ﻿<div class="row" id="loginpage">
-    <form class="vertical-center" ng-submit="controller.login(userName, password)">
-        <h1>Login</h1>
-        <input placeholder="User Name" type="text" class="form-control" ng-model="userName" />
-        <input placeholder="Password" type="password" class="form-control" ng-model="password" />
-        <input type="submit" class="btn btn-success" value="Log In" />
+    <form class="login-center" ng-submit="controller.login(userName, password)">
+        <div class="login-row">
+            <span class="glyphicon glyphicon-user login-icon">&nbsp;</span>
+            <input placeholder="User Email" type="text" class="form-control login" ng-model="userName" />
+        </div>
+        <div class="login-row">
+            <span class="glyphicon glyphicon-lock login-icon">&nbsp;</span>
+            <input placeholder="Password" type="password" class="form-control login" ng-model="password" />
+        </div>
+        <div class="login-submit">
+            <input type="submit" class="btn btn-success" value="Log In" />
+        </div>
     </form>
 </div>

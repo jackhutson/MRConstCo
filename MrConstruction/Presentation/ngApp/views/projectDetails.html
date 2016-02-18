@@ -1,11 +1,8 @@
-﻿
-<div class="row">
+﻿<div class="row">
     <div class="col-md-3">
         <h1>{{controller.project.title}}</h1>
     </div>
 </div>
-
-{{port}}
 <form ng-submit="controller.createPortfolio(port)">
     <div class="row">
         <label>Create Portfolio</label>
@@ -16,15 +13,15 @@
             <img ng-src="{{upload.url}}" class="uploads" />
             <label>
                 General
-                <input type="radio" name="{{upload.id}}" ng-model="port[upload.id]" value="general"/>
+                <input type="radio" name="{{upload.id}}" ng-model="port[upload.id]" value="general" />
             </label>
             <label>
                 After
-                <input type="radio" id="{{upload.id}}-after" name="after" ng-model="controller.afterId" ng-value="upload.id" ng-click="port[upload.id] = 'general'"/>
+                <input type="radio" id="{{upload.id}}-after" name="after" ng-model="controller.afterId" ng-value="upload.id" ng-click="port[upload.id] = 'general'" />
             </label>
             <label>
                 Before
-                <input type="radio" id="{{upload.id}}-before" name="before" ng-model="controller.beforeId" ng-value="upload.id" ng-click="port[upload.id] = 'general'"/>
+                <input type="radio" id="{{upload.id}}-before" name="before" ng-model="controller.beforeId" ng-value="upload.id" ng-click="port[upload.id] = 'general'" />
             </label>
             <label>
                 None
@@ -41,7 +38,6 @@
         </div>
     </div>
 </form>
-
 
 <div class="row">
     <div class="col-md-offset-10 col-md-2">
@@ -76,6 +72,7 @@
         <div class="col-md-offset-2 col-md-8">
             {{controller.project.description}}
         </div>
+        <hr />
         <div class="row joblistitem" ng-repeat="job in controller.project.jobList">
             <div class="col-md-2">
                 {{job.name}}
@@ -89,9 +86,9 @@
             <div class="col-md-3">
                 <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a>
             </div>
-                <div class="col-md-2">
-                    <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
-                </div>
+            <div class="col-md-2">
+                <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
+            </div>
         </div>
     </div>
 </div>

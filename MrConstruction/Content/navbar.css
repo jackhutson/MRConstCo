@@ -1,0 +1,36 @@
+﻿#logo {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+#logo>a>img{
+    max-height: 50px;
+}
+.top {
+    min-height: 150px;
+}
+.navbar-brand {
+    max-height: 200px;
+    max-width: 200px;
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+.navbar:hover{
+    background-color: none;
+}
+.center {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+}
+hr {
+    max-width: 80%;
+}
