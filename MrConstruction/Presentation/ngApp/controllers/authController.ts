@@ -12,6 +12,7 @@
             })
                 .then((response) => {
                     this.$window.localStorage.setItem('token', response.data['access_token']);
+                    this.$window.localStorage.setItem('role', response.data['role']);
                     this.$location.path('/');
                 })
                 .catch((response) => {
@@ -21,6 +22,19 @@
 
         public logout() {
             this.$window.localStorage.removeItem('token');
+            this.$window.localStorage.removeItem('role');
+        }
+
+        get isAdmin() {
+            return this.$window.localStorage.getItem('role') == 'Admin';
+        }
+
+        get isContractor() {
+            return this.$window.localStorage.getItem('role') == 'Contractor';
+        }
+
+        get isLoggedIn() {
+            return this.$window.localStorage.getItem('token');
         }
     }
 
