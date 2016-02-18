@@ -1,26 +1,31 @@
-﻿<hr />
+﻿<hr class="sexy-line"/>
 <div class="project-details-title row">
     <div class="col-md-12">
         <h1 class="text-center">{{controller.project.title}}</h1>
     </div>
 </div>
-<hr />
+<hr class="sexy-line"/>
 <!--Upload Boxes-->
 <div class="project-details-description row">
     <div class="col-md-12">
         <h3 class="text-center">{{controller.project.description}}</h3>
     </div>
 </div>
-<hr />
+<hr class="sexy-line"/>
 <div class="row">
     <div class="col-md-12">
-        <h2 class="text-center"><u>Task List</u></h2>
+        <h2 class="text-center project-details-tasklist-header">Task List</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="new-task-button col-md-offset-9 col-md-2">
+        <input value="New Task" class="btn btn-primary" type="button" ng-click="controller.showModal()" />
     </div>
 </div>
 <div class="row">
     <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-        <div>
-            <table class="table table-responsive table-striped">
+        <div class="table-striped">
+            <table class="table">
                 <tr>
                     <th>
                         Job
@@ -40,20 +45,20 @@
                         {{job.name}}
                     </td>
                     <td>
-                        {{job.estimate}}
+                        {{job.estimate | currency}}
                     </td>
                     <td>
-                        {{job.deadline}}
+                        {{job.deadline | date: "MM/dd/yyyy"}}
                     </td>
                     <td>
-                        <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
+                        <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a> | <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
                     </td>
                 </tr>
             </table>
         </div>
     </div>
 </div>
-
+<hr class="sexy-line"/>
 
 <!---->
 <form ng-submit="controller.createPortfolio(port)">
@@ -85,11 +90,6 @@
             </label>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-offset-10 col-md-2">
-            <input value="New" class="btn" type="button" ng-click="controller.showModal()" />
-        </div>
-    </div>
 </form>
 
 <div class="row">
@@ -118,29 +118,3 @@
     </div>
 </div>
 <hr />
-<div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="row col-md-8">
-        <div class="col-md-offset-2 col-md-8">
-            {{controller.project.description}}
-        </div>
-        <hr />
-        <div class="row joblistitem" ng-repeat="job in controller.project.jobList">
-            <div class="col-md-2">
-                {{job.name}}
-            </div>
-            <div class="col-md-2">
-                {{job.deadline}}
-            </div>
-            <div class="col-md-3">
-                {{job.estimate}}
-            </div>
-            <div class="col-md-3">
-                <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a>
-            </div>
-            <div class="col-md-2">
-            </div>
-        </div>
-    </div>
-</div>

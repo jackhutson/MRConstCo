@@ -44,17 +44,20 @@ h1.title {
     margin-top: 12.5%;
     font-family: 'Raleway', sans-serif;
 }
+
 .landing-img-left {
     max-width: 100%;
     border-radius: 50%;
     margin-left: -50px;
 
 }
+
 .landing-img-right {
     max-width: 100%;
     border-radius: 50%;
 
 }
+
 .landing-p {
     margin-top: 10%;
     font-family: 'Titillium Web', sans-serif;

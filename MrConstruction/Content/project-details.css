@@ -1,11 +1,13 @@
 ﻿.project-details h1 {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 .project-details-title {
     background-color: #EEEEEE;
     color: #251C68;
     padding: 40px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .project-details-description {
@@ -16,4 +18,33 @@
 .project-details-joblist-table {
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
+}
+
+.project-details-tasklist-header {
+    padding-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.sexy-line {
+    max-width: 95%;
+    margin: 25px 0;
+    height: 1px;
+    border: 0;
+    background: #251C68;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #251C68));
+}
+
+.new-task-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table th {
+    text-align: center;
+}
+
+table tr {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
