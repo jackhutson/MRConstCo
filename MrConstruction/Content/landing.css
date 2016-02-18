@@ -1,0 +1,45 @@
+﻿.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+.main-image {
+    background: url('http://www.thepanorama.cos.sg/wp-content/uploads/2014/06/pan3.jpg');
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+}
+.fixed-attachement {
+    background-attachment: fixed;
+}
+.image-filler {
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+}
+.filler{
+    min-height: 350px;
+}
+.one{
+       background: url('https://wallpaperscraft.com/image/house_beautiful_design_style_greens_70093_3840x2400.jpg');
+       background-size: cover;
+       background-position: center;
+       background-attachment: fixed;
+}
+.two{
+    background: url('http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/House-Covered-In-Snow-desktop-high-resolution-wallpaper-images-desktop-background-full-free.jpg');
+       background-size: cover;
+       background-position: center;
+       background-attachment: fixed;
+}
+
+.image-filler {
+
+}
+h1.title {
+    display: flex !important;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+}

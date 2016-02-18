@@ -1,4 +1,7 @@
-﻿#logo {
+﻿body {
+    
+}
+#logo {
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -7,7 +10,7 @@
     max-height: 50px;
 }
 .top {
-    min-height: 300px;
+    min-height: 150px;
 }
 .navbar-brand {
     max-height: 200px;
@@ -21,13 +24,21 @@
     display: flex;
     justify-content: center;
 }
-.navbar:hover{
-    background-color: none;
+a{
+    color:  !important;
+    background: none;
 }
+a:hover{
+    background-color: transparent !important;
+    border-bottom:groove 1px grey !important;
+}
+
+
 .center {
     display: flex;
     align-content: center;
     justify-content: center;
+    font-weight:600;
     font-family: 'Titillium Web', sans-serif;
     font-size: 15px;
 }

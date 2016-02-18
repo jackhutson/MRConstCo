@@ -20,7 +20,8 @@ namespace MrConstruction {
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       /*"~/Content/site.css"*/
-                      "~/Content/navbar.css"));
+                      "~/Content/navbar.css",
+                      "~/Content/landing.css"));
 
             bundles.Add(new ScriptBundle("~/angular/core").Include(
                       "~/Scripts/angular.js",

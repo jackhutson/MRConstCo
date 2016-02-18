@@ -290,6 +290,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\landing.css" />
     <Content Include="Content\navbar.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
@@ -317,6 +318,7 @@
     <Content Include="Presentation\ngApp\views\publicAbout.html" />
     <Content Include="Presentation\ngApp\views\publicLanding.html" />
     <Content Include="Presentation\ngApp\views\publicPortfolio.html" />
+    <Content Include="Presentation\ngApp\views\staging.html" />
     <Content Include="Presentation\ngApp\views\taskDetails.html" />
     <Content Include="Presentation\ngApp\views\projectList.html" />
     <Content Include="Presentation\ngApp\views\upload.html" />
