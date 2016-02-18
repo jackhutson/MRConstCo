@@ -1,0 +1,19 @@
+﻿.project-details h1 {
+    text-align: center;
+}
+
+.project-details-title {
+    background-color: #EEEEEE;
+    color: #251C68;
+    padding: 40px;
+}
+
+.project-details-description {
+    padding: 15px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.project-details-joblist-table {
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}

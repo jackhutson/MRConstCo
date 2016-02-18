@@ -1,8 +1,61 @@
-﻿<div class="row">
-    <div class="col-md-3">
-        <h1>{{controller.project.title}}</h1>
+﻿<hr />
+<div class="project-details-title row">
+    <div class="col-md-12">
+        <h1 class="text-center">{{controller.project.title}}</h1>
     </div>
 </div>
+<hr />
+<!--Upload Boxes-->
+<div class="project-details-description row">
+    <div class="col-md-12">
+        <h3 class="text-center">{{controller.project.description}}</h3>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center"><u>Task List</u></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+        <div>
+            <table class="table table-responsive table-striped">
+                <tr>
+                    <th>
+                        Job
+                    </th>
+                    <th>
+                        Estimate
+                    </th>
+                    <th>
+                        Deadline
+                    </th>
+                    <th>
+                        Options
+                    </th>
+                </tr>
+                <tr ng-repeat="job in controller.project.jobList">
+                    <td>
+                        {{job.name}}
+                    </td>
+                    <td>
+                        {{job.estimate}}
+                    </td>
+                    <td>
+                        {{job.deadline}}
+                    </td>
+                    <td>
+                        <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!---->
 <form ng-submit="controller.createPortfolio(port)">
     <div class="row">
         <label>Create Portfolio</label>
@@ -87,7 +140,6 @@
                 <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a>
             </div>
             <div class="col-md-2">
-                <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
             </div>
         </div>
     </div>
