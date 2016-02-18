@@ -1,0 +1,41 @@
+﻿.about {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+
+.profile-image {
+    max-height: 260px;
+    max-width: 260px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-bottom: 3px;
+    margin-right: 50px;
+}
+
+.profile-info {
+    margin-top: 25px;
+    text-align: left;
+}
+
+    .profile-info p {
+        padding-top: 5px;
+        color: #70859E;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 20px;
+    }
+blockquote {
+    border-left: 3px solid #e2e6ea;
+
+}
+.contact-icon {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+    .contact-icon p {
+        color: #70859E;
+        font-family: 'Titillium Web', sans-serif;
+    }

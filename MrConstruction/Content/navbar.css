@@ -7,7 +7,7 @@
     max-height: 50px;
 }
 .top {
-    min-height: 300px;
+    min-height: 150px;
 }
 .navbar-brand {
     max-height: 200px;
@@ -33,5 +33,4 @@
 }
 hr {
     max-width: 80%;
-    margin-bottom: 25px;
 }
