@@ -17,11 +17,10 @@
         <h2 class="text-center"><u>Task List</u></h2>
     </div>
 </div>
-
 <div class="row">
     <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-        <div class="table-responsive table-striped">
-            <table class="table project-details-joblist-table">
+        <div>
+            <table class="table table-responsive table-striped">
                 <tr>
                     <th>
                         Job
@@ -33,8 +32,22 @@
                         Deadline
                     </th>
                     <th>
-                        Details
+                        Options
                     </th>
+                </tr>
+                <tr ng-repeat="job in controller.project.jobList">
+                    <td>
+                        {{job.name}}
+                    </td>
+                    <td>
+                        {{job.estimate}}
+                    </td>
+                    <td>
+                        {{job.deadline}}
+                    </td>
+                    <td>
+                        <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
+                    </td>
                 </tr>
             </table>
         </div>
@@ -127,7 +140,6 @@
                 <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a>
             </div>
             <div class="col-md-2">
-                <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
             </div>
         </div>
     </div>
