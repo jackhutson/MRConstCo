@@ -1,0 +1,64 @@
+﻿.pluscontractor{
+    margin:0 auto;
+    text-align:center;
+    display:block;
+}
+.contractor-title{
+    text-align:center;
+    margin-top:0;
+    font-family: 'Raleway', sans-serif;
+    font-weight:500;
+}
+
+.contr-repeat{
+    margin:1% 0 1% 0;
+    font-size:35px;
+}
+
+.contractor-button {
+    width:200px;
+    height:30px;
+}
+
+.contractor-category{
+    font-size:35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight:500;
+    line-height:25px;
+}
+
+.category-content{
+    font-size:25px;
+    line-height:25px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.contractor-task-button>input[value]{
+    font-family: 'Titillium Web', sans-serif;
+    font-size:20px;
+}
+
+.contractor-task-button>a{
+    font-family: 'Titillium Web', sans-serif;
+    font-size:20px;
+    text-align:center;
+    line-height:none;
+}
+
+.pluscontractor>input[value]{
+    font-family: 'Titillium Web', sans-serif;
+    font-size:25px;
+    text-align:center;
+    max-width:75px;
+    max-height:40px;
+}
+
+#contractor-tasks {
+    font-size:35px;
+}
+
+#contractor-repeat{
+    margin-bottom:5%;
+}
+
+
