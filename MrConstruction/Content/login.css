@@ -1,0 +1,35 @@
+﻿div#loginpage {
+    background-color: #e2e6ea;
+    width: 350px;
+    margin: 0 auto;
+}
+.login-center {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+input.login {
+    background-color: transparent;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid; 
+}
+.login-icon {
+    
+}
+.login-row {
+    padding-top: 20px;
+}
+
+.login-submit {
+    padding-top: 20px;
+    
+}
+
+input[type=submit] {
+    background-color: #70859E;
+    border: none !important;
+    border-radius: 0 0 0 0;
+    font-weight: bold;
+}
