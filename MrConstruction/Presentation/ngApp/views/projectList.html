@@ -13,17 +13,20 @@
 <hr class="sexy-line" />
 
 <div class="row">
-    <div class="table-striped">
-        <table class="table">
-            <tr>
-                <th>Title</th>
-                <th>Budget</th>
-                <th>Status</th>
-                <th></th>
-            </tr>
-            <tr ng-repeat="project in controller.projects">
-                <!--<a href="#/project-details/{{project.id}}" class="project-clickable">-->
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="table-striped">
+            <table class="table">
+                <tr>
+                    <th>Title</th>
+                    <th>Budget</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="project in controller.projects">
+                    <!--<a href="#/project-details/{{project.id}}" class="project-clickable">-->
                     <td>
+                         <
                         {{project.title}}
                     </td>
                     <td>
@@ -35,19 +38,12 @@
                     <td>
                         <a href="#/project-details/{{project.id}}" class="project-clickable"><input value="Click to show details" type="button" contractor-button" /></a>
                     </td>
-                <!--</a>-->
-            </tr>
-        </table>
+                    <!--</a>-->
+                </tr>
+            </table>
+        </div>
     </div>
-
-    <div class="project-list row" >
-            <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-                <table class="table table-responsive">
-                    
-                </table>
-            </div>
-        
-    </div>
+    <div class="col-md-2"></div>
 </div>
 
 
