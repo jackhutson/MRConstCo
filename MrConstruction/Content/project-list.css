@@ -45,7 +45,6 @@
         border-radius: 0 0 0 0;
     }*/
 div.project-list {
-    position: relative;
 }
     div.project-list a {
         position: absolute;

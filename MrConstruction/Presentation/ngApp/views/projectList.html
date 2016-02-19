@@ -1,7 +1,7 @@
 ﻿<hr class="sexy-line" />
 
-<div class="container">
-    <div class="col-md-12 project-title"><h1 class="project-list-title">Projects</h1></div>
+<div class="row">
+    <div class="col-md-12 project-title"><h1 class="project-title">Projects</h1></div>
     <div class="col-md-12 plusproject">
         <input type="button" value="+" ng-click="controller.showModal()" />
     </div>
@@ -12,34 +12,42 @@
 
 <hr class="sexy-line" />
 
-<div class="project-list row" ng-repeat="project in controller.projects">
-    <a href="#/project-details/{{project.id}}" class="project-clickable">
-        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-            <table class="table table-responsive">
-                <tr>
-                    <td>Title</td>
+<div class="row">
+    <div class="table-striped">
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Budget</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="project in controller.projects">
+                <!--<a href="#/project-details/{{project.id}}" class="project-clickable">-->
                     <td>
-                        <strong>{{project.title}}</strong>
+                        {{project.title}}
                     </td>
-                    <td>Click to show details</td>
-                </tr>
-                <tr>
-                    <td>Budget</td>
                     <td>
-                        <strong>{{project.budget}}</strong>
+                        {{project.budget}}
                     </td>
-                    <td>Click to show details</td>
-                </tr>
-                <tr>
-                    <td>Status</td>
                     <td>
-                        <strong>{{project.state}}</strong>
+                        {{project.state}}
                     </td>
-                    <td>Click to show details</td>
-                </tr>
-            </table>
-        </div>
-    </a>
+                    <td>
+                        <a href="#/project-details/{{project.id}}" class="project-clickable"><input value="Click to show details" type="button" contractor-button" /></a>
+                    </td>
+                <!--</a>-->
+            </tr>
+        </table>
+    </div>
+
+    <div class="project-list row" >
+            <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+                <table class="table table-responsive">
+                    
+                </table>
+            </div>
+        
+    </div>
 </div>
 
 
