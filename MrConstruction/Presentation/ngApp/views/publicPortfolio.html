@@ -1,14 +1,22 @@
 ﻿<!--Add a portfolio-->
-    
+    <div class="row">
     <div class="row" ng-repeat="portfolio in controller.portfolios" ng-click="details = true">
         <div class="col-md-6">
             <img class="portfolio-before" ng-src="{{portfolio.beforePicture.url}}" />
         </div>
         <div class="col-md-6">
             <img class="portfolio-after" ng-src="{{portfolio.afterPicture.url}}" />
-        </div> 
-    </div> 
-
+        </div>
+    </div>
+        <div class="row"  ng-show="details">
+            <div class="col-md-2" ng-repeat="upload in portfolio.uploads">
+                <center><img class="thumbnail portfolio-box" ng-src="{{upload.url}}" /></center>
+            </div>
+            <div class="col-md-12">
+                
+            </div>
+        </div>
+</div>
     
 
 
