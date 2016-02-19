@@ -179,7 +179,7 @@
         <form ng-submit="controller.createPortfolio(port)">
             <div class="row">
                 <div class="col-md-offset-10 col-md-2 create-portfolio">
-                    <input class="btn btn-primary" type="submit" value="New Portfolio Entry" />
+                    <input class="btn" type="submit" value="New Portfolio Entry" />
                 </div>
             </div>
             <div class="row" ng-init="port = {}">
@@ -243,7 +243,7 @@
     </div>
 </form>-->
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-offset-4 col-md-2">
         <input value="Edit Project" class="btn" type="button" ng-click="controller.editProjectModal()" />
     </div>
     <div class="col-md-6">
