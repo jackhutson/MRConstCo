@@ -1,6 +1,6 @@
 ﻿namespace MrConstruction {
 
-    angular.module('MrConstruction', ['ngRoute', 'ui.bootstrap']);
+    angular.module('MrConstruction', ['ngRoute', 'ui.bootstrap', 'ngAnimate']);
 
     angular.module('MrConstruction').factory('authInterceptor',
         ($q: ng.IQService, $window: ng.IWindowService, $location: ng.ILocationService) => {

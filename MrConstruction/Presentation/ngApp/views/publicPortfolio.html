@@ -2,15 +2,13 @@
     
     <div class="row" ng-repeat="portfolio in controller.portfolios" ng-click="details = true">
         <div class="col-md-6">
-            <img ng-src="{{portfolio.beforePicture.url}}" />
+            <img class="portfolio-before" ng-src="{{portfolio.beforePicture.url}}" />
         </div>
         <div class="col-md-6">
-            <img ng-src="{{portfolio.afterPicture.url}}" />
+            <img class="portfolio-after" ng-src="{{portfolio.afterPicture.url}}" />
         </div>
-
-        <div class="row" ng-show="details">
-
-        </div>
+        
+        
     </div>
 
 

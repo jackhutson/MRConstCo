@@ -1,10 +1,10 @@
-﻿<hr class="sexy-line"/>
+﻿<hr class="sexy-line" />
 <div class="project-details-title row">
     <div class="col-md-12">
         <h1 class="text-center">{{controller.project.title}}</h1>
     </div>
 </div>
-<hr class="sexy-line"/>
+<hr class="sexy-line" />
 <!--Upload Boxes-->
 <div class="project-details-description row">
     <div class="col-md-12">
@@ -55,6 +55,11 @@
                 </table>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-offset-9 col-md-2">
+                <input value="Edit Location" class="btn" type="button" ng-click="controller.editLocationModal()" />
+            </div>
+        </div>
     </div>
     <div class="col-md-6">
         <div class="row">
@@ -65,7 +70,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+            <div class="col-md-offset-1 col-md-10 col-md-offset-1">
                 <table class="table table-responsive">
                     <tr>
                         <th>
@@ -98,6 +103,11 @@
                 </table>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-offset-9 col-md-2">
+                <input value="Edit Client" class="btn" type="button" ng-click="controller.editClientModal()" />
+            </div>
+        </div>
     </div>
 </div>
 <hr class="sexy-line" />
@@ -112,7 +122,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+    <div class="col-md-offset-1 col-md-10 col-md-offset-1">
         <div class="table-striped">
             <table class="table">
                 <tr>
@@ -124,6 +134,9 @@
                     </th>
                     <th>
                         Deadline
+                    </th>
+                    <th>
+                        Status
                     </th>
                     <th>
                         Options
@@ -140,6 +153,9 @@
                         {{job.deadline | date: "MM/dd/yyyy"}}
                     </td>
                     <td>
+                        {{job.state}}
+                    </td>
+                    <td>
                         <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a> | <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
                     </td>
                 </tr>
@@ -147,14 +163,55 @@
         </div>
     </div>
 </div>
-<hr class="sexy-line"/>
-
-<!---->
-<form ng-submit="controller.createPortfolio(port)">
-    <div class="row">
-        <label>Create Portfolio</label>
-        <input type="submit" />
+<hr class="sexy-line" />
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center project-details-tasklist-header"> Images and Blueprints </h2>
     </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-10 col-md-2">
+        <input class="btn" type="button" value="Upload File" ng-click="controller.uploadModal()" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 col-md-offset-10">
+        <form ng-submit="controller.createPortfolio(port)">
+            <div class="row" ng-init="port = {}">
+                <div class="col-md-3" ng-repeat="upload in controller.project.uploads">
+                    <div class="thumbnail">
+                        <a href="{{upload.url}}">
+                            <img ng-src="{{upload.url}}" class="img-responsive project-details-upload" />
+                        </a>
+                        <label>
+                            General
+                            <input class="radio-inline" type="radio" name="{{upload.id}}" ng-model="port[upload.id]" value="general" />
+                        </label>
+                        <label>
+                            After
+                            <input class="radio-inline" type="radio" id="{{upload.id}}-after" name="after" ng-model="controller.afterId" ng-value="upload.id" ng-click="port[upload.id] = 'general'" />
+                        </label>
+                        <label>
+                            Before
+                            <input class="radio-inline" type="radio" id="{{upload.id}}-before" name="before" ng-model="controller.beforeId" ng-value="upload.id" ng-click="port[upload.id] = 'general'" />
+                        </label>
+                        <label>
+                            None
+                            <input class="radio-inline" type="radio" name="{{upload.id}}"
+                                   ng-model="port[upload.id]"
+                                   value=""
+                                   checked="checked" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<hr class="sexy-line" />
+<!---->
+<!--<form ng-submit="controller.createPortfolio(port)">
+
     <div class="row" ng-init="port = {}">
         <div class="col-md-2" ng-repeat="upload in controller.project.uploads" style="display:inline">
             <img ng-src="{{upload.url}}" class="uploads" />
@@ -179,31 +236,12 @@
             </label>
         </div>
     </div>
-</form>
-
+</form>-->
 <div class="row">
-    <div class="col-md-offset-10 col-md-2">
+    <div class="col-md-6">
         <input value="Edit Project" class="btn" type="button" ng-click="controller.editProjectModal()" />
     </div>
-</div>
-<div class="row">
-    <div class="col-md-offset-10 col-md-2">
+    <div class="col-md-6">
         <input value="Delete Project" class="btn" type="button" ng-click="controller.deleteProject()" />
     </div>
 </div>
-<div class="row">
-    <div class="col-md-offset-10 col-md-2">
-        <input value="Edit Client" class="btn" type="button" ng-click="controller.editClientModal()" />
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-offset-10 col-md-2">
-        <input value="Edit Location" class="btn" type="button" ng-click="controller.editLocationModal()" />
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-offset-10 col-md-2">
-        <input type="button" value="Uploads" ng-click="controller.uploadModal()" />
-    </div>
-</div>
-<hr />
