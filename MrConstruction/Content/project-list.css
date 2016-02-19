@@ -6,12 +6,13 @@
     padding-bottom:15px;
     color: #251C68;
 }
-.project-title{
+.container>.project-title>.project-list-title{
     text-align:center;
     background-color: #EEEEEE;
     color: #251C68;
     padding:0;
     font-family: 'Raleway', sans-serif;
+    display:block;
 }
 .plusproject>input[value]{
     font-family: 'Titillium Web', sans-serif;
