@@ -43,10 +43,11 @@ a {
         background-color: transparent !important;
         border-bottom: groove 1px grey !important;
     }
-a:focus{
-    background-color: transparent !important;
-    border-bottom: groove 1px grey !important;
-}
+
+    a:focus {
+        background-color: transparent !important;
+        border-bottom: groove 1px grey !important;
+    }
 
 .center {
     display: flex;
@@ -56,6 +57,33 @@ a:focus{
     font-family: 'Titillium Web', sans-serif;
     font-size: 18px;
     color: #251C68 !important;
-
 }
 
+/*-----Button Styles-----*/
+input[type=button] {
+    background-color: #6C6C6C;
+    color: #EEEEEE;
+    border: none !important;
+    border-radius: 0 0 0 0;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+    input[type=button]:hover {
+        background-color: #251C68;
+        color: #EEEEEE;
+    }
+
+input[type=submit] {
+    background-color: #6C6C6C;
+    color: #EEEEEE;
+    border: none !important;
+    border-radius: 0 0 0 0;
+    font-weight: bold;
+}
+
+    input[type=submit]:hover {
+        background-color: #251C68;
+        color: #EEEEEE;
+    }

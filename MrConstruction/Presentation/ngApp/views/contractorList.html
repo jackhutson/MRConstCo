@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-12 contractor-title"><h1 class="contractor-title">Contractor</h1></div>
     <div class="col-md-12 pluscontractor">
-        <input value="+" class="btn btn-default btn-sm" ng-click="controller.showModal()" />
+        <input type="button" value="+" ng-click="controller.showModal()" />
     </div>
 </div>
 
@@ -33,10 +33,10 @@
                     <td>{{contractor.phoneNumber}}</td>
                     <td>{{contractor.phoneNumber2}}</td>
                     <td>
-                        <input value="Edit" class="btn btn-default contractor-button" ng-click="controller.showEditModal(contractor.id)" />
+                        <input value="Edit" type="button" contractor-button" ng-click="controller.showEditModal(contractor.id)" />
                     </td>
                     <td>
-                        <input value="Delete" class="btn btn-default contractor-button" ng-click="controller.deleteContractor(contractor.id)" />
+                        <input value="Delete" type="button" contractor-button" ng-click="controller.deleteContractor(contractor.id)" />
                     </td>
                 </tr>
             </table>
