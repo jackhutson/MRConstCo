@@ -70,11 +70,19 @@ h1.title {
     margin: 50px;
     min-width: 250px;
     min-height: 500px;
-    background-color: rgba(247, 247, 247, 0.80);
+    background-color: rgba(247, 247, 247, 0.67);
     border-radius: 2px;
 }
 .landing-card-p{
     padding: 25px;
     font-size: 22px;
-    color: #6c6c6c;   
+    color: #6c6c6c;  
+    font-weight: 700;
+    font-family: 'Titillium Web', sans-serif; 
+}
+.landing-text-bottom {
+    min-height: 350px;
+    font-size: 30px;
+    padding: 125px;
+     font-family: 'Titillium Web', sans-serif;
 }
