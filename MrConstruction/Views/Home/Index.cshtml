@@ -19,6 +19,9 @@
             <nav class="navbar">
                 <ul class="nav navbar-nav" id="nav">
                     <li>
+                        <a href="#/">Home</a>
+                    </li>
+                    <li>
                         <a href="#/about">About</a>
                     </li>
                     <li>
@@ -34,7 +37,10 @@
                         <a href="#/contractors">Contractors</a>
                     </li>
                     <li ng-if="auth.isContractor">
-                        <a href="#/task">Task</a>
+                        <a href="#/tasks">Task</a>
+                    </li>
+                    <li ng-if="auth.isLoggedIn" ng-click="auth.logout()">
+                        <a href="#/">Logout</a>
                     </li>
                 </ul>
             </nav>

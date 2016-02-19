@@ -42,5 +42,22 @@ namespace MrConstruction.Presentation.Controllers
             var cs = _contractorService.GetContractors();
             return cs;
         }
+
+        [HttpGet]
+        [Authorize(Roles = Role.Admin)]
+        [Route("api/contractor/delete/{id}")]
+        public IHttpActionResult DeleteContractor(string id)
+        {
+            _contractorService.DeleteContractor(id);
+            if (ModelState.IsValid)
+            {
+                return Ok();
+            }
+            else {
+                return BadRequest();
+            }
+        }
+
+
     }
 }

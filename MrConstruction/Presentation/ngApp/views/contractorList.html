@@ -1,19 +1,57 @@
-﻿<div class="row">
-
-    <div class="col-md-offset-4 col-md-4">
-        <h1 class="contractor-title">Contractor</h1>
-    </div>
-
+﻿<hr class="sexy-line" />
+<div class="row">
+    <div class="col-md-12 contractor-title"><h1 class="contractor-title">Contractor</h1></div>
     <div class="col-md-12 pluscontractor">
-    <input value="+" class="btn btn-default btn-sm" ng-click="controller.showModal()" />
+        <input type="button" value="+" ng-click="controller.showModal()" />
     </div>
+</div>
 
+<hr class="sexy-line" />
 
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="table-striped">
+            <table class="table">
+                <tr>
 
+                    <th>Name</th>
+                    <th>Company Name</th>
+                    <th>Title</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Second Phone Number</th>
+                    <th>Edit Contractor</th>
+                    <th>Delete Contractor</th>
+                </tr>
+                <tr ng-repeat="contractor in controller.contractors">
+
+                    <td>{{contractor.name}}</td>
+                    <td>{{contractor.companyName}}</td>
+                    <td>{{contractor.title}}</td>
+                    <td>{{contractor.email}}</td>
+                    <td>{{contractor.phoneNumber}}</td>
+                    <td>{{contractor.phoneNumber2}}</td>
+                    <td>
+                        <input value="Edit" type="button" contractor-button" ng-click="controller.showEditModal(contractor.id)" />
+                    </td>
+                    <td>
+                        <input value="Delete" type="button" contractor-button" ng-click="controller.deleteContractor(contractor.id)" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
 </div>
 
 
-<div class="row">
+
+
+
+
+
+<!--<div class="row">
     <div class="col-md-offset-1 col-md-10">
         <div ng-repeat="contractor in controller.contractors" id="contractor-repeat">
             <div class="row contr-repeat">
@@ -35,7 +73,7 @@
                 <div class="col-md-2 contractor-task-button">
                     <a href="#/task-details" class="btn btn-default contractor-button">Tasks of Contractor</a>
                 </div>
-                
+
             </div>
             <div class="row contr-repeat">
                 <div class="col-md-2 contractor-category">
@@ -44,7 +82,7 @@
                 <div class="col-md-8 category-content">
                     {{contractor.title}}
                 </div>
-                
+
             </div>
             <div class="row contr-repeat">
                 <div class="col-md-2 contractor-category">
@@ -77,4 +115,4 @@
 
         </div>
     </div>
-</div>
+</div>-->

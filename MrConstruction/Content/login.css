@@ -4,40 +4,39 @@
     margin: 0 auto;
     font-family: 'Titillium Web', sans-serif;
 }
+
 .login-center {
     padding-left: 30px;
     padding-right: 30px;
 }
+
 input.login {
     background-color: transparent;
     padding: 10px;
     border: none;
-    border-bottom: 1px solid #6C6C6C !important; 
+    border-bottom: 1px solid #6C6C6C !important;
     border-radius: 0;
 }
-.input-group-addon{
+
+.input-group-addon {
     border: none;
     padding-right: 0;
     border-bottom: 1px solid #6C6C6C !important;
     border-radius: 0;
 }
+
 input.login:focus {
     outline: none;
     box-shadow: none;
 }
+
 .login-row {
     padding-top: 20px;
 }
+
 .login-submit {
-    padding-top: 20px; 
+    padding-top: 20px;
     text-align: right;
 }
-input[type=submit] {
-    background-color: #6C6C6C;
-    border: none !important;
-    border-radius: 0 0 0 0;
-    font-weight: bold;
-}
-input[type=submit]:hover {
-    background-color: #251C68;
-}
+
+

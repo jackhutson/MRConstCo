@@ -1,4 +1,5 @@
-﻿using MrConstruction.Domain.Identity;
+﻿using Microsoft.AspNet.Identity;
+using MrConstruction.Domain.Identity;
 using MrConstruction.Infrastructure;
 using MrConstruction.Services.Models;
 using System;
@@ -11,9 +12,11 @@ namespace MrConstruction.Services {
     public class ContractorService {
 
         private UserRepository _userRepo;
+        private ApplicationUserManager _appUserRepo;
 
-        public ContractorService(UserRepository userRepo) {
+        public ContractorService(UserRepository userRepo, ApplicationUserManager appUserRepo) {
             _userRepo = userRepo;
+            _appUserRepo = appUserRepo;
         }
 
         public ContractorUserDTO GetContractorForEdit(string id) {
@@ -65,5 +68,13 @@ namespace MrConstruction.Services {
                         PhoneNumber2 = c.PhoneNumber2
                     }).ToList();
         }
+
+        public void DeleteContractor(string id)
+        {
+            var contractor = _userRepo.GetUserById(id);
+            _appUserRepo.Delete(contractor);
+            _userRepo.SaveChanges();
+        }
+        
     }
 }

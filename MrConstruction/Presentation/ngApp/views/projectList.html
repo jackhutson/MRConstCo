@@ -1,25 +1,43 @@
-﻿
-<div class="col-md-offset-4 col-md-4 add-project">
-    <div ng-click="controller.showModal()">
-        <h3>Projects&nbsp;&nbsp;&nbsp;&nbsp;+</h3>
+﻿<hr class="sexy-line" />
+
+<div class="container">
+    <div class="col-md-12 project-title"><h1 class="project-list-title">Projects</h1></div>
+    <div class="col-md-12 plusproject">
+        <input type="button" value="+" ng-click="controller.showModal()" />
     </div>
 </div>
+<!--<div class="container">
+    <a class="btn btn-cta-primary center" ng-click="controller.showModal()">Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</a>
+</div>-->
 
-<div class="row" ng-repeat="project in controller.projects">
-    <a href="#/project-details/{{project.id}}">
-        <div class="col-md-12">
-            <div class="col-md-12" id="projecttitle">
-                <strong>{{project.title}}</strong>
-            </div>
-            <div class="col-md-4" id="listitems">
-                Budget: {{project.budget}}
-            </div>
-            <div class="col-md-4" id="listitems">
-                Status: {{project.state}}
-            </div>
-            <div class="col-md-4" id="listitems">
-                Description: {{project.description}}
-            </div>
+<hr class="sexy-line" />
+
+<div class="project-list row" ng-repeat="project in controller.projects">
+    <a href="#/project-details/{{project.id}}" class="project-clickable">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+            <table class="table table-responsive">
+                <tr>
+                    <td>Title</td>
+                    <td>
+                        <strong>{{project.title}}</strong>
+                    </td>
+                    <td>Click to show details</td>
+                </tr>
+                <tr>
+                    <td>Budget</td>
+                    <td>
+                        <strong>{{project.budget}}</strong>
+                    </td>
+                    <td>Click to show details</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>
+                        <strong>{{project.state}}</strong>
+                    </td>
+                    <td>Click to show details</td>
+                </tr>
+            </table>
         </div>
     </a>
 </div>

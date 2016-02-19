@@ -7,7 +7,7 @@
         public modalInstance;
         public edited;
 
-        constructor(private $http: ng.IHttpService, private $uibModal, private $routeParams) {
+        constructor(private $http: ng.IHttpService, private $uibModal, private $routeParams, private $location) {
             $http.get('/api/contractor')
                 .then((response) => {
                     this.contractors = response.data;
@@ -69,6 +69,19 @@
 
                         });
                 });
+        }
+
+        public deleteContractor(Id: any): void {
+
+            var userConfirm = confirm("Are you sure you want to delete this contractor?");
+
+            if (userConfirm) {
+                this.$http.get(`/api/contractor/delete/${Id}`).then((response) => {
+                    console.log("Successfully deleted contractor!");
+                });
+            } else {
+                alert("Contractor delete canceled.");
+            }
         }
         
     }
