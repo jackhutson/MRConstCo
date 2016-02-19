@@ -1,9 +1,16 @@
-﻿<div class="container">
-    <a class="btn btn-cta-primary center" ng-click="controller.showModal()">Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</a>
-    <!--<button id="add-project" ng-click="controller.showModal()">
-        <h3 class="text-center">Projects&nbsp;&nbsp;&nbsp;&nbsp;+</h3>
-    </button>-->
+﻿<hr class="sexy-line" />
+
+<div class="container">
+    <div class="col-md-12 project-title"><h1 class="project-list-title">Projects</h1></div>
+    <div class="col-md-12 plusproject">
+        <input type="button" value="+" ng-click="controller.showModal()" />
+    </div>
 </div>
+<!--<div class="container">
+    <a class="btn btn-cta-primary center" ng-click="controller.showModal()">Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</a>
+</div>-->
+
+<hr class="sexy-line" />
 
 <div class="project-list row" ng-repeat="project in controller.projects">
     <a href="#/project-details/{{project.id}}" class="project-clickable">
