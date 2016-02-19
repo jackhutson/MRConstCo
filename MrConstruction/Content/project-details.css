@@ -3,6 +3,11 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.project-details h2 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
 .project-details-title {
     background-color: #EEEEEE;
     color: #251C68;
@@ -48,4 +53,18 @@ table tr {
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: 'Titillium Web', sans-serif;
+}
+
+.project-details-upload {
+    height: auto;
+    max-height: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 250px;
+    padding-top: 10px;
+}
+
+.thumbnail {
+    margin: 15px;
+    margin-top: 20px;
 }
