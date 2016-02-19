@@ -5,27 +5,30 @@
     </button>-->
 </div>
 
-<div class="project-list" ng-repeat="project in controller.projects">
+<div class="project-list row" ng-repeat="project in controller.projects">
     <a href="#/project-details/{{project.id}}" class="project-clickable">
-        <div class="col-md-offset-2 col-md-8">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
             <table class="table table-responsive">
                 <tr>
                     <td>Title</td>
                     <td>
                         <strong>{{project.title}}</strong>
                     </td>
+                    <td>Click to show details</td>
                 </tr>
                 <tr>
                     <td>Budget</td>
                     <td>
                         <strong>{{project.budget}}</strong>
                     </td>
+                    <td>Click to show details</td>
                 </tr>
                 <tr>
                     <td>Status</td>
                     <td>
-                        <strong>{{project.State}}</strong>
+                        <strong>{{project.state}}</strong>
                     </td>
+                    <td>Click to show details</td>
                 </tr>
             </table>
         </div>
