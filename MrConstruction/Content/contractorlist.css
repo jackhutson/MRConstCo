@@ -2,12 +2,16 @@
     margin:0 auto;
     text-align:center;
     display:block;
+    background-color: #EEEEEE;
+    padding-bottom:15px;
+    color: #251C68;
 }
 .contractor-title{
     text-align:center;
-    margin-top:0;
+    background-color: #EEEEEE;
+    color: #251C68;
+    padding:0;
     font-family: 'Raleway', sans-serif;
-    font-weight:500;
 }
 
 .contr-repeat{

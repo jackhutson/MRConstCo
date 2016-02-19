@@ -294,6 +294,7 @@
     <Content Include="Content\contractorlist.css" />
     <Content Include="Content\landing.css" />
     <Content Include="Content\login.css" />
+    <Content Include="Content\modalStyling.css" />
     <Content Include="Content\navbar.css" />
     <Content Include="Content\portfolioPage.css" />
     <Content Include="Content\project-details.css" />
