@@ -1,25 +1,33 @@
-﻿
-<div class="col-md-offset-4 col-md-4 add-project">
-    <div ng-click="controller.showModal()">
-        <h3>Projects&nbsp;&nbsp;&nbsp;&nbsp;+</h3>
-    </div>
+﻿<div class="container">
+    <a class="btn btn-cta-primary center" ng-click="controller.showModal()">Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</a>
+    <!--<button id="add-project" ng-click="controller.showModal()">
+        <h3 class="text-center">Projects&nbsp;&nbsp;&nbsp;&nbsp;+</h3>
+    </button>-->
 </div>
 
-<div class="row" ng-repeat="project in controller.projects">
-    <a href="#/project-details/{{project.id}}">
-        <div class="col-md-12">
-            <div class="col-md-12" id="projecttitle">
-                <strong>{{project.title}}</strong>
-            </div>
-            <div class="col-md-4" id="listitems">
-                Budget: {{project.budget}}
-            </div>
-            <div class="col-md-4" id="listitems">
-                Status: {{project.state}}
-            </div>
-            <div class="col-md-4" id="listitems">
-                Description: {{project.description}}
-            </div>
+<div class="project-list" ng-repeat="project in controller.projects">
+    <a href="#/project-details/{{project.id}}" class="project-clickable">
+        <div class="col-md-offset-2 col-md-8">
+            <table class="table table-responsive">
+                <tr>
+                    <td>Title</td>
+                    <td>
+                        <strong>{{project.title}}</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Budget</td>
+                    <td>
+                        <strong>{{project.budget}}</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>
+                        <strong>{{project.State}}</strong>
+                    </td>
+                </tr>
+            </table>
         </div>
     </a>
 </div>
