@@ -68,3 +68,14 @@ table tr {
     margin: 15px;
     margin-top: 20px;
 }
+
+input[type=submit].project-details-port {
+    background-color: #6C6C6C;
+    border: none !important;
+    border-radius: 0 0 0 0;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: #251C68;
+}
