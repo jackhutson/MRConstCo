@@ -70,7 +70,7 @@ table tr {
     margin-top: 20px;
 }
 
-input[type=submit].project-details-port {
+input[type=submit] {
     background-color: #6C6C6C;
     border: none !important;
     border-radius: 0 0 0 0;
