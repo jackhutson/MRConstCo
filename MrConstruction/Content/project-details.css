@@ -73,3 +73,7 @@ table tr {
     padding-top: 20px; 
     text-align: right;
 }
+
+.project-details-bottom {
+    padding-bottom: 50px;
+}
