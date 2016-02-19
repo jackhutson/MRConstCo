@@ -1,67 +1,80 @@
 ﻿<div class="row">
-    <div class="col-md-11">
-        Contractor
+
+    <div class="col-md-offset-4 col-md-4">
+        <h1 class="contractor-title">Contractor</h1>
     </div>
-    <div class="col-md-1">
-        <input value="+" class="btn btn-default btn-sm" ng-click="controller.showModal()" />
+
+    <div class="col-md-12 pluscontractor">
+    <input value="+" class="btn btn-default btn-sm" ng-click="controller.showModal()" />
     </div>
+
+
+
 </div>
-<div ng-repeat="contractor in controller.contractors">
-    <div class="row">
-        <div class="col-md-2">
-            Company Name
-        </div>
-        <div class="col-md-10">
-            {{contractor.companyName}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            Name
-        </div>
-        <div class="col-md-10">
-            {{contractor.name}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            Title
-        </div>
-        <div class="col-md-10">
-            {{contractor.title}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            Email
-        </div>
-        <div class="col-md-10">
-            {{contractor.email}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            Phone
-        </div>
-        <div class="col-md-10">
-            {{contractor.phoneNumber}}
-        </div>
-    </div>
-    <div class="row" ng-if="contractor.phoneNumber2">
-        <div class="col-md-2">
-            Phone #2
-        </div>
-        <div class="col-md-10">
-            {{contractor.phoneNumber2}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-10">
-            Tasks
-        </div>
-        <div class="col-md-2" style="display:block">
-            <input value="Edit" class="btn btn-default" ng-click="controller.showEditModal(contractor.id)"/>
-            <a href="#/task-details" class="btn btn-default btn-sm add-contractor">Tasks of Contractor</a>
+
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10">
+        <div ng-repeat="contractor in controller.contractors" id="contractor-repeat">
+            <div class="row contr-repeat">
+                <div class="col-md-2 contractor-category">
+                    Company Name:
+                </div>
+                <div class="col-md-8 category-content">
+                    {{contractor.companyName}}
+                </div>
+                <div class="col-md-2 contractor-category">Tasks</div>
+            </div>
+            <div class="row contr-repeat">
+                <div class="col-md-2 contractor-category">
+                    Name:
+                </div>
+                <div class="col-md-8 category-content">
+                    {{contractor.name}}
+                </div>
+                <div class="col-md-2 contractor-task-button">
+                    <a href="#/task-details" class="btn btn-default contractor-button">Tasks of Contractor</a>
+                </div>
+                
+            </div>
+            <div class="row contr-repeat">
+                <div class="col-md-2 contractor-category">
+                    Title:
+                </div>
+                <div class="col-md-8 category-content">
+                    {{contractor.title}}
+                </div>
+                
+            </div>
+            <div class="row contr-repeat">
+                <div class="col-md-2 contractor-category">
+                    Email:
+                </div>
+                <div class="col-md-10 category-content">
+                    {{contractor.email}}
+                </div>
+            </div>
+            <div class="row contr-repeat">
+                <div class="col-md-2 contractor-category">
+                    Phone:
+                </div>
+                <div class="col-md-8 category-content">
+                    {{contractor.phoneNumber}}
+                </div>
+                <div class="col-md-2 contractor-task-button">
+                    <input value="Edit" class="btn btn-default contractor-button" ng-click="controller.showEditModal(contractor.id)" />
+                </div>
+            </div>
+            <div class="row contr-repeat" ng-if="contractor.phoneNumber2">
+                <div class="col-md-2 contractor-category">
+                    Phone #2:
+                </div>
+                <div class="col-md-10 category-content">
+                    {{contractor.phoneNumber2}}
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>

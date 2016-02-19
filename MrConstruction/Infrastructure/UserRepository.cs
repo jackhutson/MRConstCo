@@ -50,21 +50,17 @@ namespace MrConstruction.Infrastructure {
                    select u).FirstOrDefault();
         }
 
-
         public ApplicationUser GetByUserName(string name) {
             return (from u in _db.Users
                     where u.UserName == name
                     select u).FirstOrDefault();
         }
 
-        public void SaveChanges()
-        {
-            try
-            {
+        public void SaveChanges() {
+            try {
                 _db.SaveChanges();
             }
-            catch (DbEntityValidationException dbError)
-            {
+            catch (DbEntityValidationException dbError) {
                 var firstError = dbError.EntityValidationErrors.First().ValidationErrors.First().ErrorMessage;
                 throw new ValidationException(firstError);
             }

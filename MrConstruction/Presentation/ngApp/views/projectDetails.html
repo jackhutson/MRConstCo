@@ -55,6 +55,11 @@
                 </table>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-offset-9 col-md-2">
+                <input value="Edit Location" class="btn" type="button" ng-click="controller.editLocationModal()" />
+            </div>
+        </div>
     </div>
     <div class="col-md-6">
         <div class="row">
@@ -98,6 +103,11 @@
                 </table>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-offset-9 col-md-2">
+                <input value="Edit Client" class="btn" type="button" ng-click="controller.editClientModal()" />
+            </div>
+        </div>
     </div>
 </div>
 <hr class="sexy-line" />
@@ -126,6 +136,9 @@
                         Deadline
                     </th>
                     <th>
+                        Status
+                    </th>
+                    <th>
                         Options
                     </th>
                 </tr>
@@ -138,6 +151,9 @@
                     </td>
                     <td>
                         {{job.deadline | date: "MM/dd/yyyy"}}
+                    </td>
+                    <td>
+                        {{job.state}}
                     </td>
                     <td>
                         <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a> | <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
@@ -192,14 +208,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-offset-10 col-md-2">
-        <input value="Edit Client" class="btn" type="button" ng-click="controller.editClientModal()" />
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-offset-10 col-md-2">
-        <input value="Edit Location" class="btn" type="button" ng-click="controller.editLocationModal()" />
-    </div>
+    
 </div>
 <div class="row">
     <div class="col-md-offset-10 col-md-2">
@@ -207,3 +216,12 @@
     </div>
 </div>
 <hr />
+
+        <div class="row">
+            <div class="col-md-2">Name of Task</div>
+            <div class="col-md-2">Deadline of Task</div>
+            <div class="col-md-2">Estimate of Task</div>
+        </div>
+        <hr />
+        <div class="row">
+                </div>

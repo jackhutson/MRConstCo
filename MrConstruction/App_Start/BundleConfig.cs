@@ -25,12 +25,14 @@ namespace MrConstruction {
                       "~/Content/about.css",
                       "~/Content/login.css",
                       "~/Content/project-details.css",
+                      "~/Content/contractorlist.css",
                       "~/Content/portfolioPage.css"));
 
             bundles.Add(new ScriptBundle("~/angular/core").Include(
                       "~/Scripts/angular.js",
                       "~/Scripts/angular-route.js",
-                      "~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
+                      "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                      "~/Scripts/angular-animate.js"));
 
             bundles.Add(new ScriptBundle("~/angular/app")
                 .Include("~/Presentation/ngApp/app.js")
