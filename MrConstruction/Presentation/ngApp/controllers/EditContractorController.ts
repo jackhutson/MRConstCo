@@ -1,6 +1,7 @@
 ﻿namespace MrConstruction.Controllers {
 
     export class EditContractorController {
+
         public edited: any;
         
         constructor(private $uibModalInstance, private $http: ng.IHttpService, private $location: ng.ILocationService, edited) {

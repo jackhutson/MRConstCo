@@ -9,8 +9,8 @@
         private beforeId;
         private afterId;
 
-        constructor(private $uibModal, private $http, private $routeParams, private $location) {
-        
+        constructor(private $route, private $uibModal, private $http, private $routeParams, private $location) {
+
 
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
@@ -41,6 +41,7 @@
                 .then((upload) => {
                     this.$http.postMultipart(`/api/project/${this.$routeParams.id}/upload`, upload)
                         .then((response) => {
+                            this.$route.reload();
                         });
                 })
                 .catch((dismiss) => {
@@ -84,7 +85,7 @@
                     console.log(editProject);
                     this.$http.post(`/api/project/edit/${this.$routeParams.id}`, editProject)
                         .then((response) => {
-
+                            this.$route.reload();
                         })
                         .catch((response) => {
                             alert("Post failed, must have a contractor.");
@@ -116,7 +117,7 @@
                 .then((location) => {
                     this.$http.post(`/api/location/${this.$routeParams.id}`, location)
                         .then((response) => {
-
+                            this.$route.reload();
                         })
                         .catch((response) => {
                             alert('failed');
@@ -129,8 +130,8 @@
                 });
 
         }
-        
-                public editClientModal(): void {
+
+        public editClientModal(): void {
 
             this.modalInstance = this.$uibModal.open({
                 templateUrl: '/Presentation/ngApp/views/editClient.html',
@@ -150,7 +151,7 @@
                     console.log(editClient);
                     this.$http.post(`/api/client/${this.$routeParams.id}`, editClient)
                         .then((response) => {
-
+                            this.$route.reload();
                         })
                         .catch((response) => {
 
@@ -178,7 +179,7 @@
                     newTask.projectId = this.$routeParams.id;
                     this.$http.post('/api/task', newTask)
                         .then((response) => {
-
+                            this.$route.reload();
                         })
                         .catch((response) => {
                             alert("Post failed, must have a contractor.");
@@ -198,7 +199,7 @@
             if (userConfirm) {
                 this.$http.get(`/api/project/delete/${this.$routeParams.id}`)
                     .then((response) => {
-                        this.$location.path('/project-list');
+                        this.$route.reload();
                     });
             } else {
                 alert("Delete canceled.");
@@ -210,8 +211,9 @@
             var userConfirm = confirm("Are you sure you want to delete this task?");
 
             if (userConfirm) {
-                this.$http.get(`/api/task/delete/${Id}`).then((response) => {
-
+                this.$http.get(`/api/task/delete/${Id}`)
+                    .then((response) => {
+                        this.$route.reload();
                 });
             } else {
                 alert("Task delete canceled.");
