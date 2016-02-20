@@ -1,4 +1,47 @@
-﻿<div class="row">
+﻿<hr class="sexy-line" />
+<div class="row">
+    <div class="col-md-12 task-title"><h1>Task Details</h1></div>
+</div>
+<hr class="sexy-line" />
+<div class="row">
+    <div class="col-md-12 task-project-title"><h3>{{controller.task.projectTitle}}</h3></div>
+</div>
+<hr class="sexy-line" />
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="table-striped">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Contractor</th>
+                    <th>Estimate</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                    <th>Description</th>
+                    <th>Options</th>
+                </tr>
+                <tr>
+                    <td>{{controller.task.name}}</td>
+                    <td>{{controller.task.contractor.name}}</td>
+                    <td>{{controller.task.estimate | currency}}</td>
+                    <td>{{controller.task.deadline | date: 'MM/dd/yyyy'}}</td>
+                    <td>{{controller.task.state}}</td>
+                    <td>{{controller.task.description}}</td>
+                    <td><input type="button" class="btn btn-primary" value="Edit Task" ng-click="controller.editTaskModal()" /></td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+
+
+
+<!--<div class="row">
     <div class="col-md-offset-3 col-md-6 col-md-offset-3">
         <h1>{{controller.task.projectTitle}}</h1>
     </div>
@@ -45,4 +88,4 @@
     <div class="col-md-offset-10 col-md-2">
         <input type="button" class="btn btn-primary" value="Edit Task" ng-click="controller.editTaskModal()" />
     </div>
-</div>
+</div>-->

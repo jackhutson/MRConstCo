@@ -300,6 +300,7 @@
     <Content Include="Content\portfolioPage.css" />
     <Content Include="Content\project-details.css" />
     <Content Include="Content\project-list.css" />
+    <Content Include="Content\task-details.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
