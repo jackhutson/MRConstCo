@@ -34,8 +34,6 @@ namespace MrConstruction.Services
 
             var contractor = _userRepo.GetSpecificContractor(id);
 
-
-
             var dto = new ContractorUserDTO()
             {
                 Id = contractor.Id,
@@ -50,6 +48,30 @@ namespace MrConstruction.Services
             return dto;
         }
 
+        public ContractorWithJobListDTO GetContractorWithJobs(string username) {
+
+            var dto = (from c in _userRepo.GetByUserNameWithJobs(username)
+                       select new ContractorWithJobListDTO() {
+                           Id = c.Id,
+                           Name = c.Name,
+                           Title = c.Title,
+                           CompanyName = c.CompanyName,
+                           Email = c.Email,
+                           PhoneNumber = c.PhoneNumber,
+                           PhoneNumber2 = c.PhoneNumber2,
+                           JobList = (from j in c.JobList
+                                      select new JobListDTO() {
+                                          Id = j.Id,
+                                          Name = j.Name,
+                                          Estimate = j.Estimate,
+                                          State = j.State.ToString(),
+                                          Deadline = j.Deadline
+                                      }).ToList()
+                       }).FirstOrDefault();
+
+            return dto;
+        }
+        
         public void EditContractor(ContractorUserDTO edited)
         {
             var contractor = _userRepo.GetSpecificContractor(edited.Id);

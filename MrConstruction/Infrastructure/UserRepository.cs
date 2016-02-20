@@ -56,6 +56,12 @@ namespace MrConstruction.Infrastructure {
                     select u).FirstOrDefault();
         }
 
+        public IQueryable<ApplicationUser> GetByUserNameWithJobs(string name) {
+            return from u in _db.Users
+                   where u.UserName == name
+                   select u;
+        }
+
         public void SaveChanges() {
             try {
                 _db.SaveChanges();
