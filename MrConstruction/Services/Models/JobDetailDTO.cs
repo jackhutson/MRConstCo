@@ -23,7 +23,7 @@ namespace MrConstruction.Services
 
         public string Description { get; set; }
 
-        public Project.Status State { get; set; }
+        public string State { get; set; }
 
     }
 }
