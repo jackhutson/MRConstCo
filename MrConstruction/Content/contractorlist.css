@@ -1,5 +1,5 @@
 ﻿.pluscontractor{
-    margin:0 auto;
+    margin: 0 auto;
     text-align:center;
     display:block;
     background-color: #EEEEEE;
@@ -17,11 +17,6 @@
 .contr-repeat{
     margin:1% 0 1% 0;
     font-size:35px;
-}
-
-.contractor-button {
-    width:200px;
-    height:30px;
 }
 
 .contractor-category{
@@ -53,8 +48,8 @@
     font-family: 'Titillium Web', sans-serif;
     font-size:25px;
     text-align:center;
-    max-width:75px;
-    max-height:40px;
+    height: 35px;
+    width: 40px;
 }
 
 #contractor-tasks {

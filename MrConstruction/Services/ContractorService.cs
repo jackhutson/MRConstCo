@@ -8,18 +8,29 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 
-namespace MrConstruction.Services {
-    public class ContractorService {
+namespace MrConstruction.Services
+{
+    public class ContractorService
+    {
 
         private UserRepository _userRepo;
         private ApplicationUserManager _appUserRepo;
 
-        public ContractorService(UserRepository userRepo, ApplicationUserManager appUserRepo) {
+        public ContractorService(UserRepository userRepo, ApplicationUserManager appUserRepo)
+        {
             _userRepo = userRepo;
             _appUserRepo = appUserRepo;
         }
 
-        public ContractorUserDTO GetContractorForEdit(string id) {
+        public class ResponseMessage
+        {
+            public bool Result { get; set; }
+            public string Message { get; set; }
+        }
+
+
+        public ContractorUserDTO GetContractorForEdit(string id)
+        {
 
             var contractor = _userRepo.GetSpecificContractor(id);
 
@@ -76,11 +87,13 @@ namespace MrConstruction.Services {
 
         }
 
-        [Authorize(Roles="Admin")]
-        public IList<ContractorUserDTO> GetContractors() {
+        [Authorize(Roles = "Admin")]
+        public IList<ContractorUserDTO> GetContractors()
+        {
             var contractors = _userRepo.GetContractors();
             return (from c in contractors
-                    select new ContractorUserDTO() {
+                    select new ContractorUserDTO()
+                    {
                         Id = c.Id,
                         Name = c.Name,
                         Title = c.Title,
@@ -94,9 +107,9 @@ namespace MrConstruction.Services {
         public void DeleteContractor(string id)
         {
             var contractor = _userRepo.GetUserById(id);
-            _appUserRepo.Delete(contractor);
-            _userRepo.SaveChanges();
+                _appUserRepo.Delete(contractor);
+                _userRepo.SaveChanges();
         }
-        
+
     }
 }

@@ -1,7 +1,31 @@
 ﻿div#newprojectpage {
     background-color: #EEEEEE;
-    width: 500px;
+    width: 700px;
     margin: 0 auto;
     font-family: 'Titillium Web', sans-serif;
     margin-bottom: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.new-form-center {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.budget {
+    padding-bottom: 7px !important;
+}
+
+.control-label {
+    border-bottom: none !important;
+}
+textarea[type=text] {
+    padding: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    padding-bottom: 100px;
 }

@@ -21,8 +21,7 @@
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Second Phone Number</th>
-                    <th>Edit Contractor</th>
-                    <th>Delete Contractor</th>
+                    <th>Options</th>
                 </tr>
                 <tr ng-repeat="contractor in controller.contractors">
 
@@ -33,9 +32,8 @@
                     <td>{{contractor.phoneNumber}}</td>
                     <td>{{contractor.phoneNumber2}}</td>
                     <td>
-                        <input value="Edit" type="button" contractor-button" ng-click="controller.showEditModal(contractor.id)" />
-                    </td>
-                    <td>
+                        <input value="Edit" type="button" contractor-button" ng-click="controller.showEditModal(contractor.id)" /> 
+                        |
                         <input value="Delete" type="button" contractor-button" ng-click="controller.deleteContractor(contractor.id)" />
                     </td>
                 </tr>
