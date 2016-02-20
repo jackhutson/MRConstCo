@@ -1,4 +1,4 @@
-﻿.modal-dialog .modal-new {
+﻿.modal-dialog .modal-new .modal-body {
     min-height: 100%;
     border-radius: 2px;
     border: 2px solid white;
@@ -10,8 +10,8 @@
     opacity: .8 !important;
 }
 
-.modal-content {
-    width: 100%;
+.modal-body {
+    width: 50%;
     height: 0;
 }
 

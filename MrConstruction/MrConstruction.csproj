@@ -296,6 +296,7 @@
     <Content Include="Content\login.css" />
     <Content Include="Content\modals.css" />
     <Content Include="Content\navbar.css" />
+    <Content Include="Content\new-project.css" />
     <Content Include="Content\portfolioPage.css" />
     <Content Include="Content\project-details.css" />
     <Content Include="Content\project-list.css" />
