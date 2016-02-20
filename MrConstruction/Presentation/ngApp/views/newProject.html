@@ -1,114 +1,87 @@
-﻿<div class="modal-dialog">
-    <!--<div class="col-md-2 colside"></div>-->
-    <div class="row newproject">
-        <h1>Create New Project</h1>
-        <form class="form-horizontal">
-            <div class="row">
-                <h2>Project Details</h2>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="Title">Title</label>
-                    <input class="form-control" type="text" placeholder="project name" ng-model="project.title" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="clientEmail">Budget</label>
-                    <input type="number" class="form-control" placeholder=10,000 ng-model="project.budget" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="estimatedStartDate">Estimated Start Date</label>
-                    <input type="date" class="form-control" ng-model="project.estStart" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="estimatedCompletedDate">Estimated Completed Date</label>
-                    <input type="date" class="form-control" ng-model="project.estCompleted" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="projectDescription">Description</label>
-                    <textarea ng-model="project.description" style="padding-bottom: 100px; text-align:center" class="form-control" type="text" placeholder="Short Description of the Project"></textarea>
-                </div>
-            </div>
-            <hr />
-            <div class="row">
-                <h2>Client Details</h2>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="clientName">Name</label>
-                    <input type="text" class="form-control" placeholder="client's name" ng-model="project.client.name" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="clientPhoneOne">Contact Phone Number 1</label>
-                    <input type="text" class="form-control" placeholder="(888) 888-8888" ng-model="project.client.phoneNumber" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="clientPhoneOne">Contact Phone Number 2</label>
-                    <input type="text" class="form-control" placeholder="(888) 888-8888" ng-model="project.client.phoneNumber2" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="clientEmail">Email</label>
-                    <input type="email" class="form-control" placeholder="example@example.com" ng-model="project.client.email" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="projectDescription">Client Notes</label>
-                    <textarea style="padding-bottom: 100px; text-align:center" class="form-control" type="text" placeholder="Client Notes" ng-model="project.client.description"></textarea>
-                </div>
-            </div>
-            <hr />
-            <div class="row">
-                <h2>Location Details</h2>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="clientStreetOne">Street One</label>
-                    <input type="text" class="form-control" placeholder="1100 Example St." ng-model="project.client.location.street1" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="clientStreetTwo">Street Two</label>
-                    <input type="text" class="form-control" placeholder="1101 Example St. (Optional)" ng-model="project.client.location.street2" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="city">City</label>
-                    <input type="text" class="form-control" placeholder="City" ng-model="project.client.location.city" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="state">State</label>
-                    <input type="text" class="form-control" placeholder="State" ng-model="project.client.location.state" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-10 projectform">
-                    <label for="Country">Country</label>
-                    <input type="text" class="form-control" placeholder="Country (ex. US)" ng-model="project.client.location.country" />
-                </div>
-            </div>
-        </form>
-        <div class="col-md-offset-5 col-md-1">
-            <input class="btn btn-success" type="submit" value="Add" ng-click="controller.newProject(project)" />
+﻿<div class="row" id="newprojectpage">
+    <h1 class="text-center">Create New Project</h1>
+    <form class="new-form-center">
+        <div class="row">
+            <h2 class="text-center">Project Details</h2>
         </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>Title</strong>&nbsp;</span>&nbsp;</span>
+                <input class="form-control new" type="text" placeholder="Title" ng-model="project.title" />
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>Budget</strong>&nbsp;</span>&nbsp;</span>
+                <input type="number" class="form-control new budget" placeholder=10,000 ng-model="project.budget" />
+            </div>
+        <div class="new-row input-group">
+            <span class="input-group-addon"><span class="inputname"><strong>Start Date</strong>&nbsp;</span>&nbsp;</span>
+                <input type="date" class="form-control new" ng-model="project.estStart" />
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>Completed Date</strong>&nbsp;</span>&nbsp;</span>
+                <input type="date" class="form-control new" ng-model="project.estCompleted" />
+        </div>
+        <div class="new-row">
+            <div class="col-md-12 projectform">
+                <label for="projectDescription" class="inputlabel">Description</label>
+                <textarea ng-model="project.description"  class="form-control" type="text" placeholder="Short Description of the Project"></textarea>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <h2 class="text-center">Client Details</h2>
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>Name</strong>&nbsp;</span>&nbsp;</span>
+                <input type="text" class="form-control new" placeholder="client's name" ng-model="project.client.name" />
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span><strong>Contact #1</strong>&nbsp;</span>&nbsp;</span>
+                <input type="text" class="form-control new" placeholder="(888) 888-8888" ng-model="project.client.phoneNumber" />
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>Contact #2</strong>&nbsp;</span>&nbsp;</span>
+                <input type="text" class="form-control new" placeholder="(888) 888-8888" ng-model="project.client.phoneNumber2" />
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>Email</strong>&nbsp;</span>&nbsp;</span>
+                <input type="email" class="form-control new" placeholder="example@example.com" ng-model="project.client.email" />
+        </div>
+        <div class="new-row">
+            <div class="col-md-12 projectform">
+                <label for="projectDescription">Client Notes</label>
+                <textarea style="padding-bottom: 100px; text-align:center" class="form-control" type="text" placeholder="Client Notes" ng-model="project.client.description"></textarea>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <h2 class="text-center">Location Details</h2>
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>Street 1</strong>&nbsp;</span>&nbsp;</span>
+                <input type="text" class="form-control new" placeholder="1100 Example St." ng-model="project.client.location.street1" />
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>Street 2</strong>&nbsp;</span>&nbsp;</span>
+                <input type="text" class="form-control new" placeholder="(Optional)" ng-model="project.client.location.street2" />
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>City</strong>&nbsp;</span>&nbsp;</span>
+                <input type="text" class="form-control new" placeholder="City" ng-model="project.client.location.city" />
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>State</strong>&nbsp;</span>&nbsp;</span>
+                <input type="text" class="form-control new" placeholder="State" ng-model="project.client.location.state" />
+        </div>
+        <div class="new-row input-group">
+                <span class="input-group-addon"><span class="inputname"><strong>Country</strong>&nbsp;</span>&nbsp;</span>
+                <input type="text" class="form-control new" placeholder="Country (ex. US)" ng-model="project.client.location.country" />
+        </div>
+    </form>
+    <br />
+    <div class="text-center">
+        <input class="btn" type="submit" value="Add" ng-click="controller.newProject(project)" />
     </div>
-    <!--<div class="col-md-2 colside"></div>-->
+    <div style="padding-bottom: 50px" class="col-md-2"></div>
 </div>
+
 

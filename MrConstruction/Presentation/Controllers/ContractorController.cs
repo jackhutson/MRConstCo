@@ -18,6 +18,7 @@ namespace MrConstruction.Presentation.Controllers
             _contractorService = contractorService;
         }
 
+
         [HttpGet]
         [Route("api/contractor/{id}")]
         public ContractorUserDTO Get(string id) {
@@ -44,18 +45,35 @@ namespace MrConstruction.Presentation.Controllers
         }
 
         [HttpGet]
+        [Route("api/contractor/tasks")]
+        public ContractorWithJobListDTO GetContractor() {
+            return _contractorService.GetContractorWithJobs(User.Identity.Name);
+        }
+
+        [HttpGet]
         [Authorize(Roles = Role.Admin)]
         [Route("api/contractor/delete/{id}")]
         public IHttpActionResult DeleteContractor(string id)
         {
-            _contractorService.DeleteContractor(id);
-            if (ModelState.IsValid)
+            try
             {
+                _contractorService.DeleteContractor(id);
                 return Ok();
             }
-            else {
-                return BadRequest();
+            catch(Exception ex)
+            {
+                return InternalServerError(ex);
+                throw;
             }
+
+
+            //if (ModelState.IsValid)
+            //{
+            //    return Ok();
+            //}
+            //else {
+            //    return BadRequest();
+            //}
         }
 
 

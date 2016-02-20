@@ -77,6 +77,13 @@
                 });
 
             $routeProvider
+                .when('/contractor-tasks', {
+                    templateUrl: 'Presentation/ngApp/views/contTaskList.html',
+                    controller: MrConstruction.Controllers.ContractorTaskListController,
+                    controllerAs: 'controller'
+                });
+
+            $routeProvider
                 .when('/about', {
                     templateUrl: 'Presentation/ngApp/views/publicAbout.html'
                 });

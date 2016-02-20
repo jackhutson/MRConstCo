@@ -1,8 +1,7 @@
-﻿.modal-dialog .modal-new {
+﻿.modal-dialog {
     min-height: 100%;
-    border-radius: 2px;
     border: 2px solid white;
-    background-color: #EEEEEE;
+    background-color: #A5B4C1;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -10,8 +9,8 @@
     opacity: .8 !important;
 }
 
-.modal-content {
-    width: 100%;
+.modal-body {
+    width: 50%;
     height: 0;
 }
 
@@ -19,3 +18,14 @@
     text-align:center !important;
     display:block;
 }
+
+.close {
+    margin: auto;
+    border: none;
+    font-size: 50px;
+    background-color: #A5B4C1;
+}
+
+    .close:hover {
+        text-decoration: none;
+        color: #F2E0AC;

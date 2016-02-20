@@ -8,22 +8,31 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 
-namespace MrConstruction.Services {
-    public class ContractorService {
+namespace MrConstruction.Services
+{
+    public class ContractorService
+    {
 
         private UserRepository _userRepo;
         private ApplicationUserManager _appUserRepo;
 
-        public ContractorService(UserRepository userRepo, ApplicationUserManager appUserRepo) {
+        public ContractorService(UserRepository userRepo, ApplicationUserManager appUserRepo)
+        {
             _userRepo = userRepo;
             _appUserRepo = appUserRepo;
         }
 
-        public ContractorUserDTO GetContractorForEdit(string id) {
+        public class ResponseMessage
+        {
+            public bool Result { get; set; }
+            public string Message { get; set; }
+        }
+
+
+        public ContractorUserDTO GetContractorForEdit(string id)
+        {
 
             var contractor = _userRepo.GetSpecificContractor(id);
-
-
 
             var dto = new ContractorUserDTO()
             {
@@ -39,6 +48,30 @@ namespace MrConstruction.Services {
             return dto;
         }
 
+        public ContractorWithJobListDTO GetContractorWithJobs(string username) {
+
+            var dto = (from c in _userRepo.GetByUserNameWithJobs(username)
+                       select new ContractorWithJobListDTO() {
+                           Id = c.Id,
+                           Name = c.Name,
+                           Title = c.Title,
+                           CompanyName = c.CompanyName,
+                           Email = c.Email,
+                           PhoneNumber = c.PhoneNumber,
+                           PhoneNumber2 = c.PhoneNumber2,
+                           JobList = (from j in c.JobList
+                                      select new JobListDTO() {
+                                          Id = j.Id,
+                                          Name = j.Name,
+                                          Estimate = j.Estimate,
+                                          State = j.State.ToString(),
+                                          Deadline = j.Deadline
+                                      }).ToList()
+                       }).FirstOrDefault();
+
+            return dto;
+        }
+        
         public void EditContractor(ContractorUserDTO edited)
         {
             var contractor = _userRepo.GetSpecificContractor(edited.Id);
@@ -54,11 +87,13 @@ namespace MrConstruction.Services {
 
         }
 
-        [Authorize(Roles="Admin")]
-        public IList<ContractorUserDTO> GetContractors() {
+        [Authorize(Roles = "Admin")]
+        public IList<ContractorUserDTO> GetContractors()
+        {
             var contractors = _userRepo.GetContractors();
             return (from c in contractors
-                    select new ContractorUserDTO() {
+                    select new ContractorUserDTO()
+                    {
                         Id = c.Id,
                         Name = c.Name,
                         Title = c.Title,
@@ -72,9 +107,9 @@ namespace MrConstruction.Services {
         public void DeleteContractor(string id)
         {
             var contractor = _userRepo.GetUserById(id);
-            _appUserRepo.Delete(contractor);
-            _userRepo.SaveChanges();
+                _appUserRepo.Delete(contractor);
+                _userRepo.SaveChanges();
         }
-        
+
     }
 }
