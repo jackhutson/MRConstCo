@@ -13,7 +13,7 @@
 </div>
 <hr class="sexy-line" />
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-5 pull-left">
         <div class="row">
             <div class="project-details-tasklist-header text-center col-md-12">
                 <h2>
@@ -52,16 +52,16 @@
                             {{controller.location.state}}
                         </td>
                     </tr>
+                    <tr>
+                        <td colspan="4">
+                            <input value="Edit Location" class="btn" type="button" ng-click="controller.editLocationModal()" />
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-offset-9 col-md-2">
-                <input value="Edit Location" class="btn" type="button" ng-click="controller.editLocationModal()" />
-            </div>
-        </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-7">
         <div class="row">
             <div class="project-details-tasklist-header text-center col-md-12">
                 <h2>
@@ -100,12 +100,12 @@
                             {{controller.client.description}}
                         </td>
                     </tr>
+                    <tr>
+                        <td colspan="4">
+                            <input value="Edit Client" class="btn" type="button" ng-click="controller.editClientModal()" />
+                        </td>
+                    </tr>
                 </table>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-offset-9 col-md-2">
-                <input value="Edit Client" class="btn" type="button" ng-click="controller.editClientModal()" />
             </div>
         </div>
     </div>
@@ -113,12 +113,10 @@
 <hr class="sexy-line" />
 <div class="row">
     <div class="col-md-12">
-        <h2 class="text-center project-details-tasklist-header">Task List</h2>
+        <h2 class="text-center project-details-tasklist-header">Tasks</h2>
     </div>
-</div>
-<div class="row">
-    <div class="new-task-button col-md-offset-10 col-md-offset-2">
-        <input value="New Task" class="btn btn-primary" type="button" ng-click="controller.showModal()" />
+    <div class="col-md-12 plustask">
+        <input type="button" class="btn" value="New Task" ng-click="controller.showModal()" />
     </div>
 </div>
 <div class="row">
@@ -168,9 +166,7 @@
     <div class="col-md-12">
         <h2 class="text-center project-details-tasklist-header"> Images and Blueprints </h2>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-offset-10 col-md-2">
+    <div class="col-md-12 plusupload">
         <input class="btn" type="button" value="Upload File" ng-click="controller.uploadModal()" />
     </div>
 </div>
@@ -178,8 +174,8 @@
     <div class="col-md-offset-1 col-md-10 col-md-offset-10">
         <form ng-submit="controller.createPortfolio(port)">
             <div class="row">
-                <div class="col-md-offset-10 col-md-2 create-portfolio">
-                    <input class="btn" type="submit" value="New Portfolio Entry" />
+                <div class="col-md-12 create-portfolio">
+                    <input class="btn" type="submit" value="Create New Portfolio Entry" />
                 </div>
             </div>
             <div class="row" ng-init="port = {}">

@@ -3,19 +3,20 @@
     width: 300px;
     margin: 0 auto;
     font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 100px;
 }
-
-.login-center {
+.new-center {
     padding-left: 30px;
     padding-right: 30px;
 }
-
-input.login {
+input.new {
     background-color: transparent;
     padding: 10px;
     border: none;
     border-bottom: 1px solid #6C6C6C !important;
     border-radius: 0;
+    outline: none;
+    box-shadow: none;
 }
 
 .input-group-addon {
@@ -24,19 +25,18 @@ input.login {
     border-bottom: 1px solid #6C6C6C !important;
     border-radius: 0;
 }
-
-input.login:focus {
+input.new:hover {
     outline: none;
     box-shadow: none;
 }
-
-.login-row {
+input.new:focus {
+    outline: none;
+    box-shadow: none;
+}
+.new-row {
     padding-top: 20px;
 }
-
-.login-submit {
+.new-submit {
     padding-top: 20px;
     text-align: right;
 }
-
-

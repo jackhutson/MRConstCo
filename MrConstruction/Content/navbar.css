@@ -82,6 +82,10 @@ input[type=submit] {
     border-radius: 0 0 0 0;
     font-weight: bold;
 }
+    input[type=submit]:hover {
+        background-color: #251C68;
+        color: #EEEEEE;
+    }
 .footer {
     background-color: rgba(37, 28, 104, 0.06);
      font-family: 'Titillium Web', sans-serif;

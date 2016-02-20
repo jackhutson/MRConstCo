@@ -1,16 +1,17 @@
-﻿.modal-dialog .newproject {
-    background-color: #F7F7F7;
+﻿.modal-dialog .modal-new .modal-body {
     min-height: 100%;
+    border-radius: 2px;
     border: 2px solid white;
-    border-radius: 10px;
+    background-color: #EEEEEE;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .modal-backdrop {
     opacity: .8 !important;
 }
 
-.modal-content {
-    width: 100%;
+.modal-body {
+    width: 50%;
     height: 0;
 }
 
