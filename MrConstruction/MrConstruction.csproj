@@ -270,6 +270,7 @@
     <Compile Include="Services\ContractorService.cs" />
     <Compile Include="Services\LocationService.cs" />
     <Compile Include="Services\Models\ClientDTO.cs" />
+    <Compile Include="Services\Models\ContractorWithJobListDTO.cs" />
     <Compile Include="Services\Models\JobDetailDTO.cs" />
     <Compile Include="Services\JobService.cs" />
     <Compile Include="Services\Models\JobListDTO.cs" />
@@ -314,6 +315,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\views\contTaskList.html" />
     <Content Include="Presentation\ngApp\views\editClient.html" />
     <Content Include="Presentation\ngApp\views\editTask.html" />
     <Content Include="Presentation\ngApp\views\editContractor.html" />
@@ -390,6 +392,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorListController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\contractorTaskList.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editClientController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\EditContractorController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\editLocationController.ts" />

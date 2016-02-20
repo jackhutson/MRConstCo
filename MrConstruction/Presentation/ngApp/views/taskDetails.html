@@ -75,7 +75,7 @@
         Description: {{controller.task.description}}
     </div>
     <div class="col-md-offset-2 col-md-2">
-        Estimate: {{controller.task.estimate}}
+        Estimate: {{controller.task.estimate | currency}}
     </div>
     <div class="col-md-offset-2 col-md-2">
         Deadline: {{controller.task.deadline | date: 'MM/dd/yyyy'}}
