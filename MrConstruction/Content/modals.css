@@ -1,31 +1,40 @@
 ﻿.modal-dialog {
     min-height: 100%;
-    border: 2px solid white;
-    background-color: #A5B4C1;
+    border-radius: 0 !important;
+    background-color: #EEEEEE;
     font-family: 'Titillium Web', sans-serif;
+}
+
+.modal-content {
+    height: 0;
+    width: 100%;
 }
 
 .modal-backdrop {
     opacity: .8 !important;
 }
 
-.modal-body {
-    width: 50%;
-    height: 0;
+.modal-header {
+    text-align: center !important;
+    display: block;
+    width: auto;
+    color: #251C68;
 }
 
-.modalhead{
-    text-align:center !important;
-    display:block;
+.modal-footer {
+    width: auto;
+    height: auto;
+    text-align: center;
 }
 
 .close {
     margin: auto;
     border: none;
-    font-size: 50px;
-    background-color: #A5B4C1;
+    font-size: 30px;
+    color: #CACACA;
+    /*background-color: #A5B4C1;*/
 }
 
     .close:hover {
         text-decoration: none;
-        color: #F2E0AC;
+        color: #251C68;
