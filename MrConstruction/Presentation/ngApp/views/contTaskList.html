@@ -26,7 +26,7 @@
                 <th>
                     Phone
                 </th>
-                <th ng-if="controller.contractor != null">
+                <th ng-if="controller.contractor.phoneNumber2 != null">
                     Alt. Phone
                 </th>
             </tr>
@@ -43,7 +43,7 @@
                 <td>
                     {{controller.contractor.phoneNumber}}
                 </td>
-                <td ng-if="controller.contractor != null">
+                <td ng-if="controller.contractor.phoneNumber2 != null">
                     {{controller.contractor.phoneNumber2}}
                 </td>
             </tr>
