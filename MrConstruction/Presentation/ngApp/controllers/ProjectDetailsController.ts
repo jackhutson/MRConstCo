@@ -10,7 +10,7 @@
         private afterId;
 
         constructor(private $uibModal, private $http, private $routeParams, private $location) {
-        
+
 
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
@@ -129,8 +129,8 @@
                 });
 
         }
-        
-                public editClientModal(): void {
+
+        public editClientModal(): void {
 
             this.modalInstance = this.$uibModal.open({
                 templateUrl: '/Presentation/ngApp/views/editClient.html',

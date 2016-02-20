@@ -3,14 +3,21 @@
 
         public project;
 
-        constructor(private $uibModalInstance, private $http: ng.IHttpService, private $location: ng.ILocationService) { }
+        constructor(private $http, private $location) { }
 
-        public ok(editProject) {
-            this.$uibModalInstance.close(editProject);
+        public newProject(project): void {
+            this.$http.post('/api/project', project)
+                .then((response) => {
+                    this.$location.path('/project-list');
+                });
         }
 
-        public cancel() {
-            this.$uibModalInstance.dismiss();
-        }
+        //public ok(editProject) {
+        //    this.$uibModalInstance.close(editProject);
+        //}
+
+        //public cancel() {
+        //    this.$uibModalInstance.dismiss();
+        //}
     }
 }

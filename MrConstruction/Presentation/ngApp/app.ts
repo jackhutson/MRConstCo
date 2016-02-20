@@ -42,11 +42,17 @@
                 });
 
             $routeProvider
+                .when('/new-project', {
+                    templateUrl: 'Presentation/ngApp/views/newProject.html',
+                    controller: MrConstruction.Controllers.NewProjectController,
+                    controllerAs: 'controller'
+                });
+
+            $routeProvider
                 .when('/login', {
                     templateUrl: 'Presentation/ngApp/views/login.html',
                     controller: MrConstruction.Controllers.AuthController,
                     controllerAs: 'controller'
-
                 });
 
             $routeProvider
@@ -62,6 +68,7 @@
                     controller: MrConstruction.Controllers.ProjectDetailsController,
                     controllerAs: 'controller'
                 });
+
             $routeProvider
                 .when('/portfolio', {
                     templateUrl: 'Presentation/ngApp/views/publicPortfolio.html',
