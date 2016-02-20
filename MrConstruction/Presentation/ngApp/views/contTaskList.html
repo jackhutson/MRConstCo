@@ -1,0 +1,94 @@
+﻿<hr class="sexy-line" />
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center project-details-title">Contractor Contact Info</h2>
+    </div>
+</div>
+<hr class="sexy-line" />
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-center">{{controller.contractor.name}}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 col-md-offset-2 table-responsive">
+        <table class="table">
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Company
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th ng-if="controller.contractor != null">
+                    Alt. Phone
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    {{controller.contractor.title}}
+                </td>
+                <td>
+                    {{controller.contractor.companyName}}
+                </td>
+                <td>
+                    {{controller.contractor.email}}
+                </td>
+                <td>
+                    {{controller.contractor.phoneNumber}}
+                </td>
+                <td ng-if="controller.contractor != null">
+                    {{controller.contractor.phoneNumber2}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<hr class="sexy-line" />
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center project-details-title">Task List</h2>
+    </div>
+</div>
+<hr class="sexy-line" />
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 col-md-offset-2 table-responsive">
+        <table class="table">
+            <tr>
+                <th>
+                    Task
+                </th>
+                <th>
+                    Estimate
+                </th>
+                <th>
+                    Deadline
+                </th>
+                <th>
+                    Status
+                </th>
+            </tr>
+            <tr ng-repeat="task in controller.contractor.jobList">
+                <td>
+                    {{task.name}}
+                </td>
+                <td>
+                    {{task.estimate | currency}}
+                </td>
+                <td>
+                    {{task.deadline | date: "MM/dd/yyyy"}}
+                </td>
+                <td>
+                    {{task.state}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="project-details-bottom"></div>
