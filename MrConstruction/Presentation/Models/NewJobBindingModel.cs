@@ -15,7 +15,7 @@ namespace MrConstruction.Presentation.Models {
 
         public decimal? Estimate { get; set; }
 
-        public Project.Status State { get; set; }
+        public string State { get; set; }
 
         public string ContractorId { get; set; }
 

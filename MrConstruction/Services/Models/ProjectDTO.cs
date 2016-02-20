@@ -17,7 +17,7 @@ namespace MrConstruction.Services.Models {
 
         public IList<UploadDTO> Uploads { get; set; }
 
-        public Project.Status State { get; set; }
+        public string State { get; set; }
 
         public IList<JobListDTO> JobList { get; set; }
 

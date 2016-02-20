@@ -65,7 +65,7 @@ namespace MrConstruction.Services.Models {
                         Estimate = isAdminUser ? j.Estimate : (decimal?)null,
                         Deadline = j.Deadline,
                         Description = j.Description,
-                        State = j.State,
+                        State = j.State.ToString(),
                         Contractor = new ContractorUserDTO() {
                             Id = contractor.Id,
                             Name = contractor.Name,
@@ -86,7 +86,7 @@ namespace MrConstruction.Services.Models {
                 Description = dto.Description,
                 Estimate = dto.Estimate,
                 ContractorId = dto.ContractorId,
-                State = dto.State,
+                State = (Project.Status)Enum.Parse(typeof(Project.Status), dto.State),
                 Deadline = dto.Deadline,
                 ProjectId = dto.ProjectId
             };
@@ -102,7 +102,7 @@ namespace MrConstruction.Services.Models {
             job.Name = dto.Name;
             job.Estimate = dto.Estimate;
             job.Deadline = dto.Deadline;
-            job.State = dto.State;
+            job.State = (Project.Status)Enum.Parse(typeof(Project.Status), dto.State);
             job.ContractorId = dto.ContractorId;
             job.Description = dto.Description;
 
