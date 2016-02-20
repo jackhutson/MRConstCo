@@ -2,35 +2,35 @@
     text-align: center;
     font-family: 'Raleway', sans-serif;
 }
-
 .project-details h2 {
     text-align: center;
     font-family: 'Raleway', sans-serif;
 }
-
 .project-details-title {
     background-color: #EEEEEE;
     color: #251C68;
     padding: 40px;
     font-family: 'Raleway', sans-serif;
 }
-
-
 .project-details-description {
     padding: 15px;
     font-family: 'Titillium Web', sans-serif;
 }
-
 .project-details-joblist-table {
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
 }
-
 .project-details-tasklist-header {
     padding-bottom: 10px;
     font-family: 'Raleway', sans-serif;
 }
-
+.plustask {
+    margin:0 auto;
+    text-align:center;
+    display:block;
+    padding-bottom:15px;
+    color: #251C68;
+}
 .sexy-line {
     max-width: 95%;
     margin: 25px 0;
@@ -39,23 +39,22 @@
     background: #251C68;
     background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #251C68));
 }
-
-.new-task-button {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 table th {
     text-align: center;
 }
-
 table tr {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: 'Titillium Web', sans-serif;
 }
-
+.plusupload {
+    margin:0 auto;
+    text-align:center;
+    display:block;
+    padding-bottom:15px;
+    color: #251C68;
+}
 .project-details-upload {
     height: auto;
     max-height: 250px;
@@ -64,16 +63,17 @@ table tr {
     min-height: 250px;
     padding-top: 10px;
 }
-
 .thumbnail {
     margin: 15px;
     margin-top: 20px;
 }
-.create-portfolio {
-    padding-top: 20px; 
-    text-align: right;
+.create-portfolio { 
+    margin:0 auto;
+    text-align:center;
+    display:block;
+    padding-bottom:15px;
+    color: #251C68;
 }
-
 .project-details-bottom {
     padding-bottom: 50px;
 }
