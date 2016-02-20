@@ -23,7 +23,7 @@ namespace MrConstruction.Services {
                             Description = p.Description,
                             Budget = p.Budget,
                             ClientName = p.Client.Name,
-                            State = p.State,
+                            State = p.State.ToString(),
                             EstStart = p.EstStart,
                             EstCompleted = p.EstCompleted,
                             JobList = (from j in p.JobList
@@ -31,7 +31,7 @@ namespace MrConstruction.Services {
                                        select new JobListDTO() {
                                            Id = j.Id,
                                            Name = j.Name,
-                                           State = j.State,
+                                           State = j.State.ToString(),
                                            Deadline = j.Deadline,
                                            Estimate = j.Estimate
                                        }).ToList(),
@@ -47,7 +47,7 @@ namespace MrConstruction.Services {
                            Description = p.Description,
                            Budget = p.Budget,
                            ClientName = p.Client.Name,
-                           State = p.State,
+                           State = p.State.ToString(),
                            EstStart = p.EstStart,
                            EstCompleted = p.EstCompleted,
                            Uploads = (from u in p.Uploads
@@ -62,7 +62,7 @@ namespace MrConstruction.Services {
                                        select new JobListDTO() {
                                            Id = j.Id,
                                            Name = j.Name,
-                                           State = j.State,
+                                           State = j.State.ToString(),
                                            Deadline = j.Deadline,
                                            Estimate = j.Estimate
                                        }).ToList(),
@@ -76,6 +76,7 @@ namespace MrConstruction.Services {
 
             project.Title = edited.Title;
             project.Budget = edited.Budget;
+            project.State = (Project.Status)Enum.Parse(typeof(Project.Status), edited.State);
             project.EstStart = edited.EstStart;
             project.EstCompleted = edited.EstCompleted;
             project.Description = edited.Description;
