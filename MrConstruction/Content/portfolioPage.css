@@ -1,6 +1,50 @@
-﻿.portfolio-before {
-    max-height: 500px;
+﻿.portfolio-top {
+    margin-right: 2000px;
+   
 }
-.portfolio-after {
-     max-height: 500px;
+.portfolio-click {
+     margin-bottom: 30px;
+}
+.portfolio-description{
+   
+}
+.portfolio-click:hover {
+    filter: #000000(opacity = 50);
+}
+
+.portfolio-flex-container {
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    justify-content: center;
+}
+.ba-item>img {
+    width: 600px !important;
+    height: 450px !important;
+    
+}
+.ba-item>img:hover{
+    background-color: #
+}
+.portfolio-flex-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin-left: 120px;
+    margin-right: 120px;
+    list-style: none;
+
+}
+.wrapper-item {
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+}
+.portfolio-button-center{
+    margin-left: 700px;
+}
+.portfolio-bottom {
+    margin-bottom: 25px;
 }

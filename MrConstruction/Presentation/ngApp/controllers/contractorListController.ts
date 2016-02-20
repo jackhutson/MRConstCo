@@ -20,7 +20,7 @@
                 templateUrl: '/Presentation/ngApp/views/newContractor.html',
                 controller: MrConstruction.Controllers.NewContractorController,
                 controllerAs: 'controller',
-                size: 'lg',
+                //size: 'lg',
                 backdrop: true,
             });
 

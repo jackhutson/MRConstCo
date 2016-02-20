@@ -1,4 +1,5 @@
 ﻿namespace MrConstruction.Controllers {
+
     export class ProjectDetailsController {
 
         public project;
