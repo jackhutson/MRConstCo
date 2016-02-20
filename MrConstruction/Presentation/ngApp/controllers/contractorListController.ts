@@ -7,7 +7,7 @@
         public modalInstance;
         public edited;
 
-        constructor(private $http: ng.IHttpService, private $uibModal, private $routeParams, private $location) {
+        constructor(private $route, private $http: ng.IHttpService, private $uibModal, private $routeParams, private $location) {
             $http.get('/api/contractor')
                 .then((response) => {
                     this.contractors = response.data;
@@ -26,6 +26,7 @@
 
             this.modalInstance.result
                 .then((reason) => {
+                    this.$route.reload();
                     console.log("reason");
                 })
                 .catch((dismiss) => {
@@ -58,6 +59,7 @@
                             console.log(editContractor);
                             this.$http.post(`/api/contractor/edit/${this.$routeParams.id}`, editContractor)
                                 .then((response) => {
+                                    this.$route.reload();
                                     console.log("You successfully posted!")
                                 })
                                 .catch((response) => {
@@ -76,14 +78,16 @@
             var userConfirm = confirm("Are you sure you want to delete this contractor?");
 
             if (userConfirm) {
-                this.$http.get(`/api/contractor/delete/${Id}`).then((response) => {
-                    console.log("Successfully deleted contractor!");
-                });
+                this.$http.get(`/api/contractor/delete/${Id}`)
+                    .then((response) => {
+                        console.log("Successfully deleted contractor!");
+                        this.$route.reload();
+                    });
             } else {
                 alert("Contractor delete canceled.");
             }
         }
-        
+
     }
     angular.module('MrConstruction').controller('contractorListController', ContractorListController);
 }
