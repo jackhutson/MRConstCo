@@ -28,7 +28,7 @@ namespace MrConstruction {
                       "~/Content/project-details.css",
                       "~/Content/new-project.css",
                       "~/Content/contractorlist.css",
-                      "~/Content/portfolioPage.css"));
+                      "~/Content/portfolioPage.css",
                       "~/Content/modal.css"));
 
             bundles.Add(new ScriptBundle("~/angular/core").Include(
