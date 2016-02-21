@@ -1,16 +1,11 @@
-﻿.portfolio-top {
-    margin-right: 2000px;
-   
-}
+﻿
 .portfolio-click {
      margin-bottom: 30px;
 }
 .portfolio-description{
    
 }
-.portfolio-click:hover {
-    filter: #000000(opacity = 50);
-}
+
 
 .portfolio-flex-container {
     display: flex;
@@ -18,13 +13,17 @@
     align-content: center;
     justify-content: center;
 }
+
+.portfolio-flex-container:hover{
+    cursor: pointer;
+}
 .ba-item>img {
     width: 600px !important;
     height: 450px !important;
     
 }
 .ba-item>img:hover{
-    background-color: #
+    
 }
 .portfolio-flex-wrapper {
     display: flex;
@@ -47,4 +46,11 @@
 }
 .portfolio-bottom {
     margin-bottom: 25px;
+}
+.portfolio-secret.ng-hide-add{
+     animation: 0.5s zoomOut ease;
+}
+.portfolio-secret.ng-hide-remove{
+   
+    animation: 0.5s zoomIn ease;
 }
