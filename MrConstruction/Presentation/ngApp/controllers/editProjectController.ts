@@ -1,6 +1,14 @@
 ﻿namespace MrConstruction.Controllers {
     export class EditProjectController {
 
+        public status = [
+            "ToDo",
+            "AwaitingEstimate",
+            "InProgress",
+            "PendingReview",
+            "Completed"
+        ];
+
         constructor(private $uibModalInstance, private $http: ng.IHttpService, private $location: ng.ILocationService, project) {
             this.project = project;
         }

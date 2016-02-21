@@ -31,20 +31,27 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-6" ng-controller="contractorListController as contractor">
-                        
+
                         <div class="dropdown">
                             <label for="dropdown" class="control-label">Pick a Contractor</label>
                             <select class="dropdown-toggle" ng-value="contractor.id" ng-model="controller.task.contractorId" ng-options="contractor.id as contractor.name for contractor in contractor.contractors track by contractor.name"></select>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <div class="col-md-offset-5 col-md-1">
-                    <input type="button" class="btn btn-success" value="Edit Task" ng-click="controller.ok(controller.task)" />
-                    <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-6">
+                        <label for="taskStatus">Status</label>
+                        <div class="dropdown">
+                            <select ng-model="controller.task.state" ng-init="controller.task.state" ng-options="state for state in controller.status"></select>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="modal-footer">
+                    <div class="col-md-offset-5 col-md-1">
+                        <input type="button" class="btn btn-success" value="Edit Task" ng-click="controller.ok(controller.task)" />
+                        <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
+                    </div>
+                </div>
         </form>
     </div>
 </div>

@@ -79,7 +79,7 @@
                         <th>
                             Phone
                         </th>
-                        <th ng-if="controller.client.phoneNumber2 != null">
+                        <th ng-if="controller.client.phoneNumber2 != null || controller.client.phoneNumber2 === ''">
                             Alt. Phone
                         </th>
                         <th>
@@ -96,7 +96,7 @@
                         <td>
                             {{controller.client.phoneNumber}}
                         </td>
-                        <td ng-if="controller.client.phoneNumber2 != null">
+                        <td ng-if="controller.client.phoneNumber2 != null || controller.client.phoneNumber2 === ''">
                             {{controller.client.phoneNumber2}}
                         </td>
                         <td>

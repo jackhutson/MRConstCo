@@ -1,54 +1,40 @@
 ﻿<div class="modal-dialog">
-    <div class="row newproject">
+    <div class="modal-content">
         <div class="modal-header">
-            <h1 class="modalhead">Edit Contractor<!--<input type="button" class="close" value="X" ng-click="controller.cancel()" />--></h1>
+            <input type="button" class="close" value="X" ng-click="controller.cancel()" />
+            <h1 class="text-center">Edit Contractor</h1>
         </div>
 
-        <form class="form-horizontal">
+        <form class="new-form-center">
             <div class="modal-body">
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 registerform">
-                        <label for="Email" class="control-label">Email</label>
-                        <input placeholder="Contractor Email" type="text" class="form-control" ng-model="controller.edited.email" />
-                    </div>
+                <div class="new-row input-group">
+                    <span class="input-group-addon"><span class="inputname"><strong>Email</strong>&nbsp;</span>&nbsp;</span>
+                    <input placeholder="Contractor Email" type="text" class="form-control new" ng-model="controller.edited.email" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 registerform">
-                        <label for="Name" class="control-label">Name</label>
-                        <input placeholder="Contractor Name" type="text" class="form-control" ng-model="controller.edited.name" />
-                    </div>
+                <div class="new-row input-group">
+                    <span class="input-group-addon"><span class="inputname"><strong>Name</strong>&nbsp;</span>&nbsp;</span>
+                    <input placeholder="Contractor Name" type="text" class="form-control new" ng-model="controller.edited.name" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 registerform">
-                        <label for="Title" class="control-label">Title</label>
-                        <input placeholder="Contractor Title" type="text" class="form-control" ng-model="controller.edited.title" />
-                    </div>
+                <div class="new-row input-group">
+                    <span class="input-group-addon"><span class="inputname"><strong>Title</strong>&nbsp;</span>&nbsp;</span>
+                    <input placeholder="Contractor Title" type="text" class="form-control new" ng-model="controller.edited.title" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 registerform">
-                        <label for="companyName" class="control-label">Company Name</label>
-                        <input placeholder="Contractor Company Name" type="text" class="form-control" ng-model="controller.edited.companyName" />
-                    </div>
+                <div class="new-row input-group">
+                    <span class="input-group-addon"><span class="inputname"><strong>Company Name</strong>&nbsp;</span>&nbsp;</span>
+                    <input placeholder="Contractor Company Name" type="text" class="form-control new" ng-model="controller.edited.companyName" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 registerform">
-                        <label for="phoneNumber" class="control-label">Phone Number</label>
-                        <input placeholder="Contractor Phone Number" type="text" class="form-control" ng-model="controller.edited.phoneNumber" />
-                    </div>
+                <div class="new-row input-group">
+                    <span class="input-group-addon"><span class="inputname"><strong>Contact</strong>&nbsp;</span>&nbsp;</span>
+                    <input placeholder="(888) 888-8888" type="text" class="form-control new" ng-model="controller.edited.phoneNumber" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10 registerform">
-                        <label for="phoneNumber" class="control-label">Phone Number #2</label>
-                        <input placeholder="Contractor Phone Number #2" type="text" class="form-control" ng-model="controller.edited.phoneNumber2" />
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="col-md-offset-5 col-md-1">
-                    <input type="submit" class="btn" value="Edit" ng-click="controller.ok(controller.edited)" />
-                    <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
+                <div class="new-row input-group">
+                    <span class="input-group-addon"><span class="inputname"><strong>Contact #2</strong>&nbsp;</span>&nbsp;</span>
+                    <input placeholder="(888) 888-8888" type="text" class="form-control new" ng-model="controller.edited.phoneNumber2" />
                 </div>
             </div>
         </form>
+        <div class="modal-footer">
+            <input type="submit" class="btn" value="Edit" ng-click="controller.ok(controller.edited)" />
+        </div>
     </div>
 </div>
