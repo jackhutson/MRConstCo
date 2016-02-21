@@ -77,3 +77,11 @@ table tr {
 .project-details-bottom {
     padding-bottom: 50px;
 }
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
