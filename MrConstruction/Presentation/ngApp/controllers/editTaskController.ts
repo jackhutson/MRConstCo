@@ -2,6 +2,14 @@
 
     export class EditTaskController {
 
+        public status = [
+            "ToDo",
+            "AwaitingEstimate",
+            "InProgress",
+            "PendingReview",
+            "Completed"
+        ];
+
         public task;
         public selectedContractor;
 

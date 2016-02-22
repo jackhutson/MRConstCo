@@ -28,7 +28,7 @@
                         <th>
                             Street One
                         </th>
-                        <th>
+                        <th ng-if="controller.location.street2 != null">
                             Street Two
                         </th>
                         <th>
@@ -42,7 +42,7 @@
                         <td>
                             {{controller.location.street1}}
                         </td>
-                        <td>
+                        <td ng-if="controller.location.street2 != null">
                             {{controller.location.street2}}
                         </td>
                         <td>
@@ -77,7 +77,10 @@
                             Name
                         </th>
                         <th>
-                            PhoneNumber
+                            Phone
+                        </th>
+                        <th ng-if="(controller.client.phoneNumber2 != null || controller.client.phoneNumber2 === '')">
+                            Alt. Phone
                         </th>
                         <th>
                             Email
@@ -92,6 +95,9 @@
                         </td>
                         <td>
                             {{controller.client.phoneNumber}}
+                        </td>
+                        <td ng-if='controller.client.phoneNumber2 != null || controller.client.phoneNumber2 === ""'>
+                            {{controller.client.phoneNumber2}}
                         </td>
                         <td>
                             {{controller.client.email}}
@@ -115,6 +121,18 @@
     <div class="col-md-12">
         <h2 class="text-center project-details-tasklist-header">Tasks</h2>
     </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-1 col-md-11">
+        <h2>
+            Budget:
+            <span ng-class="{'positive': controller.netEstCost > 0, 'negative': controller.netEstCost <= 0 }">
+                {{controller.netEstCost | currency}}
+            </span>
+        </h2>
+    </div>
+</div>
+<div class="row">
     <div class="col-md-12 plustask">
         <input type="button" class="btn" value="New Task" ng-click="controller.showModal()" />
     </div>

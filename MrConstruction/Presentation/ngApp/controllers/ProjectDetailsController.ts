@@ -1,11 +1,12 @@
 ﻿namespace MrConstruction.Controllers {
+
     export class ProjectDetailsController {
 
         public project;
         public client;
         public modalInstance;
         public location;
-
+        public netEstCost: number;
         private beforeId;
         private afterId;
 
@@ -15,8 +16,9 @@
             $http.get(`/api/project/${$routeParams.id}`)
                 .then((response) => {
                     this.project = response.data;
-
+                    this.netEstCost = this.getNetBalance();
                 });
+
             $http.get(`/api/location/${$routeParams.id}`)
                 .then((response) => {
                     this.location = response.data;
@@ -26,6 +28,17 @@
                 .then((response) => {
                     this.client = response.data;
                 });
+        }
+
+        public getNetBalance(): number {
+            var budget: number = this.project.budget;
+            var tasksTotal: number = 0;
+
+            this.project.jobList.forEach(function (s) {
+                tasksTotal = tasksTotal + s.estimate;
+            });
+
+            return budget - tasksTotal;
         }
 
         public uploadModal(): void {
