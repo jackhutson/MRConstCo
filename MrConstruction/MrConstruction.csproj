@@ -304,6 +304,7 @@
     <Content Include="Content\project-list.css" />
     <Content Include="Content\task-details.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
+    <Content Include="Content\upload.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -1,57 +1,52 @@
 ﻿<div class="modal-dialog">
-    <div class="row newproject">
+    <div class="modal-content">
         <div class="modal-header">
-            <h1 style="text-align:center">Edit Task <input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
+            <input type="button" class="close" value="X" ng-click="controller.cancel()" />
+            <h1 class="text-center">Edit Task</h1>
         </div>
-        <form class="form-horizontal">
+        <form class="new-form-center">
             <div class="modal-body">
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
-                        <label for="Name" class="control-label">Name</label>
-                        <input ng-model="controller.task.name" class="form-control" type="text" placeholder="Task Name" />
-                    </div>
+                <div class="new-row input-group">
+                    <span class="input-group-addon"><span class="inputname"><strong>Name</strong>&nbsp;</span>&nbsp;</span>
+                    <input ng-model="controller.task.name" class="form-control new" type="text" placeholder="Task Name" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
-                        <label for="taskDescription" class="control-label">Description</label>
+
+                <div class="new-row">
+                    <div class="col-md-12 projectform">
+                        <label for="taskDescription" class="inputlabel">Description</label>
                         <textarea ng-model="controller.task.description" style="padding-bottom: 100px" class="form-control" type="text" placeholder="Short description of the task"></textarea>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
-                        <label for="taskEstimate" class="control-label">Estimate</label>
-                        <input ng-model="controller.task.estimate" class="form-control" type="text" placeholder="Task Estimate" />
-                    </div>
+                <div class="new-row input-group">
+                    <span class="input-group-addon"><span class="inputname"><strong>Estimate</strong>&nbsp;</span>&nbsp;</span>
+                    <input ng-model="controller.task.estimate" class="form-control new" type="text" placeholder="Task Estimate" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
-                        <label for="deadline" class="control-label">Deadline</label>
-                        <input ng-model="controller.task.deadline" class="form-control" placeholder="Task Deadline" />
-                    </div>
+                <div class="new-row input-group">
+                    <span class="input-group-addon"><span class="inputname"><strong>Deadline</strong>&nbsp;</span>&nbsp;</span>
+                    <input ng-model="controller.task.deadline" class="form-control new" placeholder="Task Deadline" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-6" ng-controller="contractorListController as contractor">
-
+                <div class="new-row">
+                    <div class="col-md-12 projectform" ng-controller="contractorListController as contractor">
+                        <label for="dropdown" class="control-label">Pick a Contractor</label>
                         <div class="dropdown">
-                            <label for="dropdown" class="control-label">Pick a Contractor</label>
                             <select class="dropdown-toggle" ng-value="contractor.id" ng-model="controller.task.contractorId" ng-options="contractor.id as contractor.name for contractor in contractor.contractors track by contractor.name"></select>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-6">
+                <div class="new-row">
+                    <div class="col-md-12 projectform">
                         <label for="taskStatus">Status</label>
                         <div class="dropdown">
                             <select ng-model="controller.task.state" ng-init="controller.task.state" ng-options="state for state in controller.status"></select>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <div class="col-md-offset-5 col-md-1">
-                        <input type="button" class="btn btn-success" value="Edit Task" ng-click="controller.ok(controller.task)" />
-                        <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
-                    </div>
-                </div>
+            </div>
         </form>
+
+        <div class="modal-footer">
+            <input type="submit" class="btn" value="Edit Task" ng-click="controller.ok(controller.task)" />
+            <!--<input type="button" class="btn btn-danger" value="Cancel" ng-click="controller.cancel()" />-->
+        </div>
     </div>
 </div>

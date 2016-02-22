@@ -1,36 +1,30 @@
 ﻿<div class="modal-dialog">
-    <div class="row modal-new">
+    <div class="modal-content">
         <div class="modal-header">
-
-            <h1 style="text-align:center">Add New Task <input type="button" class="close" value="X" ng-click="controller.cancel()" /></h1>
+            <input type="button" class="close" value="X" ng-click="controller.cancel()" />
+            <h1 class="text-center">Add New Task</h1>
         </div>
-        <form class="form-horizontal">
+        <form class="new-form-center">
             <div class="modal-body">
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
-                        <label for="Name" class="control-label">Name</label>
-                        <input ng-model="task.name" class="form-control" type="text" placeholder="Task Name" />
-                    </div>
+                <div class="new-row input-group">
+                        <span class="input-group-addon"><span class="inputname"><strong>Name</strong>&nbsp;</span>&nbsp;</span>
+                        <input ng-model="task.name" class="form-control new" type="text" placeholder="Task Name" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
-                        <label for="taskDescription" class="control-label">Description</label>
+                <div class="new-row">
+                    <div class="col-md-12">
+                        <label for="taskDescription" class="inputlabel">Description</label>
                         <textarea ng-model="task.description" style="padding-bottom: 100px" class="form-control" type="text" placeholder="Short description of the task"></textarea>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
-                        <label for="taskEstimate" class="control-label">Estimate</label>
-                        <input ng-model="task.estimate" class="form-control" type="text" placeholder="Task Estimate" />
-                    </div>
+                <div class="new-row input-group">
+                        <span class="input-group-addon"><span class="inputname"><strong>Estimate</strong>&nbsp;</span>&nbsp;</span>
+                        <input ng-model="task.estimate" class="form-control new" type="text" placeholder="Task Estimate" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
-                        <label for="deadline" class="control-label">Deadline</label>
-                        <input ng-model="task.deadline" class="form-control" type="date" placeholder="Task Deadline" />
-                    </div>
+                <div class="new-row input-group">
+                        <span class="input-group-addon"><span class="inputname"><strong>Deadline</strong>&nbsp;</span>&nbsp;</span>
+                        <input ng-model="task.deadline" class="form-control new" type="date" placeholder="Task Deadline" />
                 </div>
-                <div class="form-group">
+                <div class="new-row">
                     <div class="col-md-offset-1 col-md-6" ng-controller="contractorListController as contractor">
                         <div class="dropdown">
                             <label for="dropdown" class="control-label">Pick a Contractor</label>
@@ -40,9 +34,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <div class="col-md-offset-5 col-md-1">
                     <input type="submit" class="btn" value="Add Task" ng-click="controller.ok(task)" />
-                </div>
             </div>
         </form>
     </div>
