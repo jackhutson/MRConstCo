@@ -78,6 +78,7 @@
             })
                 .then((response) => {
                     console.log(response);
+                    this.$location.path('/portfolio')
                 });
         }
 
