@@ -5,7 +5,7 @@
 .main-image {
     /*background: url('http://www.thepanorama.cos.sg/wp-content/uploads/2014/06/pan3.jpg');*/
     
-    background-image: url('Dollarphotoclub_4283989.jpg');
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('Dollarphotoclub_4283989.jpg');
     min-height: 450px;
     background-size: cover;
     background-position: center;
@@ -42,7 +42,7 @@
 
 h1.title {
     text-align: center !important;
-    color: #f7f7f7;
+    color: rgba(247, 247, 247, 0.93);
     font-weight: 700;
     font-size: 60px;
     margin-top: 12.5%;
@@ -53,14 +53,16 @@ h1.title {
 .landing-img-left {
     max-width: 100%;
     border-radius: 50%;
-    margin-left: -50px;
+    margin-top: 25px;
+    margin-left: -100px;
 
 }
 
 .landing-img-right {
     max-width: 100%;
     border-radius: 50%;
-
+    margin-top: 35px;
+    margin-right: 50px;
 }
 
 .landing-p {
@@ -70,13 +72,15 @@ h1.title {
     margin-left: -60px;
     margin-right: 60px;
 }
+
 .landing-card {
     margin: 50px;
     min-width: 250px;
-    min-height: 500px;
+    min-height: 350px;
     background-color: rgba(247, 247, 247, 0.67);
     border-radius: 2px;
 }
+
 .landing-card-p{
     padding: 25px;
     font-size: 22px;
@@ -84,6 +88,7 @@ h1.title {
     font-weight: 700;
     font-family: 'Titillium Web', sans-serif; 
 }
+
 .landing-text-bottom {
     min-height: 350px;
     font-size: 30px;
