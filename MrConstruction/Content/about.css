@@ -1,4 +1,5 @@
-﻿.about {
+﻿@import url('bootstrap.css');
+.about {
     padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
