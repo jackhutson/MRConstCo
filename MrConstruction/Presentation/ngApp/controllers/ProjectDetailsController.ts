@@ -46,12 +46,15 @@
                 templateUrl: '/Presentation/ngApp/views/upload.html',
                 controller: MrConstruction.Controllers.UploadsController,
                 controllerAs: 'controller',
-                size: 'lg',
+                //size: 'lg',
                 backdrop: true,
             });
 
             this.modalInstance.result
                 .then((upload) => {
+
+                    console.log(upload);
+
                     this.$http.postMultipart(`/api/project/${this.$routeParams.id}/upload`, upload)
                         .then((response) => {
                             this.$route.reload();

@@ -3,7 +3,9 @@
     padding-right: 0;
 }
 .main-image {
-    background: url('http://www.thepanorama.cos.sg/wp-content/uploads/2014/06/pan3.jpg');
+    /*background: url('http://www.thepanorama.cos.sg/wp-content/uploads/2014/06/pan3.jpg');*/
+    
+    background-image: url('Dollarphotoclub_4283989.jpg');
     min-height: 450px;
     background-size: cover;
     background-position: center;
@@ -22,17 +24,19 @@
     padding: 20px;
     padding-left: 15%;
 }
-.one{
-       background: url('https://wallpaperscraft.com/image/house_beautiful_design_style_greens_70093_3840x2400.jpg');
-       background-size: cover;
-       background-position: center;
-       background-attachment: fixed;
+.one {
+    /*background: url('https://wallpaperscraft.com/image/house_beautiful_design_style_greens_70093_3840x2400.jpg');*/
+    background-image: url('Dollarphotoclub_4069643.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
-.two{
-    background: url('http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/House-Covered-In-Snow-desktop-high-resolution-wallpaper-images-desktop-background-full-free.jpg');
-       background-size: cover;
-       background-position: center;
-       background-attachment: fixed;
+.two {
+    /*background: url('http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/House-Covered-In-Snow-desktop-high-resolution-wallpaper-images-desktop-background-full-free.jpg');*/
+    background-image: url('Dollarphotoclub_53300304.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 

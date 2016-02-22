@@ -78,6 +78,11 @@ table tr {
     padding-bottom: 50px;
 }
 
+.project-details-budget {
+    padding-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
 .positive {
     color: green;
 }

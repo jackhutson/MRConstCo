@@ -290,15 +290,6 @@ label.uploadLabel input[type="file"] {
         background: #fa6161;
     }
 
-/*-----Doesnt work :(----*/
-/*.uploadLabel:invalid + span {
-        color: #cc6f05;
-    }
-
-    .uploadLabel:invalid + span {
-        color: #3ea919;
-    }*/
-
 .row .joblistitem {
     padding-top: 5px;
 }

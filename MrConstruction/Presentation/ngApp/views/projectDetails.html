@@ -124,7 +124,7 @@
 </div>
 <div class="row">
     <div class="col-md-offset-1 col-md-11">
-        <h2>
+        <h2 class="project-details-budget">
             Budget:
             <span ng-class="{'positive': controller.netEstCost > 0, 'negative': controller.netEstCost <= 0 }">
                 {{controller.netEstCost | currency}}
@@ -172,7 +172,7 @@
                         {{job.state}}
                     </td>
                     <td>
-                        <a href="#/task-details/{{job.id}}"><input class="btn btn-success" type="button" value="Details" /></a> | <input type="button" class="btn btn-danger" value="Delete" ng-click="controller.deleteTask(job.id)" />
+                        <a href="#/task-details/{{job.id}}"><input class="btn" type="button" value="Details" /></a> | <input type="button" class="btn" value="Delete" ng-click="controller.deleteTask(job.id)" />
                     </td>
                 </tr>
             </table>
