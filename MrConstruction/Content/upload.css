@@ -10,6 +10,7 @@ label.uploadLabel input[type="file"] {
     font-size: 40px;
     filter: alpha(opacity=0);
     cursor: pointer;
+    visibility: hidden;
 }
 
 .uploadLabel {
@@ -21,7 +22,7 @@ label.uploadLabel input[type="file"] {
     margin: 5px;
     height: 50px;
     width: 300px;
-    background: maroon;
+    background: #6C6C6C;
     display: inline-block;
     font-size: 30px;
     color: white;

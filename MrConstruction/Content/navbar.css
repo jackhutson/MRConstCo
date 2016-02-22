@@ -121,14 +121,7 @@ input[type=submit] {
 .footer-h2 {
     font-size: 16px;
     margin-left: 50px;
-    input [type=submit]:hover;
-
-{
-    background-color: #251C68;
-    color: #EEEEEE;
-}
-
-font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .footer-container {

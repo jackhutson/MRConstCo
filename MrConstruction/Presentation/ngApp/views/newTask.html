@@ -11,7 +11,7 @@
                         <input ng-model="task.name" class="form-control new" type="text" placeholder="Task Name" />
                 </div>
                 <div class="new-row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 projectform">
                         <label for="taskDescription" class="inputlabel">Description</label>
                         <textarea ng-model="task.description" style="padding-bottom: 100px" class="form-control" type="text" placeholder="Short description of the task"></textarea>
                     </div>
@@ -25,7 +25,7 @@
                         <input ng-model="task.deadline" class="form-control new" type="date" placeholder="Task Deadline" />
                 </div>
                 <div class="new-row">
-                    <div class="col-md-offset-1 col-md-6" ng-controller="contractorListController as contractor">
+                    <div class="col-md-12 projectform" ng-controller="contractorListController as contractor">
                         <div class="dropdown">
                             <label for="dropdown" class="control-label">Pick a Contractor</label>
                         <select class="dropdown-toggle" ng-model="task.contractorId" ng-options="contractor.id as contractor.name for contractor in contractor.contractors track by contractor.name"></select>
