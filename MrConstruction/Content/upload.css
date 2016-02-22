@@ -1,6 +1,11 @@
 ﻿.uploadmodal {
     text-align: center;
 }
+
+div.upload-center {
+    margin-left: 190px;
+}
+
 label.uploadLabel input[type="file"] {
     display: block;
     position: absolute;
@@ -10,24 +15,34 @@ label.uploadLabel input[type="file"] {
     font-size: 40px;
     filter: alpha(opacity=0);
     cursor: pointer;
-    visibility: hidden;
 }
 
-.uploadLabel {
+label.uploadLabel {
     position: relative;
     overflow: hidden;
     float: left;
     border-radius: 4px;
-    padding: 5px 5px;
-    margin: 5px;
-    height: 50px;
-    width: 300px;
+    padding: 20px 20px 20px 20px;
+    height: 210px;
+    width: 200px;
     background: #6C6C6C;
     display: inline-block;
-    font-size: 30px;
+    font-size: 200px;
     color: white;
 }
 
-    .uploadLabel:hover {
-        background: #fa6161;
-    }
+.uploadLabel:hover {
+    background: #251C68;
+}
+
+.glyphicon.glyp-size {
+    font-size: 160px;
+}
+
+.upload-btn {
+    margin-left: -200px;
+    background: #251C68 !important;
+}
+.upload-btn:hover {
+    background: #6C6C6C !important;
+}
