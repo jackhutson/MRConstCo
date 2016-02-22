@@ -76,7 +76,7 @@ namespace MrConstruction.Services {
 
             project.Title = edited.Title;
             project.Budget = edited.Budget;
-            project.State = (Project.Status)Enum.Parse(typeof(Project.Status), edited.State);
+            project.State = (edited.State == null) ? (Project.Status)Enum.Parse(typeof(Project.Status), "ToDo") : (Project.Status)Enum.Parse(typeof(Project.Status), edited.State);
             project.EstStart = edited.EstStart;
             project.EstCompleted = edited.EstCompleted;
             project.Description = edited.Description;

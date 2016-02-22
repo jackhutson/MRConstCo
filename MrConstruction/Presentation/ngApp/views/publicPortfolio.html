@@ -1,39 +1,72 @@
 ﻿<!--Add a portfolio-->
-
-<div class="row portfolio-container">
-    <div class="row" class="portfolio-top">
+<!--<div class="row portfolio-container" ng-repeat="portfolio in controller.portfolios">
+    <div class="row portfolio-top">
 
         <div id="overlay">
-            <div class="col-md-offset-2 col-md-8 portfolio-click" ng-click="details = true">
+            <div class="col-md-offset-2 col-md-8 portfolio-click" ng-click="details == false ? details = true : details = false">
 
                 <div class="portfolio-flex-container">
                     <div class="ba-item">
-                        <img src="https://ecoequine.files.wordpress.com/2013/07/happy-horse-healthy-planet-_bcs8.jpg" />
+                        <img ng-src="{{portfolio.beforePicture.url}}" />
                     </div>
                     <div class="ba-item">
-                        <img src="http://i0.wp.com/www.topworldfact.com/wp-content/uploads/2015/06/funny_giraffe_25.jpg?resize=700%2C493" />
+                        <img ng-src="{{portfolio.afterPicture.url}}" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row" ng-show="details">
+    <div class="row portfolio-secret animated" ng-show="details">
+        <div class="col-md-offset-2 col-md-8 portfolio-description">
+            <p>{{portfolio.description}}</p>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-12">
+            <ul class="portfolio-flex-wrapper">
+                <li class="wrapper-item img-responsive" ng-repeat="picture in portfolio.uploads"><img ng-src="{{picture.url}}"/></li>
+            </ul>
+        </div>
+        <div class="col-md-12 portfolio-bottom">
+            <input ng-click="details=false" type="button" value="close" class="portfolio-button-center" />
+        </div>
+    </div>
+</div>-->
+
+<!--this is the working stuff-->
+<div class="row portfolio-container">
+    <div class="row portfolio-top" >
+
+        <div id="overlay">
+            <div class="col-md-offset-2 col-md-8 portfolio-click" ng-click="details == false ? details = true : details = false">
+
+                <div class="portfolio-flex-container">
+                    <div class="ba-item">
+                        <img ng-src="https://ecoequine.files.wordpress.com/2013/07/happy-horse-healthy-planet-_bcs8.jpg" />
+                    </div>
+                    <div class="ba-item">
+                        <img ng-src="http://i0.wp.com/www.topworldfact.com/wp-content/uploads/2015/06/funny_giraffe_25.jpg?resize=700%2C493" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row portfolio-secret animated" ng-show="details">
         <div class="col-md-offset-2 col-md-8 portfolio-description">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-12">
             <ul class="portfolio-flex-wrapper">
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
-                <li class="wrapper-item"><img src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
+                <li class="wrapper-item"><img ng-src="http://www.coolestanimals.xyz/assets/fullimage/giraffe-running-vel2u4iazl5f0bkc.jpg" class="img-responsive" /></li>
             </ul>
         </div>
         <div class="col-md-12 portfolio-bottom">
