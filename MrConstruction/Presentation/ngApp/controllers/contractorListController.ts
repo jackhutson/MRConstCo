@@ -86,7 +86,7 @@
                     .catch(() => {
                         alert("You need to assign a different contractor to the tasks this contractor is assigned to or delete said tasks before deleting this contractor!")
                     });
-                    
+
             }
             else {
                 alert("Contractor delete canceled.");
