@@ -83,7 +83,9 @@ input[type=button] {
     padding-left: 10px;
     padding-right: 10px;
 }
-
+    input[type=button]:focus {
+        outline: none !important;
+    }
     input[type=button]:hover {
         background-color: #251C68;
         color: #EEEEEE;
@@ -96,7 +98,9 @@ input[type=submit] {
     border-radius: 0 0 0 0;
     font-weight: bold;
 }
-
+    input[type=submit]:focus{
+        outline: none !important;
+    }
     input[type=submit]:hover {
         background-color: #251C68;
         color: #EEEEEE;
@@ -121,7 +125,6 @@ input[type=submit] {
 .footer-h2 {
     font-size: 16px;
     margin-left: 50px;
-   }
     font-family: 'Raleway', sans-serif;
 }
 
