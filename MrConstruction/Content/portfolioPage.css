@@ -2,29 +2,47 @@
 .portfolio-click {
      margin-bottom: 30px;
 }
-.portfolio-description{
-   
-}
-
 
 .portfolio-flex-container {
     display: flex;
     flex-flow: row;
     align-content: center;
     justify-content: center;
+    position:relative;
 }
 
 .portfolio-flex-container:hover{
     cursor: pointer;
 }
-.ba-item>img {
-    width: 600px !important;
-    height: 450px !important;
+.ba-item>img{
+    height: 450px;
+    width: 600px;
+}
+span.portfolio-img-text{
+    background: rgba(247, 247, 247, 0.50);
+    color: #251C68;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    display: table;
+    height: 450px;
+    width: 1200px;
+    left: -131px;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+    transition: 500ms;
     
 }
-.ba-item>img:hover{
-    
+span.portfolio-img-text:hover{
+    opacity: 1;
 }
+span.portfolio-img-text span{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .portfolio-flex-wrapper {
     display: flex;
     flex-flow: row wrap;
@@ -48,8 +66,8 @@
     margin-bottom: 25px;
 }
 .portfolio-secret.ng-hide-add{
-     animation: 0.5s zoomOut ease;
+     animation: 1s zoomOut ease;
 }
 .portfolio-secret.ng-hide-remove{ 
-    animation: 0.5s zoomIn ease;
+    animation: 1s zoomIn ease;
 }

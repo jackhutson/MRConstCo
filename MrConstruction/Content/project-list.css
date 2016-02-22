@@ -2,14 +2,14 @@
     margin: 0 auto;
     text-align: center;
     display: block;
-    background-color: #EEEEEE;
+    background-color: rgba(238, 238, 238, 0.89);
     padding-bottom: 15px;
     color: #251C68;
 }
 
 .project-title {
     text-align: center;
-    background-color: #EEEEEE;
+    background-color: rgba(238, 238, 238, 0.89);
     color: #251C68;
     font-family: 'Raleway', sans-serif;
     display: block;

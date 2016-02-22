@@ -73,6 +73,9 @@
                 <th>
                     Status
                 </th>
+                <th>
+                    Options
+                </th>
             </tr>
             <tr ng-repeat="task in controller.contractor.jobList">
                 <td>
@@ -87,7 +90,11 @@
                 <td>
                     {{task.state}}
                 </td>
-            </tr>
+                <td>
+                   <input ng-if="(task.state == 'InProgress')" class="btn" value="Mark for Review" type="button" ng-click="controller.markForReview(task.id)" />
+                   <span ng-if="(task.state != 'InProgress')"> N/A</span>
+                </td>
+            </tr>s
         </table>
     </div>
 </div>
