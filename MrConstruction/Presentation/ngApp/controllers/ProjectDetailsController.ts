@@ -46,7 +46,7 @@
                 templateUrl: '/Presentation/ngApp/views/upload.html',
                 controller: MrConstruction.Controllers.UploadsController,
                 controllerAs: 'controller',
-                size: 'lg',
+                //size: 'lg',
                 backdrop: true,
             });
 

@@ -17,7 +17,7 @@
                 templateUrl: '/Presentation/ngApp/views/editTask.html',
                 controller: MrConstruction.Controllers.EditTaskController,
                 controllerAs: 'controller',
-                size: 'lg',
+                //size: 'lg',
                 resolve: {
                     task: () => {
                         return this.task;
