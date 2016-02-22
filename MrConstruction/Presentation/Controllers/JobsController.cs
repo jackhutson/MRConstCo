@@ -37,6 +37,17 @@ namespace MrConstruction.Presentation.Controllers
             
         }
 
+        [HttpGet]
+        [Route("api/task/mark/{id}")]
+        public IHttpActionResult MarkForReview(int id) {
+            _jobService.MarkForReview(id);
+            if (ModelState.IsValid) {
+                return Ok();
+            } else {
+                return BadRequest();
+            }
+        }
+
         [HttpPost]
         [Route("api/jobs/{id}")]
         public IHttpActionResult EditTask(NewJobBindingModel job) {
