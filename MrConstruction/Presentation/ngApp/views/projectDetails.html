@@ -28,7 +28,7 @@
                         <th>
                             Street One
                         </th>
-                        <th ng-if="controller.location.street2 != null">
+                        <th ng-if="!controller.location.street2">
                             Street Two
                         </th>
                         <th>
@@ -42,7 +42,7 @@
                         <td>
                             {{controller.location.street1}}
                         </td>
-                        <td ng-if="controller.location.street2 != null">
+                        <td ng-if="!controller.location.street2">
                             {{controller.location.street2}}
                         </td>
                         <td>
@@ -79,7 +79,7 @@
                         <th>
                             Phone
                         </th>
-                        <th ng-if="(controller.client.phoneNumber2 != null || controller.client.phoneNumber2 === '')">
+                        <th ng-if="!controller.client.phoneNumber2">
                             Alt. Phone
                         </th>
                         <th>
@@ -96,7 +96,7 @@
                         <td>
                             {{controller.client.phoneNumber}}
                         </td>
-                        <td ng-if='controller.client.phoneNumber2 != null || controller.client.phoneNumber2 === ""'>
+                        <td ng-if="!controller.client.phoneNumber2">
                             {{controller.client.phoneNumber2}}
                         </td>
                         <td>

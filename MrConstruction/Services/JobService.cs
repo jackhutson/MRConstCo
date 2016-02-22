@@ -95,6 +95,15 @@ namespace MrConstruction.Services.Models {
             _jobRepo.SaveChanges();
         }
 
+        public void MarkForReview(int id) {
+
+            var job = _jobRepo.Get(id).FirstOrDefault();
+
+            job.State = Project.Status.PendingReview;
+
+            _jobRepo.SaveChanges();
+        }
+
         public void EditJob(NewJobBindingModel dto) {
 
             var job = _jobRepo.Get(dto.Id).FirstOrDefault();
