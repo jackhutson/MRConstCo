@@ -2,7 +2,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <input type="button" class="close" value="X" ng-click="controller.cancel()" />
-            <h1>Edit Client Details</h1>
+            <h1 class="text-center">Edit Client Details</h1>
         </div>
         <form class="new-form-center">
             <div class="modal-body">
@@ -26,14 +26,12 @@
             <div class="new-row">
                 <div class="col-md-12 projectform">
                     <label for="projectDescription" class="inputlabel">Client Notes</label>
-                    <textarea style="padding-bottom: 100px; text-align:center" class="form-control" type="text" placeholder="Client Notes" ng-model="controller.client.description"></textarea>
+                    <textarea style="padding-bottom: 100px; text-align:center" class="form-control" type="text" placeholder="Client notes" ng-model="controller.client.description"></textarea>
                 </div>
             </div>
         </form>
         <div class="modal-footer">
-            <div class="col-md-offset-5 col-md-1">
-                <input class="btn btn-success" type="submit" value="Add" ng-click="controller.ok(client)" />
-            </div>
+                <input class="btn" type="submit" value="Add" ng-click="controller.ok(client)" />
         </div>
     </div>
 </div>

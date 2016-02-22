@@ -1,36 +1,35 @@
 ﻿<div class="modal-dialog">
-    <div class="modal-header">
-        <input type="button" value="X" class="close" ng-click="controller.cancel()" />
-        <h1>Uploads</h1>
-    </div>
-    <div class="modal-body">
-        <form class="form-horizontal" ng-submit="controller.postFiles(file, 'Picture')">
-            <div class="form-group">
-                <!--<div class="col-md-offset-1 btn btn-primary uploadform">-->
+    <div class="modal-content uploadmodal">
+        <div class="modal-header">
+            <input type="button" value="X" class="close" ng-click="controller.cancel()" />
+            <h1>Uploads</h1>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" ng-submit="controller.postFiles(file, 'Picture')">
+                <div class="form-group">
+                    <!--<div class="col-md-offset-1 btn btn-primary uploadform">-->
                     <label class="uploadLabel">
                         <span class="glyphicon glyphicon-picture">&nbsp;Photo &#43;</span>
                         <input type="file" id="file-1" file-model="file" />
                     </label>
-                <!--</div>-->
-            </div>
-            <input class="btn btn-success" type="submit" value="Upload" />
-        </form>
-        <br />
-        <br />
-        <form class="form-horizontal" ng-submit="controller.postFiles(file, 'Blueprint')">
-            <div class="form-group">
-                <label class="uploadLabel">
-                    <span class="glyphicon glyphicon-file">&nbsp;Blueprint &#43;</span>
-                    <input class="file" type="file" id="file-2" file-model="file" />
-                </label>
-            </div>
-            <input class="btn btn-success" type="submit" value="Upload" />
-        </form>
-    </div>
+                    <!--</div>-->
+                </div>
+                <input class="btn" type="submit" value="Upload" />
+            </form>
+            <br />
+            <br />
+            <form class="form-horizontal" ng-submit="controller.postFiles(file, 'Blueprint')">
+                <div class="form-group">
+                    <label class="uploadLabel">
+                        <span class="glyphicon glyphicon-file">&nbsp;Blueprint &#43;</span>
+                        <input class="file" type="file" id="file-2" file-model="file" />
+                    </label>
+                </div>
+                <input class="btn" type="submit" value="Upload" />
+            </form>
+        </div>
 
-    <div class="modal-footer">
-        <div class="col-md-offset-6 col-md-1">
-            <!--<input class="btn btn-success" type="submit" value="Upload" />-->
+        <div class="modal-footer">
         </div>
     </div>
 </div>
