@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-12 portfolio-bottom">
             <input ng-click="details=false" type="button" value="close" class="portfolio-button-center" />
+            <input ng-if="controller.isAdmin" ng-click="controller.deletePortfolio(portfolio.id)" type="button" value="Delete" class="portfolio-button-center" />
         </div>
     </div>
-
 </div>
