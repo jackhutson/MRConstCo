@@ -119,6 +119,7 @@ input[type=submit] {
 .copyright {
     margin-bottom: 50px;
     margin-top: 25px;
+    text-decoration: none;
 }
 
 .footer-h2 {
