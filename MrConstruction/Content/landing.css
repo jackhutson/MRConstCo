@@ -1,6 +1,6 @@
 ﻿.container-fluid{
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 .main-image {
     /*background: url('http://www.thepanorama.cos.sg/wp-content/uploads/2014/06/pan3.jpg');*/
@@ -50,20 +50,21 @@ h1.title {
     font-family: 'Raleway', sans-serif;
     opacity: 0.9;
 }
-
-.landing-img-left {
-    max-width: 100%;
+.circular {
+    width: 300px;
+    height: 300px;
+    position: relative;
     border-radius: 50%;
-    margin-top: 25px;
-    margin-left: -100px;
-
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+    overflow: hidden;
 }
 
-.landing-img-right {
-    max-width: 100%;
-    border-radius: 50%;
-    margin-top: 35px;
-    margin-right: 50px;
+.circular>img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
 }
 
 .landing-p {
@@ -73,23 +74,28 @@ h1.title {
     margin-left: -60px;
     margin-right: 60px;
 }
+
 .landing-card {
     margin: 50px;
     min-width: 250px;
-    min-height: 500px;
+    min-height: 350px;
     background-color: rgba(247, 247, 247, 0.67);
     border-radius: 2px;
 }
+
 .landing-card-p{
-    padding: 25px;
+    padding: 45px;
     font-size: 22px;
     color: #6c6c6c;  
     font-weight: 700;
     font-family: 'Titillium Web', sans-serif; 
 }
+
 .landing-text-bottom {
     min-height: 350px;
     font-size: 30px;
     padding: 125px;
-     font-family: 'Titillium Web', sans-serif;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+    font-family: 'Titillium Web', sans-serif;
 }

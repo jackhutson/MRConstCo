@@ -58,6 +58,19 @@ namespace MrConstruction.Presentation.Controllers
             }
         }
 
+        [Authorize]
+        [HttpGet]
+        [Route("api/project/upload/delete/{id}")]
+        public IHttpActionResult DeleteUpload(int id) {
+            _uploadServ.DeleteUpload(id);
+            if (ModelState.IsValid) {
+                return Ok();
+            } else {
+                return BadRequest();
+            }
+        }
+
+        [Authorize]
         [HttpPost]
         [Route("api/project/{id}/upload")]
         public async Task<IHttpActionResult> Post(int id) {
