@@ -33,5 +33,12 @@ namespace MrConstruction.Services {
                 _uploadRepo.SaveChanges();
             }
         }
+
+        public void DeleteUpload(int id) {
+            var upload = _uploadRepo.Get(id).FirstOrDefault();
+
+            upload.Active = false;
+            _uploadRepo.SaveChanges();
+        }
     }
 }
