@@ -30,6 +30,14 @@
                 });
         }
 
+        public deleteUpload(id: number) {
+            this.$http.get(`/api/project/upload/delete/${id}`)
+                .then((response) => {
+                    console.log(id);
+                    this.$route.reload();
+                });
+        }
+
         public getNetBalance(): number {
             var budget: number = this.project.budget;
             var tasksTotal: number = 0;
