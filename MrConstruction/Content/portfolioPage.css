@@ -8,7 +8,7 @@
     flex-flow: row;
     align-content: center;
     justify-content: center;
-    position:relative;
+    
 }
 
 .portfolio-flex-container:hover{
@@ -59,8 +59,13 @@ span.portfolio-img-text span{
   height: 150px;
   margin-top: 10px;
 }
-.portfolio-button-center{
-    margin-left: 700px;
+.flex-button{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.flex-p{
+    text-align: center;
 }
 .portfolio-bottom {
     margin-bottom: 25px;
