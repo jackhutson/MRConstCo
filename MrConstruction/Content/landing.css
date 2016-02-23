@@ -9,6 +9,7 @@
     min-height: 450px;
     background-size: cover;
     background-position: center;
+
 }
 .fixed-attachement {
     background-attachment: fixed;
@@ -60,6 +61,23 @@ h1.title {
 }
 
 .circular>img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.circular-footer {
+    width: 100px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+    overflow: hidden;
+}
+
+.circular-footer>img {
     display: inline;
     margin: 0 auto;
     height: 100%;

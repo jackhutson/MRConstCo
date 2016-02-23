@@ -8,17 +8,18 @@
     flex-flow: row;
     align-content: center;
     justify-content: center;
-    
 }
 
 .portfolio-flex-container:hover{
     cursor: pointer;
 }
+
 .ba-item>img{
     height: 450px;
     width: 600px;
 }
-span.portfolio-img-text{
+
+div > span.portfolio-img-text{
     background: rgba(247, 247, 247, 0.50);
     color: #251C68;
     font-family: 'Raleway', sans-serif;
@@ -27,17 +28,19 @@ span.portfolio-img-text{
     display: table;
     height: 450px;
     width: 1200px;
-    left: -131px;
+    left: -18px;
     top: 0;
     position: absolute;
     opacity: 0;
     transition: 500ms;
     
 }
-span.portfolio-img-text:hover{
+
+div > span.portfolio-img-text:hover{
     opacity: 1;
 }
-span.portfolio-img-text span{
+
+div > span.portfolio-img-text span{
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -57,8 +60,8 @@ span.portfolio-img-text span{
     margin-left: 120px;
     margin-right: 120px;
     list-style: none;
-
 }
+
 .wrapper-item {
   padding: 5px;
   width: 200px;

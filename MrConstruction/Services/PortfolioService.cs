@@ -40,8 +40,17 @@ namespace MrConstruction.Services {
             _portfolioRepo.SaveChanges();
 
         }
+
+        public void DeletePortfolio(int id) {
+            var portfolio = _portfolioRepo.Get(id).FirstOrDefault();
+
+            portfolio.Active = false;
+            _portfolioRepo.SaveChanges();
+        }
+
         public IList<PortfolioDTO> DisplayPortfolio() {
             return (from p in _portfolioRepo.FindPortfolios()
+                    where p.Active == true
                     select new PortfolioDTO() {
                         BeforePicture = new UploadDTO() {
                             Url = p.BeforePicture.Url
@@ -54,7 +63,8 @@ namespace MrConstruction.Services {
                                        Url = u.Url
                                    }).ToList(),
                         Description = p.Description,
-                        Name = p.Name
+                        Name = p.Name,
+                        Id = p.Id
 
                     }).ToList();
         }
