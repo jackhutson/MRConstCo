@@ -297,20 +297,31 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bp-blueprint-g01.jpg" />
     <Content Include="Content\contractorlist.css" />
+    <Content Include="Content\Dollarphotoclub_4069643.jpg" />
+    <Content Include="Content\Dollarphotoclub_42637567.jpg" />
+    <Content Include="Content\Dollarphotoclub_4283989.jpg" />
+    <Content Include="Content\Dollarphotoclub_53300304.jpg" />
+    <Content Include="Content\Dollarphotoclub_64735446.jpg" />
+    <Content Include="Content\Dollarphotoclub_67326152.jpg" />
+    <Content Include="Content\Dollarphotoclub_67651783.jpg" />
+    <Content Include="Content\Dollarphotoclub_83192229.jpg" />
     <Content Include="Content\landing.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\modals.css" />
+    <Content Include="Content\MRC.png" />
+    <Content Include="Content\MRC2.png" />
     <Content Include="Content\navbar.css" />
     <Content Include="Content\new-project.css" />
     <Content Include="Content\PMS.jpg" />
+    <Content Include="Content\PMS.png" />
     <Content Include="Content\portfolioPage.css" />
     <Content Include="Content\project-details.css" />
     <Content Include="Content\project-list.css" />
     <Content Include="Content\task-details.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="Content\upload.css" />
-    <Content Include="Content\Zach_Mixon.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -359,6 +370,9 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Content\PMS.psd" />
+    <None Include="Properties\PublishProfiles\MRConstruction.pubxml" />
+    <Content Include="Public\.keep" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -389,7 +403,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Migrations\201602132126166_removed before\" />
-    <Folder Include="Public\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

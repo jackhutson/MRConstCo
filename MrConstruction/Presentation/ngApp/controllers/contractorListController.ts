@@ -7,6 +7,8 @@
         public modalInstance;
         public edited;
 
+        static $inject = ['$route', '$http', '$uibModal', '$routeParams', '$location'];
+
         constructor(private $route, private $http: ng.IHttpService, private $uibModal, private $routeParams, private $location) {
             $http.get('/api/contractor')
                 .then((response) => {

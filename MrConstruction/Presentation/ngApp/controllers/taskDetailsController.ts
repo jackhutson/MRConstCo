@@ -4,6 +4,7 @@
 
         public task;
         public modalinstance;
+        static $inject = ['$http', '$routeParams', '$uibModal'];
 
         constructor(private $http: ng.IHttpService, private $routeParams, private $uibModal) {
             $http.get(`/api/jobs/${$routeParams.id}`)

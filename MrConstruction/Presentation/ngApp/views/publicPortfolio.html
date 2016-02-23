@@ -21,19 +21,21 @@
 
     </div>
     <div class="row portfolio-secret animated" ng-show="details">
+        <hr class="sexy-line" />
         <div class="col-md-offset-2 col-md-8 portfolio-description">
+            <h3 class="flex-p">Description</h3>
             <div class="flex-p">
                 <p>{{portfolio.description}}</p>
             </div>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-12">
-            <ul class="portfolio-flex-wrapper">
-                <li ng-repeat="upload in portfolio.uploads"><img class="wrapper-item img-responsive" ng-src="{{upload.url}}" /></li>
+            <ul class="portfolio-flex-wrapper" style="padding-top: 20px;">
+                <li class="gallery-upload" ng-repeat="upload in portfolio.uploads"><img class="wrapper-item img-responsive" ng-src="{{upload.url}}" /></li>
             </ul>
         </div>
         <div class="col-md-12 portfolio-bottom">
-            <div class="flex-button">
+            <div class="flex-button" style="padding-top: 25px">
                 <input ng-click="details=false" type="button" value="close" class="portfolio-button-center" />
                 <input style="margin-left: 5px;" ng-if="controller.isAdmin" ng-click="controller.deletePortfolio(portfolio.id)" type="button" value="Delete" class="portfolio-button-center" />
             </div>

@@ -2,6 +2,8 @@
 
     export class UploadsController {
 
+        static $inject = ['$uibModalInstance', '$http'];
+
         constructor(private $uibModalInstance, private $http: ng.IHttpService) { }
 
         public postFiles(file, type) {

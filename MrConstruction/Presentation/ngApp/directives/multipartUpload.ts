@@ -1,7 +1,7 @@
 ﻿namespace MrConstruction.Directives {
 
 // <input type="file" file-model="upload.file" />
-    angular.module('MrConstruction').directive('fileModel', function ($parse, $http) {
+    angular.module('MrConstruction').directive('fileModel',['$parse', '$http', function ($parse, $http) {
         return {
             restrict: 'A',
             link: function (scope, element: any, attrs: ng.IAttributes) {
@@ -15,9 +15,9 @@
                 });
             }
         };
-    });
+    }]);
 
-    angular.module('MrConstruction').decorator('$http', function ($delegate) {
+    angular.module('MrConstruction').decorator('$http', ['$delegate', function ($delegate) {
         $delegate.postMultipart = function (url, data, options: any = {}) {
             let formData = new FormData();
 
@@ -33,5 +33,5 @@
         };
 
         return $delegate;
-    });
+    }]);
 }

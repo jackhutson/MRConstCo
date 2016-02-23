@@ -1,6 +1,8 @@
 ﻿namespace MrConstruction.Controllers {
     export class EditProjectController {
 
+        static $inject = ['$uibModalInstance', '$http', '$location', 'project'];
+
         public status = [
             "ToDo",
             "AwaitingEstimate",

@@ -3,6 +3,8 @@
 
         public project;
 
+        static $inject = ['$http', '$location'];
+
         constructor(private $http, private $location) { }
 
         public newProject(project): void {

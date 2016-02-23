@@ -2,6 +2,8 @@
 
     export class NewContractorController {
 
+        static $inject = ['$uibModalInstance', '$http', '$window', '$location'];
+
         constructor(private $uibModalInstance, private $http: ng.IHttpService, private $window: ng.IWindowService, private $location: ng.ILocationService) { }
 
         public register(user): void {

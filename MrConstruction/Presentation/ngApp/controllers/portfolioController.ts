@@ -3,6 +3,8 @@
 
         public portfolios;
 
+        static $inject = ['$window', '$http'];
+
         constructor(private $window, private $http: ng.IHttpService) {
             $http.get('/api/portfolio')
                 .then((response) => {

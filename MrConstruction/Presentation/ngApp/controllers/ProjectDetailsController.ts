@@ -9,6 +9,7 @@
         public netEstCost: number;
         private beforeId;
         private afterId;
+        static $inject = ['$route', '$uibModal', '$http', '$routeParams', '$location'];
 
         constructor(private $route, private $uibModal, private $http, private $routeParams, private $location) {
 

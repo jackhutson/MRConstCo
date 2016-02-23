@@ -2,7 +2,7 @@
 
     angular.module('MrConstruction', ['ngRoute', 'ui.bootstrap', 'ngAnimate']);
 
-    angular.module('MrConstruction').factory('authInterceptor',
+    angular.module('MrConstruction').factory('authInterceptor', [ '$q', '$window', '$location',
         ($q: ng.IQService, $window: ng.IWindowService, $location: ng.ILocationService) => {
             return {
                 request: (config) => {
@@ -20,10 +20,10 @@
                     return $q.reject(response);
                 }
             };
-        });
+        }]);
 
     angular.module('MrConstruction')
-        .config(function ($routeProvider: ng.route.IRouteProvider, $httpProvider: ng.IHttpProvider) {
+        .config(['$routeProvider', '$httpProvider', function ($routeProvider: ng.route.IRouteProvider, $httpProvider: ng.IHttpProvider) {
 
             $httpProvider.interceptors.push('authInterceptor');
 
@@ -92,6 +92,6 @@
                 .when('/', {
                     templateUrl: 'Presentation/ngApp/views/publicLanding.html'
                 });
-        });
+        }]);
 }
 

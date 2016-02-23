@@ -2,6 +2,8 @@
 
     export class AuthController {
 
+        static $inject = ['$http', '$window', '$location'];
+
         constructor(private $http: ng.IHttpService, private $window: ng.IWindowService, private $location: ng.ILocationService) { }
 
         public login(username, password): void {

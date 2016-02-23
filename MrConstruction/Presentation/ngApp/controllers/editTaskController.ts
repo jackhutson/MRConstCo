@@ -2,6 +2,8 @@
 
     export class EditTaskController {
 
+        static $inject = ['$uibModalInstance', '$http', '$location', 'task'];
+
         public status = [
             "ToDo",
             "AwaitingEstimate",

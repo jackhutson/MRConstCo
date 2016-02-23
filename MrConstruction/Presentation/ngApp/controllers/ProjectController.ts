@@ -2,6 +2,7 @@
     export class ProjectController {
 
         public projects;
+        static $inject = ['$http'];
 
         constructor(private $http: ng.IHttpService) {
             $http.get('/api/project')

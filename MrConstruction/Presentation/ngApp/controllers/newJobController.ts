@@ -6,6 +6,8 @@
         public newTask;
         public selectedContractor;
 
+        static $inject = ['$uibModalInstance', '$http', '$location'];
+
         constructor(private $uibModalInstance, private $http: ng.IHttpService,
             private $location: ng.ILocationService) { }
             
