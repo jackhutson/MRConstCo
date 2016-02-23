@@ -67,6 +67,23 @@ h1.title {
     width: auto;
 }
 
+.circular-footer {
+    width: 100px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+    overflow: hidden;
+}
+
+.circular-footer>img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
 .landing-p {
     margin-top: 10%;
     font-family: 'Titillium Web', sans-serif;
