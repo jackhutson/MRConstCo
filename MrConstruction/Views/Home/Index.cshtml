@@ -1,7 +1,6 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MrConstruction">
 <head>
     <title></title>
-
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/angular/core")
     @Scripts.Render("~/angular/app")
@@ -9,7 +8,6 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700italic,900' rel='stylesheet' type='text/css'>
 </head>
 <body class="container-fluid">
-
     <!--HEADER-->
     <div class="top">
         <div class="row" id="logo">
@@ -46,36 +44,73 @@
             </nav>
         </div>
         <div class="row">
-
         </div>
     </div>
-
     <ng-view></ng-view>
-
     <!--FOOTER-->
     <footer class="footer">
         <div class="row footer-container">
-            <div class="col-md-offset-3 col-md-6">
+            <div class="col-md-offset-3 col-md-7">
                 <div class="row">
-                    <div class="col-md-6" style="text-align:center;">
-                        <h4 class="title"><a href="/#/about">Contact Details</a></h4>
-                        <hr class="sexy-line" />
-
-                        <p>281-732-4106</p>
-                        <p>mrconstco@gmail.com</p>
-                        <p>MR Construction Co.</p>
-                        <p>13204 Indigo Creek Ln</p>
-                        <p>Pearland, Texas 77584</p>
+                    <div class="col-md-2 text-center">
+                        <h4 class="title" style="text-align:left">Navigation</h4>
                     </div>
+                    <div class="col-md-7">
+                        <h4 class="title text-center">
+                            About Mike Rigby
+                        </h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="title" style="margin-left: 30px">
+                            <a href="#/about">Contact</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr class="sexy-line" />
+                </div>
+                <div class="row">
+                    <div class="col-md-2" ng-controller="authController as auth">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#/">Home</a>
+                            </li>
+                            <li>
+                                <a href="#/about">About</a>
+                            </li>
+                            <li>
+                                <a href="#/portfolio">Portfolio</a>
+                            </li>
+                            <li ng-if="!auth.isLoggedIn">
+                                <a href="#/login">Login</a>
+                            </li>
+                            <li ng-if="auth.isAdmin">
+                                <a href="#/project-list">Projects</a>
+                            </li>
+                            <li ng-if="auth.isAdmin">
+                                <a href="#/contractors">Contractors</a>
+                            </li>
+                            <li ng-if="auth.isContractor">
+                                <a href="#/contractor-tasks">Tasks</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-7 text-center">
 
-                    <div class="col-md-6" style="text-align:center;">
-                        <div class="row"> <h4 class="title">Mike Rigby</h4></div>
-                        <hr class="sexy-line" />
-                        <div class="circular-footer col-md-4">
-                            <img src="~/Content/PMS.jpg" />
-                        </div>
-                        <div class="col-md-8">
-                            <p>Michael Rigby graduated from Middle Tennessee State University (MTSU) earning his Bachelors of Science degree in Engineering. He also earned his Masters of Business Administration from MTSU.<br /> Hire Mike.</p>
+                        <p>
+                            Michael Rigby graduated from Middle Tennessee State University (MTSU) earning his Bachelors of Science degree in Engineering. He also earned his Masters of Business Administration from MTSU.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <div style="margin-left: 30px">
+                            <p>1 (281) 732-4106</p>
+                            <a href="mailto:mrconstco@gmail.com"><p>mrconstco@gmail.com</p></a>
+                            <br />
+                            <p>
+                                MR Construction Co.<br />
+                                13204 Indigo Creek Ln<br />
+                                Pearland, Texas 77584
+                            </p>
                         </div>
                     </div>
                 </div>
