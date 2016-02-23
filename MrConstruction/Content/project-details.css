@@ -7,7 +7,7 @@
     font-family: 'Raleway', sans-serif;
 }
 .project-details-title {
-    background-color: rgba(238, 238, 238, 0.89);
+    background-color: rgba(238, 238, 238, 0.79) !important;
     color: #251C68;
     padding: 40px;
     font-family: 'Raleway', sans-serif;
@@ -89,4 +89,13 @@ table tr {
 
 .negative {
     color: red;
+}
+
+.project-details-upload-radio {
+    padding-top: 5px;
+    padding-right: 2px;
+}
+
+.thumbnail {
+    background-color: rgba(238, 238, 238, 0.59) !important;
 }

@@ -199,22 +199,25 @@
             <div class="row" ng-init="port = {}">
                 <div class="col-md-3" ng-repeat="upload in controller.project.uploads">
                     <div class="thumbnail">
+                        <input style="margin-top: 5px; margin-left: 5px; margin-bottom: 5px" type="button" class="btn" value="x" ng-click="controller.deleteUpload(upload.id)"/>
+
                         <a href="{{upload.url}}">
                             <img ng-src="{{upload.url}}" class="img-responsive project-details-upload" />
                         </a>
-                        <label>
-                            General
-                            <input class="radio-inline" type="radio" name="{{upload.id}}" ng-model="port[upload.id]" value="general" />
+                        <hr class="sexy-line" />
+                        <label class="project-details-upload-radio">
+                            General 
+                            <input class="radio-inline" type="radio" name="{{upload.id}}" ng-model="port[upload.id]" value="general" /> |
                         </label>
-                        <label>
-                            After
-                            <input class="radio-inline" type="radio" id="{{upload.id}}-after" name="after" ng-model="controller.afterId" ng-value="upload.id" ng-click="port[upload.id] = 'general'" />
+                        <label class="project-details-upload-radio">
+                            After 
+                            <input class="radio-inline" type="radio" id="{{upload.id}}-after" name="after" ng-model="controller.afterId" ng-value="upload.id" ng-click="port[upload.id] = 'general'" /> |
                         </label>
-                        <label>
-                            Before
-                            <input class="radio-inline" type="radio" id="{{upload.id}}-before" name="before" ng-model="controller.beforeId" ng-value="upload.id" ng-click="port[upload.id] = 'general'" />
+                        <label class="project-details-upload-radio">
+                            Before 
+                            <input class="radio-inline" type="radio" id="{{upload.id}}-before" name="before" ng-model="controller.beforeId" ng-value="upload.id" ng-click="port[upload.id] = 'general'" /> |
                         </label>
-                        <label>
+                        <label class="project-details-upload-radio">
                             None
                             <input class="radio-inline" type="radio" name="{{upload.id}}"
                                    ng-model="port[upload.id]"
