@@ -1,6 +1,6 @@
 ﻿.container-fluid{
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 .main-image {
     /*background: url('http://www.thepanorama.cos.sg/wp-content/uploads/2014/06/pan3.jpg');*/
@@ -72,13 +72,15 @@ h1.title {
     margin-left: -60px;
     margin-right: 60px;
 }
+
 .landing-card {
     margin: 50px;
     min-width: 250px;
-    min-height: 500px;
+    min-height: 350px;
     background-color: rgba(247, 247, 247, 0.67);
     border-radius: 2px;
 }
+
 .landing-card-p{
     padding: 25px;
     font-size: 22px;
@@ -86,6 +88,7 @@ h1.title {
     font-weight: 700;
     font-family: 'Titillium Web', sans-serif; 
 }
+
 .landing-text-bottom {
     min-height: 350px;
     font-size: 30px;
