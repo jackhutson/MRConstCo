@@ -299,12 +299,14 @@
     <Content Include="Content\modals.css" />
     <Content Include="Content\navbar.css" />
     <Content Include="Content\new-project.css" />
+    <Content Include="Content\PMS.jpg" />
     <Content Include="Content\portfolioPage.css" />
     <Content Include="Content\project-details.css" />
     <Content Include="Content\project-list.css" />
     <Content Include="Content\task-details.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="Content\upload.css" />
+    <Content Include="Content\Zach_Mixon.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
