@@ -17,7 +17,9 @@
     </div>
     <div class="row portfolio-secret animated" ng-show="details">
         <div class="col-md-offset-2 col-md-8 portfolio-description">
-            <p>{{portfolio.description}}</p>
+            <div class="flex-p">
+                <p>{{portfolio.description}}</p>
+            </div>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-12">
@@ -26,8 +28,10 @@
             </ul>
         </div>
         <div class="col-md-12 portfolio-bottom">
-            <input ng-click="details=false" type="button" value="close" class="portfolio-button-center" />
+            <div class="flex-button">
+                <input ng-click="details=false" type="button" value="close" class="portfolio-button-center" />
+                <input style="margin-left: 5px;" ng-if="controller.isAdmin" ng-click="controller.deletePortfolio(portfolio.id)" type="button" value="Delete" class="portfolio-button-center" />
+            </div>
         </div>
     </div>
-
 </div>
