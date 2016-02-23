@@ -246,6 +246,10 @@
     <Compile Include="Migrations\201602161933275_added foreignkey to Portfolio model.Designer.cs">
       <DependentUpon>201602161933275_added foreignkey to Portfolio model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602230120091_removed isBefore and isAfter from Uploads.cs" />
+    <Compile Include="Migrations\201602230120091_removed isBefore and isAfter from Uploads.Designer.cs">
+      <DependentUpon>201602230120091_removed isBefore and isAfter from Uploads.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ClientController.cs" />
@@ -445,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602161933275_added foreignkey to Portfolio model.resx">
       <DependentUpon>201602161933275_added foreignkey to Portfolio model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602230120091_removed isBefore and isAfter from Uploads.resx">
+      <DependentUpon>201602230120091_removed isBefore and isAfter from Uploads.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
