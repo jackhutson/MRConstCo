@@ -53,7 +53,8 @@ namespace MrConstruction.Services {
                                    select new UploadDTO() {
                                        Url = u.Url
                                    }).ToList(),
-                        Description = p.Description
+                        Description = p.Description,
+                        Name = p.Name
 
                     }).ToList();
         }
